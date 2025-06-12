@@ -442,16 +442,6 @@
         </table>
     </div>
 
-    <!-- Custom confirmation modal (removed as clear button is removed) -->
-    <!-- <div id="confirmationModal" class="modal-overlay">
-        <div class="modal-content">
-            <p>모든 선수를 지우시겠습니까?</p>
-            <div class="modal-buttons">
-                <button id="modalConfirmBtn" class="confirm">예</button>
-                <button id="modalCancelBtn" class="cancel">아니오</button>
-            </div>
-        </div>
-    </div> -->
 
     <script>
         // DOM 요소 가져오기
@@ -462,10 +452,6 @@
         const downloadButton = document.getElementById('downloadButton');
         const canvasContainer = document.getElementById('canvasContainer');
         const quarterSelect = document.getElementById('quarterSelect');
-        // Removed confirmationModal and its buttons
-        // const confirmationModal = document.getElementById('confirmationModal');
-        // const modalConfirmBtn = document.getElementById('modalConfirmBtn');
-        // const modalCancelBtn = document.getElementById('modalCancelBtn');
 
         // 새롭게 추가된 선수 명단 관리 요소들
         const newPlayerNameInput = document.getElementById('newPlayerNameInput');
@@ -795,59 +781,6 @@
             renderPlayers(); // 불러온/기본 스쿼드에 따라 선수 다시 렌더링
             updateSquadSummaryTable(); // 새 스쿼드 로드 후 요약 테이블 업데이트
         });
-
-        // Event listener: On "Add Player" button click (add SUB player to field)
-        // Removed as requested
-        /*
-        addPlayerButton.addEventListener('click', () => {
-            const newId = players.length > 0 ? Math.max(...players.map(p => p.id)) + 1 : 0;
-            const originalCanvasWidth = 1200;
-            const originalCanvasHeight = 750;
-            const sidebarWidthRatio = 0.2; // 캔버스 너비의 20%를 사이드바로 사용
-            const playerBoxHeightOriginal = 80; // 선수 입력 div의 대략적인 원본 높이
-
-            // 현재 'SUB' 선수들의 수 계산 (사이드바에 새로 추가될 선수의 Y 위치 계산용)
-            const subPlayersCount = players.filter(p => p.position === 'SUB').length;
-
-            // 새로운 'SUB' 선수의 X, Y 위치 계산 (사이드바 영역 중앙에 배치)
-            const subPlayerX = (originalCanvasWidth * sidebarWidthRatio) / 2; // 사이드바 영역의 중앙 X
-            // Y 위치는 기존 SUB 선수들 아래로 순차적으로 배치
-            const subPlayerY = originalCanvasHeight * 0.1 + (subPlayersCount * (playerBoxHeightOriginal + 20)); // 시작 Y + (개수 * 간격)
-
-            players.push({
-                id: newId,
-                position: 'SUB', // 'SUB'은 교체 선수를 의미합니다.
-                name: '선택', // 새로운 선수의 기본 이름은 "선택"으로 설정
-                x: subPlayerX,
-                y: subPlayerY,
-                inputElement: null
-            });
-            renderPlayers(); // 선수 다시 렌더링
-            updateSquadSummaryTable(); // 선수 추가 후 요약 테이블 업데이트
-        });
-        */
-
-        // Event listener: On "Clear All" button click (using custom modal)
-        // Removed as requested
-        /*
-        clearPlayersButton.addEventListener('click', () => {
-            confirmationModal.classList.add('visible'); // 모달 표시
-        });
-        */
-
-        // Removed modal confirm/cancel event listeners as the modal is removed
-        /*
-        modalConfirmBtn.addEventListener('click', () => {
-            players = []; // 선수 목록 초기화
-            renderPlayers(); // 선수 다시 렌더링
-            confirmationModal.classList.remove('visible'); // 모달 숨기기
-            updateSquadSummaryTable(); // 선수 지우기 후 요약 테이블 업데이트
-        });
-
-        modalCancelBtn.addEventListener('click', () => {
-            confirmationModal.classList.remove('visible'); // 모달 숨기기
-        });
-        */
 
         // 이벤트 리스너: 마우스 이동 중 (선수 드래그)
         document.addEventListener('mousemove', (e) => {
