@@ -1,0 +1,8 @@
+# Visual studio
+.vs
+.vscode
+# Jetbrains Pycharm
+.idea
+venv
+
+Thumbs.db
