@@ -381,6 +381,29 @@
         #squadSummary tbody tr:hover {
             background-color: #e6f7ff; /* 호버 시 배경색 변경 */
         }
+
+        /* 삭제 버튼 스타일 */
+        .delete-player-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .delete-player-btn:hover {
+            background-color: #c82333;
+        }
+
+        /* 스쿼드 요약 테이블의 작업 열 너비 조정 */
+        #squadSummary th:last-child,
+        #squadSummary td:last-child {
+            width: 80px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -434,6 +457,7 @@
                     <th data-sort-key="name">선수 이름</th>
                     <th data-sort-key="quarters">포함된 쿼터</th>
                     <th data-sort-key="quarterCount">포함된 쿼터 수</th>
+                    <th>작업</th> <!-- 새로운 열 추가 -->
                 </tr>
             </thead>
             <tbody id="squadSummaryBody">
@@ -712,11 +736,9 @@
          * 스쿼드 요약 테이블을 선수별 쿼터 포함 정보를 포함하여 업데이트하는 함수
          */
         function updateSquadSummaryTable() {
-            // 기존 테이블 본문 지우기
             squadSummaryBody.innerHTML = '';
 
             const playerSummaryData = [];
-            // 모든 선수 명단을 기반으로 요약 데이터 초기화
             playerNames.forEach(name => {
                 if (name !== "선택") {
                     const quartersIncluded = [];
@@ -730,13 +752,12 @@
                 }
             });
 
-            // 현재 정렬 기준과 방향에 따라 데이터 정렬
+            // 정렬 로직
             playerSummaryData.sort((a, b) => {
                 let comparison = 0;
                 if (currentSortColumn === 'name') {
                     comparison = a.name.localeCompare(b.name);
                 } else if (currentSortColumn === 'quarters') {
-                    // 쿼터 이름 문자열로 정렬 (쿼터 수가 아닌 문자열 자체)
                     comparison = a.quarters.join(', ').localeCompare(b.quarters.join(', '));
                 } else if (currentSortColumn === 'quarterCount') {
                     comparison = a.quarterCount - b.quarterCount;
@@ -744,18 +765,112 @@
                 return currentSortDirection === 'asc' ? comparison : -comparison;
             });
 
-            // 테이블 본문에 데이터 채우기
             playerSummaryData.forEach(player => {
                 const row = squadSummaryBody.insertRow();
+
+                // 기존 셀들 추가
                 const cellName = row.insertCell();
                 const cellQuarters = row.insertCell();
-                const cellQuarterCount = row.insertCell(); // 새로운 셀 추가
+                const cellQuarterCount = row.insertCell();
+
                 cellName.textContent = player.name;
-                cellQuarters.textContent = player.quarters.join(', '); // 쉼표로 구분하여 표시
-                cellQuarterCount.textContent = player.quarterCount; // 쿼터 수 표시
+                cellQuarters.textContent = player.quarters.join(', ');
+                cellQuarterCount.textContent = player.quarterCount;
+
+                // 삭제 버튼 셀 추가
+                const cellAction = row.insertCell();
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = '삭제';
+                deleteButton.className = 'delete-player-btn';
+                deleteButton.onclick = () => confirmDeletePlayer(player.name);
+                cellAction.appendChild(deleteButton);
             });
         }
 
+        // 선수 삭제 확인 함수
+        function confirmDeletePlayer(playerName) {
+            if (confirm(`"${playerName}" 선수를 명단에서 삭제하시겠습니까?`)) {
+                deletePlayer(playerName);
+            }
+        }
+
+        // 선수 삭제 실행 함수
+        function deletePlayer(playerName) {
+            // playerNames 배열에서 선수 제거
+            const playerIndex = playerNames.indexOf(playerName);
+            if (playerIndex > -1) {
+                playerNames.splice(playerIndex, 1);
+            }
+
+            // 모든 쿼터의 스쿼드에서 해당 선수 제거
+            for (const quarter in savedSquads) {
+                savedSquads[quarter] = savedSquads[quarter].map(player => {
+                    if (player.name === playerName) {
+                        return { ...player, name: '선택' };
+                    }
+                    return player;
+                });
+            }
+
+            // 현재 players 배열에서도 해당 선수 이름을 '선택'으로 변경
+            players = players.map(player => {
+                if (player.name === playerName) {
+                    return { ...player, name: '선택' };
+                }
+                return player;
+            });
+
+            // UI 업데이트
+            renderPlayers();
+            updateSquadSummaryTable();
+            console.log(`"${playerName}" 선수가 명단에서 삭제되었습니다.`);
+        }
+        //
+        // function updateSquadSummaryTable() {
+        //     // 기존 테이블 본문 지우기
+        //     squadSummaryBody.innerHTML = '';
+        //
+        //     const playerSummaryData = [];
+        //     // 모든 선수 명단을 기반으로 요약 데이터 초기화
+        //     playerNames.forEach(name => {
+        //         if (name !== "선택") {
+        //             const quartersIncluded = [];
+        //             for (const quarter in savedSquads) {
+        //                 const squad = savedSquads[quarter];
+        //                 if (squad.some(p => p.name === name)) {
+        //                     quartersIncluded.push(quarter);
+        //                 }
+        //             }
+        //             playerSummaryData.push({ name: name, quarters: quartersIncluded.sort(), quarterCount: quartersIncluded.length });
+        //         }
+        //     });
+        //
+        //     // 현재 정렬 기준과 방향에 따라 데이터 정렬
+        //     playerSummaryData.sort((a, b) => {
+        //         let comparison = 0;
+        //         if (currentSortColumn === 'name') {
+        //             comparison = a.name.localeCompare(b.name);
+        //         } else if (currentSortColumn === 'quarters') {
+        //             // 쿼터 이름 문자열로 정렬 (쿼터 수가 아닌 문자열 자체)
+        //             comparison = a.quarters.join(', ').localeCompare(b.quarters.join(', '));
+        //         } else if (currentSortColumn === 'quarterCount') {
+        //             comparison = a.quarterCount - b.quarterCount;
+        //         }
+        //         return currentSortDirection === 'asc' ? comparison : -comparison;
+        //     });
+        //
+        //     // 테이블 본문에 데이터 채우기
+        //     playerSummaryData.forEach(player => {
+        //         const row = squadSummaryBody.insertRow();
+        //         const cellName = row.insertCell();
+        //         const cellQuarters = row.insertCell();
+        //         const cellQuarterCount = row.insertCell(); // 새로운 셀 추가
+        //         cellName.textContent = player.name;
+        //         cellQuarters.textContent = player.quarters.join(', '); // 쉼표로 구분하여 표시
+        //         cellQuarterCount.textContent = player.quarterCount; // 쿼터 수 표시
+        //     });
+        // }
+        //
 
         // 이벤트 리스너: 전술 선택 변경 시
         formationSelect.addEventListener('change', (e) => {
