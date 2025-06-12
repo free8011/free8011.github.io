@@ -27,6 +27,44 @@
             font-size: 2.5rem; /* 큰 제목 */
         }
 
+        /* 전체 컨텐츠 컨테이너 스타일 */
+        .content-container {
+            display: flex;
+            gap: 20px;
+            width: 95%;
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 왼쪽 스쿼드 편집 영역 */
+        .squad-editor {
+            flex: 1;
+            min-width: 0; /* flexbox 오버플로우 방지 */
+        }
+
+        /* 오른쪽 스쿼드 요약 영역 */
+        #squadSummary {
+            width: 400px; /* 고정 너비 */
+            margin-top: 0; /* 기존 마진 제거 */
+            height: fit-content; /* 내용에 맞춰 높이 조정 */
+            position: sticky;
+            top: 20px; /* 스크롤 시 상단에 고정 */
+        }
+
+        /* 반응형 디자인을 위한 미디어 쿼리 */
+        @media (max-width: 1200px) {
+            .content-container {
+                width: 100%;
+                flex-direction: column; /* 화면이 좁아지면 세로로 배치 */
+            }
+
+            #squadSummary {
+                 /* 전체 너비 사용 */
+                position: static; /* 고정 위치 해제 */
+            }
+        }
+
         /* 컨트롤 버튼 및 셀렉트 박스 컨테이너 */
         .controls {
             margin-bottom: 20px;
@@ -93,7 +131,8 @@
         /* 캔버스 컨테이너 (반응형) */
         #canvasContainer {
             position: relative;
-            width: 95vw; /* 뷰포트 너비의 95% 사용 */
+            width: 100%; /* 부모 너비에 맞춤 */
+            /*width: 95vw; !* 뷰포트 너비의 95% 사용 *!*/
             max-width: 1200px; /* 최대 너비 1200px */
             aspect-ratio: 1200 / 750; /* 캔버스 비율 유지 (가로:세로 = 1200:750) */
             border: 4px solid #333; /* 두꺼운 테두리 */
@@ -292,47 +331,59 @@
             background-color: #5a6268;
         }
 
-        /* 미디어 쿼리: 768px 이하 화면 */
+        /* 반응형 디자인: 768px 이하 화면 */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem; /* 제목 크기 줄이기 */
+            .content-container {
+                flex-direction: column; /* 세로 배치 */
+                gap: 10px; /* 간격 줄이기 */
+            }
+
+            .squad-editor, #squadSummary {
+                width: 100%; /* 전체 너비 사용 */
+            }
+
+            #squadSummary {
+                position: static; /* 고정 위치 해제 */
+                margin-top: 10px; /* 위쪽 여백 추가 */
             }
 
             .controls {
                 flex-direction: column; /* 컨트롤 요소 세로 배열 */
                 align-items: stretch; /* 너비에 맞춰 늘이기 */
+                gap: 10px; /* 간격 줄이기 */
             }
 
-            .controls select, .controls button, .player-roster-management input, .player-roster-management button {
-                width: 100%; /* 작은 화면에서 컨트롤 너비 100% */
-                margin-bottom: 10px;
+            .controls select, .controls button {
+                width: 100%; /* 버튼과 셀렉트 박스 너비 100% */
             }
 
-            .player-input {
-                padding: 10px;
-                min-width: 120px;
+            .player-roster-management {
+                flex-direction: column; /* 세로 배열 */
+                align-items: stretch; /* 너비에 맞춰 늘이기 */
             }
 
-            .player-input label {
-                font-size: 1em;
+            .player-roster-management input, .player-roster-management button {
+                width: 100%; /* 입력 필드와 버튼 너비 100% */
             }
 
-            .player-input .player-name-select { /* input 대신 select에 적용 */
-                font-size: 1rem;
-                height: 30px;
+            #canvasContainer {
+                aspect-ratio: auto; /* 비율 고정 해제 */
+                height: auto; /* 높이 자동 조정 */
             }
-            .player-roster-management label {
-                margin-bottom: 10px;
+
+            h1 {
+                font-size: 1.8rem; /* 제목 크기 줄이기 */
+                text-align: center; /* 중앙 정렬 */
             }
         }
 
         /* 스쿼드 요약 테이블 스타일 */
         #squadSummary {
             width: 95vw;
-            max-width: 1200px;
-            margin-top: 30px;
+            max-width: 600px;
+            margin-top: 0px;
             margin-bottom: 30px;
-            padding: 20px;
+            padding: 5px;
             background-color: #fff;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -341,7 +392,7 @@
 
         #squadSummary h2 {
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             font-size: 1.8rem;
         }
 
@@ -408,66 +459,66 @@
 </head>
 <body>
     <h1>나만의 축구 스쿼드</h1>
+    <div class="content-container">
+        <!-- 왼쪽 섹션: 스쿼드 편집 영역 -->
+        <div class="squad-editor">
+            <div class="controls">
+                <label for="formationSelect">전술 선택:</label>
+                <select id="formationSelect">
+                    <option value="4-2-3-1">4-2-3-1</option>
+                    <option value="4-1-2-3">4-1-2-3</option>
+                    <option value="4-3-3">4-3-3</option>
+                    <option value="4-4-2">4-4-2</option>
+                    <option value="3-5-2">3-5-2</option>
+                    <option value="5-3-2">5-3-2</option>
+                    <!-- 필요한 경우 다른 전술 옵션 추가 -->
+                </select>
+                <select id="quarterSelect">
+                    <option value="1 쿼터">1 쿼터</option>
+                    <option value="2 쿼터">2 쿼터</option>
+                    <option value="3 쿼터">3 쿼터</option>
+                    <option value="4 쿼터">4 쿼터</option>
+                </select>
+                <button id="saveSquadButton">스쿼드 저장</button> <!-- 스쿼드 저장 버튼 -->
+                <button id="downloadButton">PNG로 저장</button> <!-- PNG 다운로드 버튼 -->
+            </div>
+            <br>
+            <!-- 캔버스 및 선수 이름 입력 필드 컨테이너 -->
+            <div id="canvasContainer">
+                <canvas id="squadCanvas"></canvas> <!-- 캔버스 크기는 JavaScript로 설정됩니다. -->
+                <!-- Player-input 요소들은 이 컨테이너 안에 동적으로 추가됩니다. -->
+            </div>
 
-    <div class="controls">
-        
-        <!-- Removed "선수 추가" and "모두 지우기" buttons -->
-
-        <!-- 새로운 선수 명단 추가 섹션 -->
-        <div class="player-roster-management">
-            <label for="newPlayerNameInput">새 선수 명단 추가 (쉼표 또는 띄어쓰기로 구분):</label>
-            <input type="text" id="newPlayerNameInput" placeholder="예: 김철수, 이영희, 박지성">
-            <button id="addPlayerToRosterButton">명단에 추가</button>
+        </div>
+        <!-- Squad Summary Section -->
+        <div id="squadSummary">
+            <div class="controls">
+                <!-- 새로운 선수 명단 추가 섹션 -->
+                <div class="player-roster-management">
+                    <label for="newPlayerNameInput">새 선수 명단 추가 (쉼표 또는 띄어쓰기로 구분):</label>
+                    <input type="text" id="newPlayerNameInput" placeholder="예: 김철수, 이영희, 박지성">
+                    <button id="addPlayerToRosterButton">명단에 추가</button>
+                </div>
+            </div>
+            <h2>스쿼드 요약</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th data-sort-key="name">선수 이름</th>
+                        <th data-sort-key="quarters">포함된 쿼터</th>
+                        <th data-sort-key="quarterCount">포함된 쿼터 수</th>
+                        <th>작업</th> <!-- 새로운 열 추가 -->
+                    </tr>
+                </thead>
+                <tbody id="squadSummaryBody">
+                <!-- 데이터는 JavaScript로 여기에 삽입됩니다 -->
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 
-    <!-- 캔버스 및 선수 이름 입력 필드 컨테이너 -->
-    <div id="canvasContainer">
-        <canvas id="squadCanvas"></canvas> <!-- 캔버스 크기는 JavaScript로 설정됩니다. -->
-        <!-- Player-input 요소들은 이 컨테이너 안에 동적으로 추가됩니다. -->
-    </div>
-    <br>
-    <div class="controls"> 
-        <label for="formationSelect">전술 선택:</label>
-        <select id="formationSelect">
-            <option value="4-2-3-1">4-2-3-1</option>
-            <option value="4-1-2-3">4-1-2-3</option>
-            <option value="4-3-3">4-3-3</option>
-            <option value="4-4-2">4-4-2</option>
-            <option value="3-5-2">3-5-2</option>
-            <option value="5-3-2">5-3-2</option>
-            <!-- 필요한 경우 다른 전술 옵션 추가 -->
-        </select>
-        <select id="quarterSelect">
-            <option value="1 쿼터">1 쿼터</option>
-            <option value="2 쿼터">2 쿼터</option>
-            <option value="3 쿼터">3 쿼터</option>
-            <option value="4 쿼터">4 쿼터</option>
-        </select>
-        <button id="saveSquadButton">스쿼드 저장</button> <!-- 스쿼드 저장 버튼 -->
-        <button id="downloadButton">PNG로 저장</button> <!-- PNG 다운로드 버튼 --> 
-    </div>
- 
-    <!-- Squad Summary Section -->
-    <div id="squadSummary">
-        <h2>스쿼드 요약</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th data-sort-key="name">선수 이름</th>
-                    <th data-sort-key="quarters">포함된 쿼터</th>
-                    <th data-sort-key="quarterCount">포함된 쿼터 수</th>
-                    <th>작업</th> <!-- 새로운 열 추가 -->
-                </tr>
-            </thead>
-            <tbody id="squadSummaryBody">
-                <!-- 데이터는 JavaScript로 여기에 삽입됩니다 -->
-            </tbody>
-        </table>
-    </div>
-
-
-    <script>
+<script>
         // DOM 요소 가져오기
         const canvas = document.getElementById('squadCanvas');
         const ctx = canvas.getContext('2d');
@@ -508,12 +559,12 @@
         // 전술별 포지션 기본 위치 (원본 1200x750 캔버스 기준 비율)
         // 이 좌표는 캔버스 컨테이너 크기에 따라 자동으로 스케일링됩니다.
         const formations = {
-            '4-2-3-1': { GK: { x: 0.5, y: 0.93 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], DM: [{ x: 0.35, y: 0.55 }, { x: 0.65, y: 0.55 }], LW: { x: 0.25, y: 0.35 }, AM: { x: 0.5, y: 0.3 }, RW: { x: 0.75, y: 0.35 }, ST: { x: 0.5, y: 0.15 } },
-            '4-3-3': { GK: { x: 0.5, y: 0.93 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], CM: [{ x: 0.25, y: 0.55 }, { x: 0.5, y: 0.55 }, { x: 0.75, y: 0.5 }], LW: { x: 0.15, y: 0.25 }, ST: { x: 0.5, y: 0.15 }, RW: { x: 0.85, y: 0.25 } },
-            '3-5-2': { GK: { x: 0.5, y: 0.93 }, CB: [{ x: 0.25, y: 0.7 }, { x: 0.5, y: 0.75 }, { x: 0.75, y: 0.7 }], LM: { x: 0.15, y: 0.45 }, CM: [{ x: 0.35, y: 0.55 }, { x: 0.5, y: 0.4 }, { x: 0.65, y: 0.55 }], RM: { x: 0.85, y: 0.45 }, ST: [{ x: 0.4, y: 0.2 }, { x: 0.6, y: 0.2 }] },
-            '5-3-2': { GK: { x: 0.5, y: 0.93 }, CB: [{ x: 0.1, y: 0.73 }, { x: 0.3, y: 0.75 }, { x: 0.5, y: 0.8 }, { x: 0.7, y: 0.75 }, { x: 0.9, y: 0.73 }], CM: [{ x: 0.25, y: 0.5 }, { x: 0.5, y: 0.55 }, { x: 0.75, y: 0.5 }], ST: [{ x: 0.4, y: 0.2 }, { x: 0.6, y: 0.2 }] },
-            '4-4-2': { GK: { x: 0.5, y: 0.93 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], MF: [{ x: 0.15, y: 0.45 }, { x: 0.35, y: 0.5 }, { x: 0.65, y: 0.5 }, { x: 0.85, y: 0.45 }], ST: [{ x: 0.35, y: 0.2 }, { x: 0.65, y: 0.2 }] },
-            '4-1-2-3': { GK: { x: 0.5, y: 0.93 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], DM: { x: 0.5, y: 0.55 }, CM: [{ x: 0.35, y: 0.4 }, { x: 0.65, y: 0.4 }], LW: { x: 0.15, y: 0.25 }, RW: { x: 0.85, y: 0.25 }, ST: { x: 0.5, y: 0.15 } }
+            '4-2-3-1': { GK: { x: 0.5, y: 0.9 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], DM: [{ x: 0.35, y: 0.55 }, { x: 0.65, y: 0.55 }], LW: { x: 0.25, y: 0.35 }, AM: { x: 0.5, y: 0.3 }, RW: { x: 0.75, y: 0.35 }, ST: { x: 0.5, y: 0.1 } },
+            '4-3-3': { GK: { x: 0.5, y: 0.9 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], CM: [{ x: 0.25, y: 0.45 }, { x: 0.5, y: 0.45 }, { x: 0.75, y: 0.45 }], LW: { x: 0.15, y: 0.25 }, ST: { x: 0.5, y: 0.15 }, RW: { x: 0.85, y: 0.25 } },
+            '3-5-2': { GK: { x: 0.5, y: 0.9 }, CB: [{ x: 0.25, y: 0.7 }, { x: 0.5, y: 0.75 }, { x: 0.75, y: 0.7 }], LM: { x: 0.15, y: 0.45 }, CM: [{ x: 0.35, y: 0.55 }, { x: 0.5, y: 0.4 }, { x: 0.65, y: 0.55 }], RM: { x: 0.85, y: 0.45 }, ST: [{ x: 0.4, y: 0.2 }, { x: 0.6, y: 0.2 }] },
+            '5-3-2': { GK: { x: 0.5, y: 0.93 }, CB: [{ x: 0.1, y: 0.7 }, { x: 0.3, y: 0.72 }, { x: 0.5, y: 0.75 }, { x: 0.7, y: 0.72 }, { x: 0.9, y: 0.7 }], CM: [{ x: 0.25, y: 0.45 }, { x: 0.5, y: 0.50 }, { x: 0.75, y: 0.45 }], ST: [{ x: 0.4, y: 0.2 }, { x: 0.6, y: 0.2 }] },
+            '4-4-2': { GK: { x: 0.5, y: 0.9 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], MF: [{ x: 0.15, y: 0.45 }, { x: 0.35, y: 0.5 }, { x: 0.65, y: 0.5 }, { x: 0.85, y: 0.45 }], ST: [{ x: 0.35, y: 0.2 }, { x: 0.65, y: 0.2 }] },
+            '4-1-2-3': { GK: { x: 0.5, y: 0.9 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], DM: { x: 0.5, y: 0.55 }, CM: [{ x: 0.35, y: 0.4 }, { x: 0.65, y: 0.4 }], LW: { x: 0.15, y: 0.25 }, RW: { x: 0.85, y: 0.25 }, ST: { x: 0.5, y: 0.15 } }
         };
 
         /**
