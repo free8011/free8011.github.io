@@ -167,9 +167,68 @@
             align-items: center;
             z-index: 10; /* 캔버스 위에 표시 */
             min-width: 150px; /* 최소 너비 */
-            transition: transform 0.1s ease-out; /* 드래그 시 부드러운 피드백 */
+            /*transition: transform 0.1s ease-out; !* 드래그 시 부드러운 피드백 *!*/
+            transition: all 0.3s ease;
         }
 
+        /* 태블릿 크기 화면 (768px ~ 1024px) */
+        @media (max-width: 1024px) {
+            .player-input {
+                min-width: 120px;
+                padding: 10px;
+                border-radius: 12px;
+            }
+
+            .player-input label {
+                font-size: 0.9em;
+            }
+
+            .player-input .player-name-select {
+                font-size: 0.9em;
+                padding: 4px;
+            }
+        }
+
+        /* 모바일 크기 화면 (768px 이하) */
+        @media (max-width: 768px) {
+            .player-input {
+                min-width: 90px;
+                padding: 8px;
+                border-radius: 10px;
+                border-width: 1px;
+            }
+
+            .player-input label {
+                font-size: 0.8em;
+                margin-bottom: 4px;
+            }
+
+            .player-input .player-name-select {
+                font-size: 0.8em;
+                padding: 3px;
+                width: 85px;
+            }
+        }
+
+        /* 작은 모바일 화면 (480px 이하) */
+        @media (max-width: 480px) {
+            .player-input {
+                min-width: 70px;
+                padding: 5px;
+                border-radius: 8px;
+            }
+
+            .player-input label {
+                font-size: 0.7em;
+                margin-bottom: 2px;
+            }
+
+            .player-input .player-name-select {
+                font-size: 0.7em;
+                padding: 2px;
+                width: 65px;
+            }
+        }
         /* 선수 이름 입력 필드 활성화 시 효과 */
         .player-input:active {
             cursor: grabbing; /* 드래그 중인 커서 */
