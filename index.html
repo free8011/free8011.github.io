@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 축구 스쿼드</title>
+    <!-- html2canvas 라이브러리: 캔버스 내용을 이미지로 저장하는 데 사용됩니다. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        /* 기본 스타일 및 폰트 설정 */
+        body {
+            font-family: 'Inter', sans-serif; /* Inter 폰트 사용 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0; /* 밝은 회색 배경 */
+            min-height: 100vh; /* 뷰포트 전체 높이 사용 */
+            width: 100%;
+        }
+
+        /* 제목 스타일 */
+        h1 {
+            color: #333;
+            margin-top: 20px;
+            font-size: 2.5rem; /* 큰 제목 */
+        }
+
+        /* 컨트롤 버튼 및 셀렉트 박스 컨테이너 */
+        .controls {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap; /* 작은 화면에서 요소들이 줄바꿈되도록 허용 */
+            justify-content: center; /* 컨트롤 요소를 중앙 정렬 */
+            align-items: center;
+            gap: 15px; /* 요소 간 간격 */
+            padding: 10px;
+        }
+
+        /* 컨트롤 라벨 스타일 */
+        .controls label {
+            font-weight: bold;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        /* 컨트롤 셀렉트 박스 및 버튼 스타일 */
+        .controls select, .controls button {
+            padding: 10px 15px; /* 패딩 증가 */
+            border: 1px solid #ccc;
+            border-radius: 8px; /* 더 둥근 모서리 */
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease; /* 부드러운 전환 효과 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 은은한 그림자 */
+        }
+
+        /* 컨트롤 버튼 기본 스타일 */
+        .controls button {
+            background-color: #4CAF50; /* 초록색 배경 */
+            color: white;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase; /* 대문자 텍스트 */
+        }
+
+        /* 컨트롤 버튼 호버 효과 */
+        .controls button:hover {
+            background-color: #45a049; /* 어두운 초록색 */
+            transform: translateY(-2px); /* 살짝 위로 뜨는 효과 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* 다운로드 버튼 특정 스타일 */
+        #downloadButton {
+            background-color: #42b72a;
+        }
+        
+        #downloadButton:hover {
+            background-color: #36a420;
+        }
+
+        /* 스쿼드 저장 버튼 스타일 */
+        #saveSquadButton {
+            background-color: #007bff; /* 파란색 */
+        }
+        #saveSquadButton:hover {
+            background-color: #0056b3;
+        }
+
+
+        /* 캔버스 컨테이너 (반응형) */
+        #canvasContainer {
+            position: relative;
+            width: 95vw; /* 뷰포트 너비의 95% 사용 */
+            max-width: 1200px; /* 최대 너비 1200px */
+            aspect-ratio: 1200 / 750; /* 캔버스 비율 유지 (가로:세로 = 1200:750) */
+            border: 4px solid #333; /* 두꺼운 테두리 */
+            border-radius: 15px; /* 둥근 모서리 */
+            overflow: hidden; /* 내용이 컨테이너 밖으로 나가지 않도록 숨김 */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* 강한 그림자 */
+            margin-bottom: 20px; /* 캔버스 아래 여백 */
+        }
+
+        /* 스쿼드 캔버스 스타일 */
+        #squadCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* 컨테이너에 맞춰 너비 100% */
+            height: 100%; /* 컨테이너에 맞춰 높이 100% */
+            display: block; /* 블록 요소로 설정 */
+        }
+
+        /* 선수 이름 입력 필드 스타일 */
+        .player-input {
+            position: absolute;
+            background-color: rgba(8, 49, 11, 0.97); /* 어두운 초록색 배경, 반투명 */
+            border: 2px solid #ccc; /* 두꺼운 테두리 */
+            padding: 15px; /* 패딩 증가 */
+            border-radius: 15px; /* 더 둥근 모서리 */
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.3); /* 강한 그림자 */
+            font-weight: bold;
+            cursor: grab; /* 드래그 가능한 커서 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10; /* 캔버스 위에 표시 */
+            min-width: 150px; /* 최소 너비 */
+            transition: transform 0.1s ease-out; /* 드래그 시 부드러운 피드백 */
+        }
+
+        /* 선수 이름 입력 필드 활성화 시 효과 */
+        .player-input:active {
+            cursor: grabbing; /* 드래그 중인 커서 */
+            transform: scale(1.02); /* 살짝 커지는 효과 */
+        }
+
+        /* 선수 라벨 스타일 */
+        .player-input label {
+            font-size: 1.1em; /* 약간 큰 폰트 */
+            color: #ffffff; /* 흰색 글자 */
+            margin-bottom: 6px; /* 아래 여백 증가 */
+        }
+
+        /* 선수 이름 드롭다운 (select) 스타일 */
+        .player-input .player-name-select {
+            width: calc(100% - 10px); /* 패딩을 고려하여 너비 조정 */
+            height: 35px; /* 높이 증가 */
+            padding: 5px; /* 패딩 조정 */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem; /* 약간 큰 폰트 */
+            color: #333; /* 어두운 글자색 */
+            background-color: #f9f9f9; /* 밝은 배경색 */
+            -webkit-appearance: none; /* 기본 드롭다운 화살표 제거 */
+            -moz-appearance: none;
+            appearance: none;
+            /* 커스텀 드롭다운 화살표 SVG 아이콘 */
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C114.7L159.2%2C242.5c-2.3%2C2.3-5.5%2C3.6-8.8%2C3.6s-6.5-1.3-8.8-3.6L5.3%2C114.7c-4.7-4.7-4.7-12.3%2C0-17s12.3-4.7%2C17%2C0l137.9%2C137.9c0.8%2C0.8%2C1.8%2C1.2%2C2.8%2C1.2s2-0.4%2C2.8-1.2l137.9-137.9c4.7-4.7%2C12.3-4.7%2C17%2C0S291.6%2C110%2C287%2C114.7z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 12px;
+            padding-right: 30px; /* 커스텀 화살표를 위한 공간 */
+        }
+
+        /* 선수 명단 관리 섹션 스타일 */
+        .player-roster-management {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #e0e0e0;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .player-roster-management label {
+            flex-basis: 100%; /* 작은 화면에서 라벨이 한 줄 전체 차지 */
+            text-align: center;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .player-roster-management input[type="text"] {
+            flex-grow: 1; /* 남은 공간을 채우도록 성장 */
+            padding: 8px 12px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .player-roster-management button {
+            background-color: #007bff; /* 파란색 버튼 */
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .player-roster-management button:hover {
+            background-color: #0056b3;
+        }
+
+
+        /* 사용자 정의 확인 모달 오버레이 */
+        .modal-overlay {
+            position: fixed; /* 뷰포트에 고정 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* 반투명 검정 배경 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* 최상위 레이어 */
+            visibility: hidden; /* 기본적으로 숨김 */
+            opacity: 0; /* 기본 투명도 0 */
+            transition: opacity 0.3s ease, visibility 0.3s ease; /* 부드러운 나타나기/사라지기 효과 */
+        }
+
+        /* 모달이 보일 때 스타일 */
+        .modal-overlay.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* 모달 콘텐츠 박스 */
+        .modal-content {
+            background-color: #fff; /* 흰색 배경 */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* 그림자 */
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            transform: translateY(-20px); /* 초기 위치 (아래로 살짝 내려와서 나타남) */
+            transition: transform 0.3s ease;
+        }
+
+        /* 모달이 보일 때 콘텐츠 위치 */
+        .modal-overlay.visible .modal-content {
+            transform: translateY(0); /* 원래 위치로 이동 */
+        }
+
+        /* 모달 메시지 텍스트 */
+        .modal-content p {
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* 모달 버튼 컨테이너 */
+        .modal-buttons button {
+            margin: 0 10px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 모달 확인 버튼 */
+        .modal-buttons button.confirm {
+            background-color: #dc3545; /* 빨간색 (위험한 작업) */
+            color: white;
+        }
+
+        .modal-buttons button.confirm:hover {
+            background-color: #c82333;
+        }
+
+        /* 모달 취소 버튼 */
+        .modal-buttons button.cancel {
+            background-color: #6c757d; /* 회색 (취소) */
+            color: white;
+        }
+
+        .modal-buttons button.cancel:hover {
+            background-color: #5a6268;
+        }
+
+        /* 미디어 쿼리: 768px 이하 화면 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* 제목 크기 줄이기 */
+            }
+
+            .controls {
+                flex-direction: column; /* 컨트롤 요소 세로 배열 */
+                align-items: stretch; /* 너비에 맞춰 늘이기 */
+            }
+
+            .controls select, .controls button, .player-roster-management input, .player-roster-management button {
+                width: 100%; /* 작은 화면에서 컨트롤 너비 100% */
+                margin-bottom: 10px;
+            }
+
+            .player-input {
+                padding: 10px;
+                min-width: 120px;
+            }
+
+            .player-input label {
+                font-size: 1em;
+            }
+
+            .player-input .player-name-select { /* input 대신 select에 적용 */
+                font-size: 1rem;
+                height: 30px;
+            }
+            .player-roster-management label {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* 스쿼드 요약 테이블 스타일 */
+        #squadSummary {
+            width: 95vw;
+            max-width: 1200px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        #squadSummary h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        #squadSummary table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        #squadSummary th, #squadSummary td {
+            border: 1px solid #ddd;
+            padding: 12px 10px;
+            text-align: left;
+        }
+
+        #squadSummary th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #555;
+            text-align: center;
+            cursor: pointer; /* Make headers clickable for sorting */
+        }
+
+        #squadSummary th:hover {
+            background-color: #e6e6e6; /* Hover effect for sortable headers */
+        }
+
+        #squadSummary td {
+            text-align: center;
+            color: #333;
+        }
+
+        #squadSummary tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        #squadSummary tbody tr:hover {
+            background-color: #e6f7ff; /* 호버 시 배경색 변경 */
+        }
+    </style>
+</head>
+<body>
+    <h1>나만의 축구 스쿼드</h1>
+
+    <div class="controls">
+        
+        <!-- Removed "선수 추가" and "모두 지우기" buttons -->
+
+        <!-- 새로운 선수 명단 추가 섹션 -->
+        <div class="player-roster-management">
+            <label for="newPlayerNameInput">새 선수 명단 추가 (쉼표 또는 띄어쓰기로 구분):</label>
+            <input type="text" id="newPlayerNameInput" placeholder="예: 김철수, 이영희, 박지성">
+            <button id="addPlayerToRosterButton">명단에 추가</button>
+        </div>
+    </div>
+
+    <!-- 캔버스 및 선수 이름 입력 필드 컨테이너 -->
+    <div id="canvasContainer">
+        <canvas id="squadCanvas"></canvas> <!-- 캔버스 크기는 JavaScript로 설정됩니다. -->
+        <!-- Player-input 요소들은 이 컨테이너 안에 동적으로 추가됩니다. -->
+    </div>
+    <br>
+    <div class="controls"> 
+        <label for="formationSelect">전술 선택:</label>
+        <select id="formationSelect">
+            <option value="4-2-3-1">4-2-3-1</option>
+            <option value="4-1-2-3">4-1-2-3</option>
+            <option value="4-3-3">4-3-3</option>
+            <option value="4-4-2">4-4-2</option>
+            <option value="3-5-2">3-5-2</option>
+            <option value="5-3-2">5-3-2</option>
+            <!-- 필요한 경우 다른 전술 옵션 추가 -->
+        </select>
+        <select id="quarterSelect">
+            <option value="1 쿼터">1 쿼터</option>
+            <option value="2 쿼터">2 쿼터</option>
+            <option value="3 쿼터">3 쿼터</option>
+            <option value="4 쿼터">4 쿼터</option>
+        </select>
+        <button id="saveSquadButton">스쿼드 저장</button> <!-- 스쿼드 저장 버튼 -->
+        <button id="downloadButton">PNG로 저장</button> <!-- PNG 다운로드 버튼 --> 
+    </div>
+ 
+    <!-- Squad Summary Section -->
+    <div id="squadSummary">
+        <h2>스쿼드 요약</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th data-sort-key="name">선수 이름</th>
+                    <th data-sort-key="quarters">포함된 쿼터</th>
+                    <th data-sort-key="quarterCount">포함된 쿼터 수</th>
+                </tr>
+            </thead>
+            <tbody id="squadSummaryBody">
+                <!-- 데이터는 JavaScript로 여기에 삽입됩니다 -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Custom confirmation modal (removed as clear button is removed) -->
+    <!-- <div id="confirmationModal" class="modal-overlay">
+        <div class="modal-content">
+            <p>모든 선수를 지우시겠습니까?</p>
+            <div class="modal-buttons">
+                <button id="modalConfirmBtn" class="confirm">예</button>
+                <button id="modalCancelBtn" class="cancel">아니오</button>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        // DOM 요소 가져오기
+        const canvas = document.getElementById('squadCanvas');
+        const ctx = canvas.getContext('2d');
+        const formationSelect = document.getElementById('formationSelect');
+        // Removed addPlayerButton and clearPlayersButton
+        const downloadButton = document.getElementById('downloadButton');
+        const canvasContainer = document.getElementById('canvasContainer');
+        const quarterSelect = document.getElementById('quarterSelect');
+        // Removed confirmationModal and its buttons
+        // const confirmationModal = document.getElementById('confirmationModal');
+        // const modalConfirmBtn = document.getElementById('modalConfirmBtn');
+        // const modalCancelBtn = document.getElementById('modalCancelBtn');
+
+        // 새롭게 추가된 선수 명단 관리 요소들
+        const newPlayerNameInput = document.getElementById('newPlayerNameInput');
+        const addPlayerToRosterButton = document.getElementById('addPlayerToRosterButton');
+        const saveSquadButton = document.getElementById('saveSquadButton'); // 스쿼드 저장 버튼
+        const squadSummaryBody = document.getElementById('squadSummaryBody'); // 요약 테이블 본문
+        const squadSummaryTable = document.querySelector('#squadSummary table'); // 헤더 클릭을 위한 테이블 요소
+
+        // 캔버스 크기를 부모 컨테이너에 맞춰 동적으로 설정하는 함수
+        function setCanvasDimensions() {
+            canvas.width = canvasContainer.clientWidth;
+            canvas.height = canvasContainer.clientHeight;
+        }
+
+        let players = []; // 선수 데이터 배열: { id, position, name, x, y, inputElement }
+        let selectedPlayer = null; // 드래그 중인 선수를 추적하는 변수
+        let offsetX, offsetY; // 드래그 시작 시 마우스와 요소 간의 오프셋
+
+        // 쿼터별 저장된 스쿼드를 담는 객체
+        // 데이터는 메모리에 저장되며, 페이지를 새로고침하면 사라집니다.
+        let savedSquads = {}; 
+
+        // 미리 정의된 선수 이름 목록 (초기값)
+        const playerNames = ["선택"];
+
+        // 스쿼드 요약 테이블 정렬 상태
+        let currentSortColumn = 'name'; // 기본 정렬 기준은 이름
+        let currentSortDirection = 'asc'; // 기본 정렬 방향은 오름차순
+
+        // 전술별 포지션 기본 위치 (원본 1200x750 캔버스 기준 비율)
+        // 이 좌표는 캔버스 컨테이너 크기에 따라 자동으로 스케일링됩니다.
+        const formations = {
+            '4-2-3-1': { GK: { x: 0.5, y: 0.93 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], DM: [{ x: 0.35, y: 0.55 }, { x: 0.65, y: 0.55 }], LW: { x: 0.25, y: 0.35 }, AM: { x: 0.5, y: 0.3 }, RW: { x: 0.75, y: 0.35 }, ST: { x: 0.5, y: 0.15 } },
+            '4-3-3': { GK: { x: 0.5, y: 0.93 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], CM: [{ x: 0.25, y: 0.55 }, { x: 0.5, y: 0.55 }, { x: 0.75, y: 0.5 }], LW: { x: 0.15, y: 0.25 }, ST: { x: 0.5, y: 0.15 }, RW: { x: 0.85, y: 0.25 } },
+            '3-5-2': { GK: { x: 0.5, y: 0.93 }, CB: [{ x: 0.25, y: 0.7 }, { x: 0.5, y: 0.75 }, { x: 0.75, y: 0.7 }], LM: { x: 0.15, y: 0.45 }, CM: [{ x: 0.35, y: 0.55 }, { x: 0.5, y: 0.4 }, { x: 0.65, y: 0.55 }], RM: { x: 0.85, y: 0.45 }, ST: [{ x: 0.4, y: 0.2 }, { x: 0.6, y: 0.2 }] },
+            '5-3-2': { GK: { x: 0.5, y: 0.93 }, CB: [{ x: 0.1, y: 0.73 }, { x: 0.3, y: 0.75 }, { x: 0.5, y: 0.8 }, { x: 0.7, y: 0.75 }, { x: 0.9, y: 0.73 }], CM: [{ x: 0.25, y: 0.5 }, { x: 0.5, y: 0.55 }, { x: 0.75, y: 0.5 }], ST: [{ x: 0.4, y: 0.2 }, { x: 0.6, y: 0.2 }] },
+            '4-4-2': { GK: { x: 0.5, y: 0.93 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], MF: [{ x: 0.15, y: 0.45 }, { x: 0.35, y: 0.5 }, { x: 0.65, y: 0.5 }, { x: 0.85, y: 0.45 }], ST: [{ x: 0.35, y: 0.2 }, { x: 0.65, y: 0.2 }] },
+            '4-1-2-3': { GK: { x: 0.5, y: 0.93 }, DF: [{ x: 0.12, y: 0.7 }, { x: 0.32, y: 0.75 }, { x: 0.68, y: 0.75 }, { x: 0.88, y: 0.7 }], DM: { x: 0.5, y: 0.55 }, CM: [{ x: 0.35, y: 0.4 }, { x: 0.65, y: 0.4 }], LW: { x: 0.15, y: 0.25 }, RW: { x: 0.85, y: 0.25 }, ST: { x: 0.5, y: 0.15 } }
+        };
+
+        /**
+         * 축구장 필드를 캔버스에 그리는 함수
+         * @param {CanvasRenderingContext2D} targetCtx - 그림을 그릴 캔버스의 2D 컨텍스트
+         * @param {string} quarterText - 표시할 쿼터 텍스트 (예: "1 쿼터")
+         */
+        function drawField(targetCtx, quarterText) {
+            const canvasWidth = targetCtx.canvas.width;
+            const canvasHeight = targetCtx.canvas.height;
+
+            // 녹색 배경 그리기
+            targetCtx.fillStyle = '#0f8017'; /* 잔디밭 색상 */
+            targetCtx.fillRect(0, 0, canvasWidth, canvasHeight);
+
+            // 좌측 교체 선수 영역 그리기 (반투명 검은색)
+            targetCtx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+            const sidebarHeight = canvasHeight * 0.1; // 캔버스 너비의 10%
+            targetCtx.fillRect(0, 0, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*1, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*2, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*3, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*4, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*5, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*6, canvasWidth, sidebarHeight);
+
+            targetCtx.strokeStyle = 'white'; /* 라인 색상 */
+            targetCtx.lineWidth = 6; /* 라인 두께 */
+            targetCtx.beginPath();
+
+            // 상단 아크 (센터 서클 일부) - 캔버스 크기에 비례하여 스케일링
+            targetCtx.arc(canvasWidth / 2, 0, canvasWidth * 0.083, 0, Math.PI, false);
+
+            // 페널티 박스 - 캔버스 크기에 비례하여 스케일링 및 중앙 정렬
+            const pBoxWidth = canvasWidth * (500 / 1200);
+            const pBoxHeight = canvasHeight * (200 / 750);
+            const pBoxX = (canvasWidth - pBoxWidth) / 2;
+            const pBoxY = canvasHeight * (550 / 750);
+            targetCtx.strokeRect(pBoxX, pBoxY, pBoxWidth, pBoxHeight);
+            
+            // 골 에어리어 - 캔버스 크기에 비례하여 스케일링 및 중앙 정렬
+            const gBoxWidth = canvasWidth * (220 / 1200);
+            const gBoxHeight = canvasHeight * (80 / 750);
+            const gBoxX = (canvasWidth - gBoxWidth) / 2;
+            const gBoxY = canvasHeight * (670 / 750);
+            targetCtx.strokeRect(gBoxX, gBoxY, gBoxWidth, gBoxHeight);
+
+            // 페널티 아크 - 캔버스 크기에 비례하여 스케일링
+            const pArcRadius = canvasWidth * (70 / 1200);
+            targetCtx.moveTo(canvasWidth / 2 + pArcRadius, pBoxY); // 아크 시작점으로 이동
+            targetCtx.arc(canvasWidth / 2, pBoxY, pArcRadius, 0, Math.PI, true);
+
+            targetCtx.stroke(); /* 경로 그리기 */
+
+            // 쿼터 텍스트 그리기
+            if (quarterText) {
+                targetCtx.fillStyle = 'rgba(255, 255, 255, 0.9)'; /* 흰색, 반투명 */
+                targetCtx.font = `bold ${canvasHeight * 0.04}px Arial`; /* 폰트 크기 캔버스 높이에 비례하여 스케일링 */
+                targetCtx.textAlign = 'left';
+                targetCtx.textBaseline = 'top';
+                targetCtx.fillText(quarterText, canvasWidth * 0.016, canvasHeight * 0.026); /* 위치도 캔버스 크기에 비례 */
+            }
+        }
+
+        // 캔버스 배경 (축구장 필드)을 다시 그리는 메인 함수
+        function drawBackground() {
+            setCanvasDimensions(); // 캔버스 크기 업데이트
+            const selectedQuarter = quarterSelect.value;
+            drawField(ctx, selectedQuarter);
+        }
+
+        /**
+         * 선수 이름 입력 필드 (DIV 요소)를 생성하고 컨테이너에 추가하는 함수
+         * @param {number} id - 선수의 고유 ID
+         * @param {string} position - 선수의 포지션 (예: "GK", "DF")
+         * @param {string} name - 선수의 이름
+         * @param {number} x - 원본 캔버스 기준 x 좌표
+         * @param {number} y - 원본 캔버스 기준 y 좌표
+         */
+        function createPlayerInput(id, position, name, x, y) {
+            const playerDiv = document.createElement('div');
+            playerDiv.className = 'player-input';
+            playerDiv.id = `player-${id}`;
+
+            const label = document.createElement('label');
+            label.textContent = position;
+            playerDiv.appendChild(label);
+
+            // 기존 input 대신 select 요소 생성
+            const select = document.createElement('select');
+            select.className = 'player-name-select'; // CSS 스타일링을 위한 클래스 추가
+
+            // "선택" 옵션 추가
+            const defaultOption = document.createElement('option');
+            defaultOption.value = "선택";
+            defaultOption.textContent = "선택";
+            select.appendChild(defaultOption);
+
+            // 현재 캔버스에 이미 선택된 선수 이름 목록을 가져옵니다. (현재 플레이어 제외)
+            const selectedNamesOnField = players
+                .filter(p => p.id !== id && p.name !== "선택")
+                .map(p => p.name);
+
+            // playerNames 배열의 각 이름을 옵션으로 추가합니다.
+            // "선택" 옵션을 제외하고 정렬한 뒤, 현재 캔버스에 선택되지 않은 이름만 추가합니다.
+            // 단, 현재 플레이어의 이름은 항상 포함되어야 합니다.
+            playerNames
+                .filter(n => n !== "선택")
+                .sort((a, b) => a.localeCompare(b))
+                .forEach(playerName => {
+                    if (!selectedNamesOnField.includes(playerName) || playerName === name) {
+                        const option = document.createElement('option');
+                        option.value = playerName;
+                        option.textContent = playerName;
+                        select.appendChild(option);
+                    }
+                });
+
+            // 현재 플레이어의 이름에 해당하는 옵션 선택 (이름이 없을 경우 "선택"이 기본값)
+            select.value = name || "선택";
+
+            // 드롭다운 값 변경 시 플레이어 이름 업데이트 및 전체 UI 갱신
+            select.addEventListener('change', (e) => {
+                const player = players.find(p => p.id === id);
+                if (player) {
+                    // 이전 이름이 "선택"이 아니고, 새로운 이름도 "선택"이 아닌 경우에만
+                    // 이전에 선택되었던 선수를 선택 가능 목록으로 되돌려야 합니다.
+                    const oldName = player.name;
+                    player.name = e.target.value;
+                    
+                    // 만약 이전 이름이 '선택'이 아니었다면, 그 이름을 다른 드롭다운에서 다시 선택 가능하도록 함
+                    // (이 부분은 renderPlayers() 호출 시 자동으로 처리됩니다.)
+
+                    renderPlayers(); // 드롭다운 옵션 업데이트를 위해 모든 선수 입력 필드 다시 렌더링
+                    updateSquadSummaryTable(); // 선수 이름 변경 후 요약 테이블 업데이트
+                }
+            });
+            playerDiv.appendChild(select); // select 요소를 playerDiv에 추가
+
+            canvasContainer.appendChild(playerDiv); // 캔버스 컨테이너에 추가 (오버레이)
+
+            // 현재 컨테이너의 크기 가져오기
+            const containerWidth = canvasContainer.clientWidth;
+            const containerHeight = canvasContainer.clientHeight;
+            const originalCanvasWidth = 1200; // 원본 디자인 기준 너비
+            const originalCanvasHeight = 750; // 원본 디자인 기준 높이
+
+            // 원본 좌표를 현재 컨테이너 크기에 맞춰 스케일링
+            const scaledX = (x / originalCanvasWidth) * containerWidth;
+            const scaledY = (y / originalCanvasHeight) * containerHeight;
+
+            // playerDiv가 DOM에 추가된 후, offsetWidth/Height를 사용하여 정확한 위치 설정
+            // playerDiv의 중앙이 scaledX, scaledY에 오도록 조정
+            playerDiv.style.left = `${scaledX - playerDiv.offsetWidth / 2}px`;
+            playerDiv.style.top = `${scaledY - playerDiv.offsetHeight / 2}px`;
+
+            // 선수 객체에 스케일링된 좌표 저장 (드래그 시 사용)
+            const player = players.find(p => p.id === id);
+            if (player) {
+                player.x = x; // 원본 x 좌표 유지
+                player.y = y; // 원본 y 좌표 유지
+            }
+
+            // 드래그 기능 추가
+            playerDiv.addEventListener('mousedown', (e) => {
+                // select 또는 input 요소에서 클릭이 시작된 경우 드래그 시작 안 함
+                if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') {
+                    return;
+                }
+                selectedPlayer = { id: id, element: playerDiv };
+                // 마우스 클릭 위치와 요소 왼쪽 상단 모서리 간의 오프셋 계산
+                offsetX = e.clientX - playerDiv.getBoundingClientRect().left;
+                offsetY = e.clientY - playerDiv.getBoundingClientRect().top;
+                playerDiv.style.cursor = 'grabbing';
+                e.preventDefault(); // 기본 텍스트 선택 방지
+            });
+
+            return playerDiv;
+        }
+
+        // 모든 선수 이름 입력 필드를 다시 렌더링하는 함수
+        function renderPlayers() {
+            // 기존 선수 입력 필드 제거
+            canvasContainer.querySelectorAll('.player-input').forEach(el => el.remove());
+            // 새롭게 선수 입력 필드 생성 및 추가
+            players.forEach(player => {
+                player.inputElement = createPlayerInput(player.id, player.position, player.name, player.x, player.y);
+            });
+        }
+
+        /**
+         * 선택된 전술에 따라 선수들을 재배치하는 함수
+         * @param {string} formation - 선택된 전술 문자열 (예: "4-2-3-1")
+         */
+        function applyFormation(formation) {
+            players = []; // 선수 목록 초기화
+            const currentFormation = formations[formation];
+            let idCounter = 0;
+
+            const originalCanvasWidth = 1200;
+            const originalCanvasHeight = 750;
+
+            // 전술에 따라 선수 포지션 설정
+            for (const positionType in currentFormation) {
+                const positions = currentFormation[positionType];
+                if (Array.isArray(positions)) {
+                    positions.forEach((pos) => {
+                        // 원본 좌표를 저장
+                        players.push({ id: idCounter++, position: `${positionType}`, name: '선택', x: pos.x * originalCanvasWidth, y: pos.y * originalCanvasHeight, inputElement: null });
+                    });
+                } else {
+                    // 원본 좌표를 저장
+                    players.push({ id: idCounter++, position: positionType, name: '선택', x: positions.x * originalCanvasWidth, y: positions.y * originalCanvasHeight, inputElement: null });
+                }
+            }
+            renderPlayers(); // 선수 다시 렌더링
+        }
+
+        /**
+         * 스쿼드 요약 테이블을 선수별 쿼터 포함 정보를 포함하여 업데이트하는 함수
+         */
+        function updateSquadSummaryTable() {
+            // 기존 테이블 본문 지우기
+            squadSummaryBody.innerHTML = '';
+
+            const playerSummaryData = [];
+            // 모든 선수 명단을 기반으로 요약 데이터 초기화
+            playerNames.forEach(name => {
+                if (name !== "선택") {
+                    const quartersIncluded = [];
+                    for (const quarter in savedSquads) {
+                        const squad = savedSquads[quarter];
+                        if (squad.some(p => p.name === name)) {
+                            quartersIncluded.push(quarter);
+                        }
+                    }
+                    playerSummaryData.push({ name: name, quarters: quartersIncluded.sort(), quarterCount: quartersIncluded.length });
+                }
+            });
+
+            // 현재 정렬 기준과 방향에 따라 데이터 정렬
+            playerSummaryData.sort((a, b) => {
+                let comparison = 0;
+                if (currentSortColumn === 'name') {
+                    comparison = a.name.localeCompare(b.name);
+                } else if (currentSortColumn === 'quarters') {
+                    // 쿼터 이름 문자열로 정렬 (쿼터 수가 아닌 문자열 자체)
+                    comparison = a.quarters.join(', ').localeCompare(b.quarters.join(', '));
+                } else if (currentSortColumn === 'quarterCount') {
+                    comparison = a.quarterCount - b.quarterCount;
+                }
+                return currentSortDirection === 'asc' ? comparison : -comparison;
+            });
+
+            // 테이블 본문에 데이터 채우기
+            playerSummaryData.forEach(player => {
+                const row = squadSummaryBody.insertRow();
+                const cellName = row.insertCell();
+                const cellQuarters = row.insertCell();
+                const cellQuarterCount = row.insertCell(); // 새로운 셀 추가
+                cellName.textContent = player.name;
+                cellQuarters.textContent = player.quarters.join(', '); // 쉼표로 구분하여 표시
+                cellQuarterCount.textContent = player.quarterCount; // 쿼터 수 표시
+            });
+        }
+
+
+        // 이벤트 리스너: 전술 선택 변경 시
+        formationSelect.addEventListener('change', (e) => {
+            applyFormation(e.target.value);
+            // 전술 변경 시에도 드롭다운 옵션이 업데이트되도록 renderPlayers 호출
+            renderPlayers();
+            updateSquadSummaryTable(); // 요약 테이블 업데이트
+        });
+
+        // 이벤트 리스너: 쿼터 선택 변경 시 배경 다시 그리기 및 스쿼드 불러오기
+        quarterSelect.addEventListener('change', (e) => {
+            drawBackground(); // 필드 배경 다시 그리기
+            const newQuarter = e.target.value;
+            if (savedSquads[newQuarter]) {
+                // 해당 쿼터에 저장된 스쿼드가 있다면 불러오기
+                players = JSON.parse(JSON.stringify(savedSquads[newQuarter]));
+                console.log(`'${newQuarter}' 스쿼드를 불러왔습니다.`);
+            } else {
+                // 저장된 스쿼드가 없다면 기본 전술 적용
+                applyFormation(formationSelect.value); // 현재 전술 다시 적용
+                console.log(`'${newQuarter}'에 저장된 스쿼드가 없어 기본 전술을 적용합니다.`);
+            }
+            renderPlayers(); // 불러온/기본 스쿼드에 따라 선수 다시 렌더링
+            updateSquadSummaryTable(); // 새 스쿼드 로드 후 요약 테이블 업데이트
+        });
+
+        // Event listener: On "Add Player" button click (add SUB player to field)
+        // Removed as requested
+        /*
+        addPlayerButton.addEventListener('click', () => {
+            const newId = players.length > 0 ? Math.max(...players.map(p => p.id)) + 1 : 0;
+            const originalCanvasWidth = 1200;
+            const originalCanvasHeight = 750;
+            const sidebarWidthRatio = 0.2; // 캔버스 너비의 20%를 사이드바로 사용
+            const playerBoxHeightOriginal = 80; // 선수 입력 div의 대략적인 원본 높이
+
+            // 현재 'SUB' 선수들의 수 계산 (사이드바에 새로 추가될 선수의 Y 위치 계산용)
+            const subPlayersCount = players.filter(p => p.position === 'SUB').length;
+
+            // 새로운 'SUB' 선수의 X, Y 위치 계산 (사이드바 영역 중앙에 배치)
+            const subPlayerX = (originalCanvasWidth * sidebarWidthRatio) / 2; // 사이드바 영역의 중앙 X
+            // Y 위치는 기존 SUB 선수들 아래로 순차적으로 배치
+            const subPlayerY = originalCanvasHeight * 0.1 + (subPlayersCount * (playerBoxHeightOriginal + 20)); // 시작 Y + (개수 * 간격)
+
+            players.push({
+                id: newId,
+                position: 'SUB', // 'SUB'은 교체 선수를 의미합니다.
+                name: '선택', // 새로운 선수의 기본 이름은 "선택"으로 설정
+                x: subPlayerX,
+                y: subPlayerY,
+                inputElement: null
+            });
+            renderPlayers(); // 선수 다시 렌더링
+            updateSquadSummaryTable(); // 선수 추가 후 요약 테이블 업데이트
+        });
+        */
+
+        // Event listener: On "Clear All" button click (using custom modal)
+        // Removed as requested
+        /*
+        clearPlayersButton.addEventListener('click', () => {
+            confirmationModal.classList.add('visible'); // 모달 표시
+        });
+        */
+
+        // Removed modal confirm/cancel event listeners as the modal is removed
+        /*
+        modalConfirmBtn.addEventListener('click', () => {
+            players = []; // 선수 목록 초기화
+            renderPlayers(); // 선수 다시 렌더링
+            confirmationModal.classList.remove('visible'); // 모달 숨기기
+            updateSquadSummaryTable(); // 선수 지우기 후 요약 테이블 업데이트
+        });
+
+        modalCancelBtn.addEventListener('click', () => {
+            confirmationModal.classList.remove('visible'); // 모달 숨기기
+        });
+        */
+
+        // 이벤트 리스너: 마우스 이동 중 (선수 드래그)
+        document.addEventListener('mousemove', (e) => {
+            if (selectedPlayer) {
+                const containerRect = canvasContainer.getBoundingClientRect();
+                const playerElement = selectedPlayer.element;
+
+                // 현재 컨테이너의 스케일 비율 계산 (원본 디자인 크기 대비)
+                const currentScaleX = containerRect.width / 1200;
+                const currentScaleY = containerRect.height / 750;
+
+                // 마우스 위치를 기준으로 새로운 요소 위치 계산 (컨테이너 내에서)
+                let newX = e.clientX - containerRect.left - offsetX;
+                let newY = e.clientY - containerRect.top - offsetY;
+
+                // 요소가 컨테이너 경계를 벗어나지 않도록 제한
+                newX = Math.max(0, Math.min(newX, containerRect.width - playerElement.offsetWidth));
+                newY = Math.max(0, Math.min(newY, containerRect.height - playerElement.offsetHeight));
+
+                playerElement.style.left = `${newX}px`;
+                playerElement.style.top = `${newY}px`;
+
+                // 선수 객체의 x, y 좌표를 원본 (스케일되지 않은) 값으로 업데이트
+                const player = players.find(p => p.id === selectedPlayer.id);
+                if (player) {
+                    player.x = (newX + playerElement.offsetWidth / 2) / currentScaleX;
+                    player.y = (newY + playerElement.offsetHeight / 2) / currentScaleY;
+                }
+            }
+        });
+
+        // 이벤트 리스너: 마우스 버튼 떼었을 때 (드래그 종료)
+        document.addEventListener('mouseup', () => {
+            if (selectedPlayer) {
+                selectedPlayer.element.style.cursor = 'grab'; // 커서 원래대로
+                selectedPlayer = null; // 선택된 선수 초기화
+            }
+        });
+
+        // 이벤트 리스너: 창 크기 변경 시
+        window.addEventListener('resize', () => {
+            drawBackground(); // 필드 다시 그리기
+            renderPlayers(); // 선수 위치 다시 계산 및 렌더링
+            updateSquadSummaryTable(); // 창 크기 변경 시 요약 테이블 업데이트
+        });
+
+        // 이벤트 리스너: PNG 다운로드 버튼 클릭 시
+        downloadButton.addEventListener('click', () => {
+            // html2canvas를 사용하여 canvasContainer 요소를 캡처
+            html2canvas(canvasContainer, {
+                useCORS: true, // 크로스 오리진 이미지 사용을 위해 설정
+                scale: 2 // 스크린샷 해상도를 높이기 위해 스케일 팩터 증가
+            }).then(canvas => {
+                // 다운로드 링크 생성 및 클릭
+                const link = document.createElement('a');
+                // 파일 이름에 쿼터 정보 포함
+                const fileName = `${quarterSelect.value.replace(/\s/g, '-')}.png`;
+                link.download = fileName;
+                link.href = canvas.toDataURL('image/png'); // 캔버스 내용을 PNG 이미지 데이터 URL로 변환
+                link.click(); // 다운로드 시작
+            }).catch(error => {
+                console.error("캔버스 캡처 중 오류 발생:", error);
+                // 사용자에게 친화적인 오류 메시지를 표시할 수 있습니다. (예: 커스텀 모달)
+            });
+        });
+
+        // 이벤트 리스너: 선수 명단에 선수 추가 (새로운 선수 이름을 목록에 추가)
+        addPlayerToRosterButton.addEventListener('click', () => {
+            const inputNames = newPlayerNameInput.value.trim();
+            if (inputNames) {
+                // 쉼표 또는 공백으로 분리하고 각 이름에서 공백 제거
+                const namesToAdd = inputNames.split(/[, ]+/).map(name => name.trim()).filter(name => name !== '');
+                let playersAdded = 0;
+                let ignoredNames = [];
+
+                namesToAdd.forEach(newName => {
+                    if (!playerNames.includes(newName)) {
+                        playerNames.push(newName);
+                        playersAdded++;
+                    } else {
+                        ignoredNames.push(newName);
+                    }
+                });
+
+                // playerNames 배열 정렬 ("선택" 제외)
+                const selectedOptionIndex = playerNames.indexOf("선택");
+                let tempPlayerNames = [];
+                if (selectedOptionIndex !== -1) {
+                    tempPlayerNames = playerNames.splice(selectedOptionIndex, 1); // "선택"을 일시적으로 제거
+                }
+                playerNames.sort((a, b) => a.localeCompare(b)); // 나머지 정렬
+                if (tempPlayerNames.length > 0) {
+                    playerNames.unshift(tempPlayerNames[0]); // "선택"을 다시 맨 앞에 추가
+                }
+
+                newPlayerNameInput.value = ''; // 입력 필드 초기화
+                
+                // 사용자에게 추가 결과 피드백
+                if (playersAdded > 0) {
+                    console.log(`${playersAdded}명의 선수가 명단에 추가되었습니다.`);
+                }
+                if (ignoredNames.length > 0) {
+                    console.log(`이미 명단에 있는 선수: ${ignoredNames.join(', ')} (추가되지 않음)`);
+                }
+                if (playersAdded === 0 && ignoredNames.length === 0) {
+                    console.log("추가할 유효한 선수 이름이 없습니다.");
+                }
+
+                renderPlayers(); // 드롭다운 옵션 업데이트를 위해 모든 선수 입력 필드 다시 렌더링
+                updateSquadSummaryTable(); // 명단 변경 후 요약 테이블 업데이트
+            } else {
+                console.log("선수 이름을 입력해주세요.");
+            }
+        });
+
+        // 이벤트 리스너: "스쿼드 저장" 버튼
+        saveSquadButton.addEventListener('click', () => {
+            const currentQuarter = quarterSelect.value;
+            // 현재 선수 배열의 깊은 복사본을 저장
+            savedSquads[currentQuarter] = JSON.parse(JSON.stringify(players));
+            console.log(`'${currentQuarter}' 스쿼드가 저장되었습니다.`);
+            // 스쿼드 저장 후 요약 테이블 업데이트
+            updateSquadSummaryTable();
+            // 필요에 따라 사용자에게 시각적 피드백 제공 (예: 임시 성공 메시지)
+        });
+
+        // 테이블 헤더 클릭 이벤트 리스너 (정렬용)
+        squadSummaryTable.querySelectorAll('th').forEach(header => {
+            header.addEventListener('click', () => {
+                const sortKey = header.dataset.sortKey;
+                if (sortKey) {
+                    if (currentSortColumn === sortKey) {
+                        currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+                    } else {
+                        currentSortColumn = sortKey;
+                        currentSortDirection = 'asc'; // 새 열에 대해서는 기본적으로 오름차순 정렬
+                    }
+                    updateSquadSummaryTable(); // 새 정렬 기준으로 테이블 다시 렌더링
+                }
+            });
+        });
+
+
+        // 초기 앱 로드 시 실행되는 함수들
+        drawBackground(); // 초기 축구장 배경 그리기
+        // 초기 선택된 쿼터에 대해 기본 전술을 적용하거나, 저장된 스쿼드가 있다면 불러오기
+        const initialQuarter = quarterSelect.value;
+        if (savedSquads[initialQuarter]) {
+            players = JSON.parse(JSON.stringify(savedSquads[initialQuarter]));
+            console.log(`초기 '${initialQuarter}' 스쿼드를 불러왔습니다.`);
+        } else {
+            applyFormation(formationSelect.value);
+            console.log(`초기 '${initialQuarter}'에 저장된 스쿼드가 없어 기본 전술을 적용합니다.`);
+        }
+        updateSquadSummaryTable(); // 요약 테이블 초기 업데이트
+    </script>
+</body>
+</html>
