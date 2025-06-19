@@ -116,7 +116,7 @@
         }
         
         #downloadButton:hover {
-            background-color: #36a420;
+            background-color: #36a220;
         }
 
         /* 스쿼드 저장 버튼 스타일 */
@@ -158,7 +158,7 @@
             position: absolute;
             background-color: rgba(8, 49, 11, 0.97); /* 어두운 초록색 배경, 반투명 */
             border: 2px solid #ccc; /* 두꺼운 테두리 */
-            padding: 15px; /* 패딩 증가 */
+            padding: 8px;
             border-radius: 15px; /* 더 둥근 모서리 */
             box-shadow: 3px 3px 8px rgba(0,0,0,0.3); /* 강한 그림자 */
             font-weight: bold;
@@ -180,7 +180,7 @@
             flex-wrap: wrap; /* 작은 화면에서 줄바꿈 허용 */
             justify-content: center; /* 요소들 중앙 정렬 */
             gap: 15px; /* 심판과 촬영 요소 사이 간격 */
-            padding: 15px;
+            padding: 8px;
             border-radius: 15px;
             box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
             z-index: 10;
@@ -462,6 +462,7 @@
                 <button id="saveSquadButton">스쿼드 저장</button> <!-- 스쿼드 저장 버튼 -->
                 <button id="downloadButton">PNG로 저장</button> <!-- PNG 다운로드 버튼 -->
             </div>
+
             <br>
             <!-- 캔버스 및 선수 이름 입력 필드 컨테이너 -->
             <div id="canvasContainer">
@@ -480,8 +481,17 @@
                     </div>
                 </div>
             </div>
-
+            <div>
+                <!-- 1,2,3,4 쿼터의 저장된 URL을 표시하는 영역 -->
+                <p>저장된 쿼터:</p>
+                <ul id="savedQuartersList">
+                    <li>1 쿼터: <span class="quarter-url" data-quarter="1">없음</span></li>
+                    <li>2 쿼터: <span class="quarter-url" data-quarter="2">없음</span></li>
+                    <li>3 쿼터: <span class="quarter-url" data-quarter="3">없음</span></li>
+                    <li>4 쿼터: <span class="quarter-url" data-quarter="4">없음</span></li>
+            </div>
         </div>
+
         <!-- Squad Summary Section -->
         <div id="squadSummary">
             <div class="controls">
@@ -588,6 +598,8 @@
          * @param {string} quarterText - 표시할 쿼터 텍스트 (예: "1 쿼터")
          */
         function drawField(targetCtx, quarterText) {
+            targetCtx.clearRect(0, 0, canvas.width, canvas.height);
+
             const canvasWidth = targetCtx.canvas.width;
             const canvasHeight = targetCtx.canvas.height;
 
@@ -595,16 +607,22 @@
             targetCtx.fillStyle = '#0f8017'; /* 잔디밭 색상 */
             targetCtx.fillRect(0, 0, canvasWidth, canvasHeight);
 
-            // 좌측 교체 선수 영역 그리기 (반투명 검은색)
+            // 축구장 잔디 띠라인 (반투명 검은색)
             targetCtx.fillStyle = 'rgba(0, 0, 0, 0.3)';
-            const sidebarWidth = canvasWidth * 0.2; // 캔버스 너비의 20%
-            targetCtx.fillRect(0, 0, sidebarWidth, canvasHeight);
+            const sidebarHeight = canvasHeight * 0.1; // 캔버스 너비의 10%
+            targetCtx.fillRect(0, 0, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*1, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*2, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*3, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*4, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*5, canvasWidth, sidebarHeight);
+            targetCtx.fillRect(0, (canvasHeight/6)*6, canvasWidth, sidebarHeight);
 
             targetCtx.strokeStyle = 'white'; /* 라인 색상 */
             targetCtx.lineWidth = 6; /* 라인 두께 */
             targetCtx.beginPath();
 
-            // 상단 아크 (센터 서클 일부) - 캔버스 크기에 비례하여 스케일링
+             // 상단 아크 (센터 서클 일부) - 캔버스 크기에 비례하여 스케일링
             targetCtx.arc(canvasWidth / 2, 0, canvasWidth * 0.083, 0, Math.PI, false);
 
             // 페널티 박스 - 캔버스 크기에 비례하여 스케일링 및 중앙 정렬
@@ -614,18 +632,14 @@
             const pBoxY = canvasHeight * (550 / 750);
             targetCtx.strokeRect(pBoxX, pBoxY, pBoxWidth, pBoxHeight);
 
-            // 골 에어리어
-            const gBoxWidth = 220;
-            const gBoxHeight = 80;
+            // 골 에어리어 - 캔버스 크기에 비례하여 스케일링 및 중앙 정렬
+            const gBoxWidth = canvasWidth * (220 / 1200);
+            const gBoxHeight = canvasHeight * (80 / 750);
+            const gBoxX = (canvasWidth - gBoxWidth) / 2;
+            const gBoxY = canvasHeight * (670 / 750);
+            targetCtx.strokeRect(gBoxX, gBoxY, gBoxWidth, gBoxHeight);
 
-            const scaledGBoxWidth = canvasWidth * (gBoxWidth / 1200);
-            const scaledGBoxHeight = canvasHeight * (gBoxHeight / 750);
-            const scaledGBoxX = (canvasWidth - scaledGBoxWidth) / 2; // 중앙 정렬
-            const scaledGBoxY = canvasHeight - scaledGBoxHeight; // 캔버스 하단에 위치
-
-            targetCtx.strokeRect(scaledGBoxX, scaledGBoxY, scaledGBoxWidth, scaledGBoxHeight);
-
-            // 페널티 아크
+            // 페널티 아크 - 캔버스 크기에 비례하여 스케일링
             const pArcRadius = canvasWidth * (70 / 1200);
             targetCtx.moveTo(canvasWidth / 2 + pArcRadius, pBoxY); // 아크 시작점으로 이동
             targetCtx.arc(canvasWidth / 2, pBoxY, pArcRadius, 0, Math.PI, true);
@@ -824,17 +838,22 @@
             let newPlayersList = []; // 현재 쿼터의 필드 플레이어 목록 (심판/촬영 제외)
             let currentQuarterRefereeName = '선택'; // 현재 쿼터에 적용될 심판 이름
             let currentQuarterFilmingName = '선택'; // 현재 쿼터에 적용될 촬영 이름
+            let currentFixedBoxX = fixedPersonnelData.x;
+            let currentFixedBoxY = fixedPersonnelData.y;
+
 
             if (applyCurrentFormation) { // 전술 드롭다운 변경 시
                 newPlayersList = getFormationPlayers(formationSelect.value);
                 // 심판/촬영 이름은 현재 드롭다운에 선택된 상태를 유지
                 currentQuarterRefereeName = refereeSelect.value;
                 currentQuarterFilmingName = filmingSelect.value;
+                // 고정 박스 위치도 현재 위치 유지
+                // currentFixedBoxX, currentFixedBoxY는 이미 fixedPersonnelData에 최신 값이 있으므로 별도 할당 불필요
                 console.log(`새 전술 '${formationSelect.value}'를 현재 쿼터 '${quarter}'에 적용합니다.`);
 
             } else if (savedSquads[quarter]) { // 쿼터 드롭다운 변경 또는 초기 로드 시 저장된 스쿼드가 있다면
                 const loadedSquad = JSON.parse(JSON.stringify(savedSquads[quarter]));
-                newPlayersList = loadedSquad.filter(p => p.position !== '심판' && p.position !== '촬영');
+                newPlayersList = loadedSquad.filter(p => p.position !== '심판' && p.position !== '촬영' && p.id !== 'fixedBox');
 
                 // 저장된 스쿼드에서 심판 및 촬영 이름 불러오기
                 const loadedReferee = loadedSquad.find(p => p.position === '심판');
@@ -845,8 +864,8 @@
                 // 저장된 고정 인원 박스 위치도 업데이트
                 const savedFixedBoxData = loadedSquad.find(p => p.id === 'fixedBox');
                 if (savedFixedBoxData) {
-                    fixedPersonnelData.x = savedFixedBoxData.x;
-                    fixedPersonnelData.y = savedFixedBoxData.y;
+                    currentFixedBoxX = savedFixedBoxData.x;
+                    currentFixedBoxY = savedFixedBoxData.y;
                 }
 
                 console.log(`'${quarter}' 스쿼드를 불러왔습니다.`);
@@ -855,26 +874,32 @@
                 // 심판/촬영 이름은 기본값 '선택' 유지
                 currentQuarterRefereeName = '선택';
                 currentQuarterFilmingName = '선택';
-                // 고정 박스 위치도 초기 위치로 리셋 (혹은 마지막으로 드래그된 위치를 유지할 수도 있음)
+                // 고정 박스 위치도 초기 위치로 리셋
                 const originalCanvasWidth = 1200;
                 const originalCanvasHeight = 750;
-                fixedPersonnelData.x = originalCanvasWidth * 0.85;
-                fixedPersonnelData.y = originalCanvasHeight * 0.1;
+                currentFixedBoxX = originalCanvasWidth * 0.85;
+                currentFixedBoxY = originalCanvasHeight * 0.1;
                 console.log(`'${quarter}'에 저장된 스쿼드가 없어 기본 전술을 적용합니다.`);
             }
 
             players = newPlayersList; // 전역 players 배열 업데이트 (필드 플레이어만 포함)
 
+            // 고정 인원 박스 데이터 업데이트 (URL 로드, 쿼터 변경, 전술 변경 등 모든 경우에 해당)
+            fixedPersonnelData.x = currentFixedBoxX;
+            fixedPersonnelData.y = currentFixedBoxY;
+
+
             // 드롭다운의 실제 값 업데이트 및 옵션 채우기 (중복 방지 로직 적용)
             refereeSelect.value = currentQuarterRefereeName;
             filmingSelect.value = currentQuarterFilmingName;
+
             populateFixedPersonnelSelects(); // 심판, 촬영 드롭다운 먼저
             renderPlayers(); // 필드 플레이어 드롭다운 (이 함수 내에서 createPlayerInput 호출)
 
             updateSquadSummaryTable(); // 요약 테이블 업데이트
-            setCanvasDimensions(); // 고정 박스 위치 업데이트를 위해 다시 호출
+            setCanvasDimensions(); // 고정 박스 위치 업데이트를 위해 다시 호출 (DOM에 반영)
+            drawField(ctx, quarterSelect.value);
         }
-
 
         /**
          * 스쿼드 요약 테이블을 선수별 쿼터 포함 정보를 포함하여 업데이트하는 함수
@@ -892,12 +917,14 @@
                     for (const quarter in savedSquads) {
                         const squad = savedSquads[quarter];
                         // 스쿼드에 포함된 플레이어 중 심판/촬영 포지션이 아닌 플레이어만 카운트
+                        // 즉, savedSquads[quarter]에 있는 플레이어 중 name이 일치하고, 그 플레이어의 position이 '심판' 또는 '촬영'이 아닌 경우
                         if (squad.some(p => p.name === name && p.position !== '심판' && p.position !== '촬영')) {
                             quartersIncluded.push(quarter);
                         }
                     }
 
                     // 심판이나 촬영 인원에게 할당된 이름인지 확인
+                    // 이 정보는 현재 캔버스에 선택된 심판/촬영의 이름을 기준으로 판단
                     const isRefereeName = (name === refereeSelect.value);
                     const isFilmingName = (name === filmingSelect.value);
 
@@ -1057,12 +1084,51 @@
             const currentQuarter = quarterSelect.value;
             // 현재 플레이어 목록에 심판과 촬영 인원 정보를 추가하여 저장
             const squadToSave = JSON.parse(JSON.stringify(players));
-            squadToSave.push({ position: '심판', name: refereeSelect.value, id: 'refereeSelect' }); // ID 추가
-            squadToSave.push({ position: '촬영', name: filmingSelect.value, id: 'filmingSelect' }); // ID 추가
-            squadToSave.push({ id: fixedPersonnelData.id, x: fixedPersonnelData.x, y: fixedPersonnelData.y, position: 'FixedBox' }); // 고정 박스 위치 저장
+            squadToSave.push({ position: '심판', name: refereeSelect.value, id: 'refereeSelect' });
+            squadToSave.push({ position: '촬영', name: filmingSelect.value, id: 'filmingSelect' });
+            squadToSave.push({ id: fixedPersonnelData.id, x: fixedPersonnelData.x, y: fixedPersonnelData.y, position: 'FixedBox' });
 
             savedSquads[currentQuarter] = squadToSave;
-            console.log(`'${currentQuarter}' 스쿼드가 저장되었습니다.`);
+
+            // URL 생성 및 클립보드에 복사
+            const squadDataForUrl = {
+                fullRoster: playerNames.filter(name => name !== "선택"), // "선택"을 제외한 전체 명단
+                fieldPlayers: players.filter(p => p.position !== '심판' && p.position !== '촬영'),
+                referee: { name: refereeSelect.value },
+                filming: { name: filmingSelect.value },
+                fixedBox: { x: fixedPersonnelData.x, y: fixedPersonnelData.y },
+                selectedFormation: formationSelect.value,
+                selectedQuarter: quarterSelect.value
+            };
+            const encodedData = encodeURIComponent(JSON.stringify(squadDataForUrl));
+            const shareableUrl = `${window.location.origin}${window.location.pathname}#squad=${encodedData}`;
+
+            try {
+                const textarea = document.createElement('textarea');
+                textarea.value = shareableUrl;
+                textarea.style.position = 'fixed'; // Avoid scrolling to bottom
+                document.body.appendChild(textarea);
+                textarea.focus();
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                console.log('스쿼드 URL이 클립보드에 복사되었습니다:', shareableUrl);
+            } catch (err) {
+                console.error('클립보드 복사 실패:', err);
+                // Fallback for systems where execCommand is not allowed either
+                prompt('스쿼드 URL을 복사하세요 (Ctrl+C):', shareableUrl);
+            }
+
+            // "저장된 쿼터" 영역 업데이트
+            const quarterUrlSpan = document.querySelector(`.quarter-url[data-quarter="${currentQuarter.split(' ')[0]}"]`);
+            if (quarterUrlSpan) {
+                quarterUrlSpan.textContent = shareableUrl;
+                quarterUrlSpan.style.color = 'blue'; // URL을 강조하기 위해 색상 변경
+                quarterUrlSpan.style.cursor = 'pointer'; // 클릭 가능하도록 커서 변경
+                quarterUrlSpan.addEventListener('click', () => {
+                    window.open(shareableUrl, '_blank'); // URL 클릭 시 새 탭에서 열기
+                });
+            }
             updateSquadSummaryTable(); // 스쿼드 저장 후 요약 테이블 업데이트
             // 필요에 따라 사용자에게 시각적 피드백 제공 (예: 임시 성공 메시지)
         });
@@ -1192,12 +1258,100 @@
             });
         });
 
+        /**
+         * URL에서 스쿼드 데이터를 로드하는 함수
+         * @returns {boolean} 데이터 로드 성공 여부
+         */
+        function loadSquadFromUrl() {
+            try {
+                const hash = window.location.hash;
+                if (hash.startsWith('#squad=')) {
+                    const encodedData = hash.substring('#squad='.length);
+                    const squadData = JSON.parse(decodeURIComponent(encodedData));
+
+                    // 1. URL의 fullRoster로 playerNames 배열을 먼저 채웁니다.
+                    if (squadData.fullRoster && Array.isArray(squadData.fullRoster)) {
+                        playerNames.length = 0;
+                        playerNames.push("선택");
+                        squadData.fullRoster.forEach(name => {
+                            if (!playerNames.includes(name)) {
+                                playerNames.push(name);
+                            }
+                        });
+                        // '선택'을 제외하고 나머지 이름을 정렬합니다.
+                        const selectOption = playerNames.shift();
+                        playerNames.sort((a, b) => a.localeCompare(b));
+                        playerNames.unshift(selectOption);
+                    } else {
+                        // 이전 버전 URL과의 호환성을 위한 폴백(fallback) 로직
+                        const newNamesFromUrl = new Set(squadData.fieldPlayers.map(p => p.name).filter(n => n !== '선택'));
+                        if (squadData.referee && squadData.referee.name && squadData.referee.name !== '선택') newNamesFromUrl.add(squadData.referee.name);
+                        if (squadData.filming && squadData.filming.name && squadData.filming.name !== '선택') newNamesFromUrl.add(squadData.filming.name);
+                        newNamesFromUrl.forEach(name => {
+                            if (!playerNames.includes(name)) {
+                                playerNames.push(name);
+                            }
+                        });
+                    }
+
+                    // 2. JS 변수에 스쿼드 데이터를 설정합니다.
+                    players = squadData.fieldPlayers;
+                    formationSelect.value = squadData.selectedFormation || formationSelect.options[0].value;
+                    quarterSelect.value = squadData.selectedQuarter || quarterSelect.options[0].value;
+                    if (squadData.fixedBox) {
+                        fixedPersonnelData.x = squadData.fixedBox.x;
+                        fixedPersonnelData.y = squadData.fixedBox.y;
+                    }
+
+                    // 3. 데이터를 바탕으로 화면의 드롭다운 UI를 먼저 생성합니다.
+                    populateFixedPersonnelSelects();
+                    renderPlayers();
+
+                    // 4. 드롭다운 UI가 준비된 후, 저장된 값으로 설정합니다.
+                    refereeSelect.value = squadData.referee ? squadData.referee.name : '선택';
+                    filmingSelect.value = squadData.filming ? squadData.filming.name : '선택';
+
+                    // 5. 나머지 UI를 업데이트합니다.
+                    updateSquadSummaryTable();
+                    setCanvasDimensions();
+
+                    // 6. 불러온 스쿼드를 현재 세션을 위해 savedSquads에 저장합니다.
+                    const currentQuarter = quarterSelect.value;
+                    const squadToSaveToMemory = JSON.parse(JSON.stringify(squadData.fieldPlayers));
+                    squadToSaveToMemory.push({ position: '심판', name: squadData.referee.name, id: 'refereeSelect' });
+                    squadToSaveToMemory.push({ position: '촬영', name: squadData.filming.name, id: 'filmingSelect' });
+                    squadToSaveToMemory.push({ id: 'fixedBox', x: fixedPersonnelData.x, y: fixedPersonnelData.y, position: 'FixedBox' });
+                    savedSquads[currentQuarter] = squadToSaveToMemory;
+
+                    console.log('URL에서 스쿼드 데이터를 성공적으로 불러왔습니다.');
+                    return true;
+                }
+            } catch (error) {
+                console.error('URL에서 스쿼드 데이터 로드/파싱 실패:', error);
+            }
+            return false;
+        }
 
         // 초기 앱 로드 시 실행되는 함수들
+        drawBackground(); // 캔버스 배경 먼저 그리기
         setCanvasDimensions(); // 캔버스 크기 먼저 설정
 
-        // loadOrApplySquad 함수가 모든 초기화 및 로딩을 처리
-        loadOrApplySquad(quarterSelect.value);
+        // URL에서 스쿼드 데이터 로드 시도
+        const loadedFromUrl = loadSquadFromUrl();
+
+        // URL에서 로드되지 않았다면, 현재 쿼터의 기본 전술을 적용
+        if (!loadedFromUrl) {
+            loadOrApplySquad(quarterSelect.value);
+        } else {
+            // URL에서 로드되었다면, UI를 다시 렌더링하고 요약 테이블 업데이트
+            // loadSquadFromUrl에서 이미 값을 설정했으므로 여기서 다시 로드할 필요 없음.
+            // 대신 UI 업데이트 함수들을 직접 호출
+            populateFixedPersonnelSelects();
+            renderPlayers();
+            updateSquadSummaryTable();
+            setCanvasDimensions(); // 위치 재설정
+            drawBackground();
+        }
     </script>
 </body>
 </html>
