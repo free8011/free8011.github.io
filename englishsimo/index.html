@@ -177,7 +177,7 @@ body {
   border-bottom: 1px solid rgba(0,0,0,0.1);
   flex-shrink: 0;
   gap: 2px;
-  z-index: 10;
+  z-index: 200;
 }
 
 .tb-group {
@@ -235,6 +235,9 @@ body {
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   -webkit-scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  overscroll-behavior-y: contain;
 }
 .pages-scroll.vertical .page {
   width: 100%;
@@ -683,14 +686,16 @@ body {
   <!-- Toolbar -->
   <div class="study-toolbar" id="study-toolbar">
     <button class="navbar-btn" id="btn-study-back" style="font-size:15px;color:#007aff">← 뒤로</button>
-    <div class="tb-spacer"></div>
-    <!-- Font size controls -->
-    <div class="tb-group" id="toolbar-normal">
+    <!-- Font size controls (left) -->
+    <div class="tb-group" id="toolbar-font">
       <button class="tb-btn" id="btn-font-dec" title="글자 작게">A<sup style="font-size:9px">−</sup></button>
       <span class="font-size-display" id="font-size-display">16</span>
       <button class="tb-btn" id="btn-font-inc" title="글자 크게">A<sup style="font-size:9px">+</sup></button>
-      <div class="tb-sep"></div>
-      <button class="tb-btn" id="btn-toggle-meaning" title="뜻 가리기/보기">👁 <span id="meaning-toggle-label">가리기</span></button>
+    </div>
+    <div class="tb-spacer"></div>
+    <!-- Right controls -->
+    <div class="tb-group" id="toolbar-normal">
+      <button class="tb-btn" id="btn-toggle-meaning" title="뜻 가리기/보기"><span id="meaning-toggle-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span> <span id="meaning-toggle-label">가리기</span></button>
       <div class="tb-sep"></div>
       <button class="tb-btn" id="btn-draw" title="그리기">✏️</button>
       <div class="tb-sep"></div>
@@ -1181,8 +1186,11 @@ function toggleMeaning() {
     el.classList.toggle('hidden', showMeaning);
   });
 }
+const SVG_EYE_OPEN = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`;
+const SVG_EYE_CLOSED = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>`;
 function updateMeaningToggleLabel() {
   document.getElementById('meaning-toggle-label').textContent = showMeaning ? '가리기' : '보기';
+  document.getElementById('meaning-toggle-icon').innerHTML = showMeaning ? SVG_EYE_OPEN : SVG_EYE_CLOSED;
 }
 
 // ===== FONT SIZE =====
@@ -1299,6 +1307,7 @@ function enterDrawMode() {
   drawMode = true;
   canvas.classList.add('active');
   document.getElementById('toolbar-normal').classList.add('hidden');
+  document.getElementById('toolbar-font').classList.add('hidden');
   document.getElementById('toolbar-draw').classList.remove('hidden');
   drawTool = 'pen';
   updateDrawToolUI();
@@ -1310,6 +1319,7 @@ function exitDrawMode() {
   drawMode = false;
   canvas.classList.remove('active');
   document.getElementById('toolbar-normal').classList.remove('hidden');
+  document.getElementById('toolbar-font').classList.remove('hidden');
   document.getElementById('toolbar-draw').classList.add('hidden');
   document.getElementById('pages-scroll').style.overflow = '';
 }
