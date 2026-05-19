@@ -1873,45 +1873,55 @@ async function handlePdfFile(file) {
 
       const result = await worker.recognize(cvs);
       const lines = result.data.lines;
+      const pageW = cvs.width;
+      const pageH = cvs.height;
+
+      // Collect all word-meaning pairs from this page with position info
+      const pageEntries = [];
 
       for (const line of lines) {
         if (!line.words || line.words.length === 0) continue;
-        const pageW = cvs.width;
-        const pageH = cvs.height;
+        const lineY = line.bbox ? (line.bbox.y0 + line.bbox.y1) / 2 / pageH : 0;
 
-        // Find English words in left column (x < 0.20)
-        let engWord = null;
-        let engY = null;
+        // Find all English words in this line
+        const engWords = [];
         for (const w of line.words) {
-          const xRatio = w.bbox.x0 / pageW;
           const text = w.text.trim();
-          if (xRatio < 0.20 && /^[a-zA-Z-]+$/.test(text) && text.length >= 2) {
-            engWord = text.toLowerCase();
-            engY = (w.bbox.y0 + w.bbox.y1) / 2 / pageH;
-            break;
+          if (/^[a-zA-Z][a-zA-Z-]*$/.test(text) && text.length >= 2) {
+            engWords.push({
+              word: text.toLowerCase(),
+              xCenter: (w.bbox.x0 + w.bbox.x1) / 2 / pageW,
+              x0: w.bbox.x0 / pageW
+            });
           }
         }
 
-        if (!engWord) continue;
-
-        // Find meaning in middle column (x 0.20-0.55) at similar y
-        let meaning = '';
-        for (const w of line.words) {
-          const xRatio = w.bbox.x0 / pageW;
-          const yMid = (w.bbox.y0 + w.bbox.y1) / 2 / pageH;
-          if (xRatio >= 0.20 && xRatio <= 0.55 && Math.abs(yMid - engY) < 0.03) {
+        // For each English word, collect Korean meaning words to its right (within 0.40 width)
+        for (const eng of engWords) {
+          let meaning = '';
+          for (const w of line.words) {
+            const wX0 = w.bbox.x0 / pageW;
             const txt = w.text.trim();
-            if (/[가-힣]/.test(txt)) {
+            if (wX0 > eng.xCenter && wX0 < eng.xCenter + 0.45 && /[가-힣]/.test(txt)) {
               meaning += (meaning ? ' ' : '') + txt;
             }
           }
-        }
-
-        if (engWord && meaning) {
-          const key = engWord + '|' + meaning;
-          if (!wordsMap.has(key)) {
-            wordsMap.set(key, { word: engWord, meaning });
+          if (meaning) {
+            pageEntries.push({ word: eng.word, meaning, y: lineY, x: eng.x0 });
           }
+        }
+      }
+
+      // Sort top→bottom, same row left→right
+      pageEntries.sort((a, b) => {
+        if (Math.abs(a.y - b.y) < 0.02) return a.x - b.x;
+        return a.y - b.y;
+      });
+
+      for (const entry of pageEntries) {
+        const key = entry.word + '|' + entry.meaning;
+        if (!wordsMap.has(key)) {
+          wordsMap.set(key, { word: entry.word, meaning: entry.meaning });
         }
       }
     }
