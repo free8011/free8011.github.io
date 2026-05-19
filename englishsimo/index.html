@@ -318,14 +318,19 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: calc(var(--font-size) * 0.85);
-  padding: 0;
-  color: #aeaeb2;
+  padding: 3px;
+  color: #c7c7cc;
   flex-shrink: 0;
-  transition: color 0.2s;
-  line-height: 1;
+  transition: color 0.2s, transform 0.15s;
+  line-height: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.speak-btn:active { transform: scale(0.88); }
 .speak-btn.speaking { color: #007aff; }
+.speak-btn svg { width: calc(var(--font-size) * 0.9); height: calc(var(--font-size) * 0.9); }
 .word-pronunciation {
   font-size: calc(var(--font-size) * 0.68);
   color: #aeaeb2;
@@ -1087,7 +1092,7 @@ function createWordRow(word, globalIdx) {
 
   const speakBtn = document.createElement('button');
   speakBtn.className = 'speak-btn';
-  speakBtn.innerHTML = '🔊';
+  speakBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>`;
   speakBtn.dataset.wordId = word.id;
   speakBtn.addEventListener('click', (e) => {
     e.stopPropagation();
