@@ -1898,6 +1898,7 @@ async function handlePdfFile(file) {
 
         // For each English word, collect Korean meaning words to its right (within 0.40 width)
         for (const eng of engWords) {
+          if (eng.word.length < 3) continue; // skip noise like "to", "a"
           let meaning = '';
           for (const w of line.words) {
             const wX0 = w.bbox.x0 / pageW;
@@ -1907,7 +1908,14 @@ async function handlePdfFile(file) {
             }
           }
           if (meaning) {
-            pageEntries.push({ word: eng.word, meaning, y: lineY, x: eng.x0 });
+            // Collapse spaces between Korean syllables (OCR artifact)
+            let m = meaning;
+            let prev;
+            do { prev = m; m = m.replace(/([가-힣]) ([가-힣])/g, '$1$2'); } while (m !== prev);
+            // Skip if looks like an example sentence (too many Korean words, > 5 tokens)
+            const tokens = m.split(/\s+/).filter(t => /[가-힣]/.test(t));
+            if (tokens.length > 5) continue;
+            pageEntries.push({ word: eng.word, meaning: m, y: lineY, x: eng.x0 });
           }
         }
       }
