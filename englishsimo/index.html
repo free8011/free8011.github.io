@@ -2216,7 +2216,10 @@ async function initDataFile() {
       const data = await res.json();
       if (data.version === 1) {
         wordEdits = data.edits || {};
-        if (data.user_books) localStorage.setItem('es_user_books', JSON.stringify(data.user_books));
+        // Only import user_books from static file if none exist locally yet
+        if (data.user_books && data.user_books.length > 0 && !localStorage.getItem('es_user_books')) {
+          localStorage.setItem('es_user_books', JSON.stringify(data.user_books));
+        }
         updateFileStatus('정적 파일 로드됨', true);
         return;
       }
