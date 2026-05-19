@@ -742,6 +742,62 @@ body {
 .word-edit-btn.cancel { background: white; color: #007aff; }
 .word-edit-btn.save { background: #007aff; color: white; }
 
+/* ===== POS SELECTOR ===== */
+.pos-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 0 14px;
+}
+.pos-btn {
+  flex: 1;
+  min-width: 60px;
+  padding: 8px 4px;
+  border-radius: 8px;
+  border: 1.5px solid #e0e0e5;
+  background: white;
+  font-size: 13px;
+  color: #8e8e93;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pos-btn.selected {
+  border-color: #007aff;
+  background: #007aff;
+  color: white;
+  font-weight: 600;
+}
+
+/* ===== EDIT LOCK OVERLAY ===== */
+.edit-lock-sheet {
+  background: #f2f2f7;
+  border-radius: 20px 20px 0 0;
+  padding: 28px 24px 40px;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.edit-lock-title { font-size: 22px; font-weight: 700; color: #1c1c1e; }
+.edit-lock-sub { font-size: 14px; color: #8e8e93; }
+.edit-lock-input {
+  width: 180px;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #007aff;
+  background: transparent;
+  font-size: 28px;
+  letter-spacing: 8px;
+  color: #1c1c1e;
+  outline: none;
+  padding: 4px 0 8px;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+.edit-lock-error { color: #ff3b30; font-size: 13px; min-height: 18px; }
+
 /* ===== UTIL ===== */
 .hidden { display: none !important; }
 
@@ -911,6 +967,20 @@ body {
   </div>
 </div>
 
+<!-- Edit Lock Overlay -->
+<div id="edit-lock-overlay" class="modal-overlay hidden" onclick="if(event.target===this)closeEditLock()">
+  <div class="edit-lock-sheet">
+    <div class="edit-lock-title">🔒 수정 잠금</div>
+    <div class="edit-lock-sub">비밀번호를 입력하세요</div>
+    <input class="edit-lock-input" id="edit-lock-input" type="password" inputmode="numeric" maxlength="10" placeholder="••••">
+    <div class="edit-lock-error" id="edit-lock-error"></div>
+    <div class="word-edit-actions" style="width:100%">
+      <button class="word-edit-btn cancel" onclick="closeEditLock()">취소</button>
+      <button class="word-edit-btn save" onclick="submitEditLock()">확인</button>
+    </div>
+  </div>
+</div>
+
 <!-- Word Edit Modal -->
 <div id="word-edit-overlay" class="modal-overlay hidden" onclick="if(event.target===this)closeWordEdit()">
   <div class="word-edit-sheet">
@@ -922,6 +992,17 @@ body {
     <div class="word-edit-field">
       <label class="word-edit-label">발음기호 <span id="edit-pron-status" class="word-edit-pron-status"></span></label>
       <input class="word-edit-input" id="edit-pron-input" type="text" placeholder="단어 입력 시 자동 생성" autocomplete="off">
+    </div>
+    <div class="word-edit-field">
+      <label class="word-edit-label">품사</label>
+      <div class="pos-selector" id="edit-pos-selector">
+        <button class="pos-btn" data-pos="동" onclick="selectPos('동')">동사</button>
+        <button class="pos-btn" data-pos="명" onclick="selectPos('명')">명사</button>
+        <button class="pos-btn" data-pos="형" onclick="selectPos('형')">형용사</button>
+        <button class="pos-btn" data-pos="부" onclick="selectPos('부')">부사</button>
+        <button class="pos-btn" data-pos="전" onclick="selectPos('전')">전치사</button>
+        <button class="pos-btn" data-pos="접" onclick="selectPos('접')">접속사</button>
+      </div>
     </div>
     <div class="word-edit-field">
       <label class="word-edit-label">뜻</label>
@@ -1300,13 +1381,14 @@ function createWordRow(word, globalIdx) {
   meaningCol.appendChild(meaningWrap);
   row.appendChild(meaningCol);
 
-  // Long-press to edit word
+  // Long-press (mobile) or double-click (PC) to edit word
   let editTimer = null;
   row.addEventListener('touchstart', () => {
     editTimer = setTimeout(() => { editTimer = null; openWordEdit(globalIdx); }, 650);
   }, { passive: true });
   row.addEventListener('touchend', () => clearTimeout(editTimer));
   row.addEventListener('touchmove', () => clearTimeout(editTimer));
+  row.addEventListener('dblclick', () => openWordEdit(globalIdx));
 
   return row;
 }
@@ -2129,16 +2211,63 @@ async function initDataFile() {
 
 // ===== WORD EDIT =====
 let editingWordIdx = null;
+let editUnlocked = false;
+let pendingEditIdx = null;
+const EDIT_PASSWORD = '1234';
+
 function getEditKey(idx) {
   return (currentBook.isBuiltin ? 'builtin' : ('u' + currentBook.userIdx)) + '_' + idx;
 }
 
+function parseMeaning(meaning) {
+  const m = (meaning || '').match(/^([동명형부전접]) (.+)$/);
+  return m ? { pos: m[1], text: m[2] } : { pos: '', text: meaning || '' };
+}
+
+function selectPos(pos) {
+  document.querySelectorAll('.pos-btn').forEach(btn => {
+    btn.classList.toggle('selected', btn.dataset.pos === pos);
+  });
+}
+
+function openEditLock(wordIdx) {
+  pendingEditIdx = wordIdx;
+  document.getElementById('edit-lock-input').value = '';
+  document.getElementById('edit-lock-error').textContent = '';
+  document.getElementById('edit-lock-overlay').classList.remove('hidden');
+  setTimeout(() => document.getElementById('edit-lock-input').focus(), 100);
+}
+function closeEditLock() {
+  document.getElementById('edit-lock-overlay').classList.add('hidden');
+  pendingEditIdx = null;
+}
+function submitEditLock() {
+  const val = document.getElementById('edit-lock-input').value;
+  if (val === EDIT_PASSWORD) {
+    editUnlocked = true;
+    const idx = pendingEditIdx;
+    closeEditLock();
+    openWordEdit(idx);
+  } else {
+    document.getElementById('edit-lock-error').textContent = '비밀번호가 틀렸습니다.';
+    document.getElementById('edit-lock-input').value = '';
+    document.getElementById('edit-lock-input').focus();
+  }
+}
+document.getElementById('edit-lock-input').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') submitEditLock();
+  if (e.key === 'Escape') closeEditLock();
+});
+
 function openWordEdit(wordIdx) {
+  if (!editUnlocked) { openEditLock(wordIdx); return; }
   const w = currentWords[wordIdx];
   editingWordIdx = wordIdx;
   document.getElementById('edit-word-input').value = w.word;
   document.getElementById('edit-pron-input').value = w.pronunciation || '';
-  document.getElementById('edit-meaning-input').value = w.meaning || '';
+  const { pos, text } = parseMeaning(w.meaning);
+  selectPos(pos);
+  document.getElementById('edit-meaning-input').value = text;
   setPronStatus('', '');
   document.getElementById('word-edit-overlay').classList.remove('hidden');
   setTimeout(() => document.getElementById('edit-word-input').focus(), 100);
@@ -2184,8 +2313,10 @@ function saveWordEdit() {
   if (editingWordIdx === null) return;
   const word = document.getElementById('edit-word-input').value.trim();
   const pron = document.getElementById('edit-pron-input').value.trim();
-  const meaning = document.getElementById('edit-meaning-input').value.trim();
-  if (!word || !meaning) return;
+  const meaningText = document.getElementById('edit-meaning-input').value.trim();
+  if (!word || !meaningText) return;
+  const selectedPos = document.querySelector('.pos-btn.selected')?.dataset.pos || '';
+  const meaning = selectedPos ? selectedPos + ' ' + meaningText : meaningText;
 
   currentWords[editingWordIdx].word = word;
   currentWords[editingWordIdx].pronunciation = pron;
