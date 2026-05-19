@@ -410,6 +410,23 @@ body {
   border-top: 1px solid rgba(0,0,0,0.08);
   flex-shrink: 0;
   z-index: 10;
+  cursor: pointer;
+  gap: 4px;
+}
+.page-indicator:active { background: rgba(0,0,0,0.05); }
+.page-jump-input {
+  width: 44px;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #007aff;
+  background: transparent;
+  font-size: 13px;
+  color: #1c1c1e;
+  font-family: inherit;
+  outline: none;
+  padding: 0 2px;
+  -webkit-user-select: auto;
+  user-select: auto;
 }
 
 /* ===== DRAWING CANVAS ===== */
@@ -1323,9 +1340,42 @@ function updatePageIndicator() {
   const pageCount = Math.ceil(currentWords.length / wordsPerPage);
   const start = currentPageIdx * wordsPerPage + 1;
   const end = Math.min((currentPageIdx + 1) * wordsPerPage, currentWords.length);
-  document.getElementById('page-indicator').textContent =
-    `페이지 ${currentPageIdx + 1} / ${pageCount} · #${start}–#${end}`;
+  const el = document.getElementById('page-indicator');
+  el.textContent = `페이지 ${currentPageIdx + 1} / ${pageCount} · #${start}–#${end}`;
 }
+
+function openPageJump() {
+  const pageCount = Math.ceil(currentWords.length / wordsPerPage);
+  if (pageCount <= 1) return;
+  const el = document.getElementById('page-indicator');
+  const start = currentPageIdx * wordsPerPage + 1;
+  const end = Math.min((currentPageIdx + 1) * wordsPerPage, currentWords.length);
+
+  el.innerHTML = `페이지 <input class="page-jump-input" id="page-jump-input" type="number" min="1" max="${pageCount}" value="${currentPageIdx + 1}"> / ${pageCount} · #${start}–#${end}`;
+
+  const input = document.getElementById('page-jump-input');
+  input.focus();
+  input.select();
+
+  function confirm() {
+    const val = parseInt(input.value, 10);
+    const target = Math.max(1, Math.min(pageCount, val || 1)) - 1;
+    currentPageIdx = target;
+    scrollToPage(target, true);
+    updatePageIndicator();
+  }
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); confirm(); }
+    if (e.key === 'Escape') { updatePageIndicator(); }
+  });
+  input.addEventListener('blur', confirm);
+}
+
+document.getElementById('page-indicator').addEventListener('click', (e) => {
+  if (e.target.classList.contains('page-jump-input')) return;
+  openPageJump();
+});
 
 // ===== MEANING TOGGLE =====
 function toggleMeaning() {
