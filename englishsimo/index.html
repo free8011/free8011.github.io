@@ -1978,7 +1978,13 @@ function addOcrBook() {
   if (!name) { alert('단어장 이름을 입력해주세요.'); nameInput.focus(); return; }
 
   const userBooks = loadUserBooks();
-  userBooks.push({ id: Date.now(), name, words: ocrWords });
+  if (userBooks.some(b => b.name === name)) {
+    if (!confirm(`"${name}" 이름의 단어장이 이미 있습니다.\n덮어쓸까요?`)) return;
+    const idx = userBooks.findIndex(b => b.name === name);
+    userBooks[idx] = { ...userBooks[idx], words: ocrWords };
+  } else {
+    userBooks.push({ id: Date.now(), name, words: ocrWords });
+  }
   saveUserBooks(userBooks);
 
   alert(`"${name}" 단어장이 추가되었습니다. (${ocrWords.length}개 단어)`);
@@ -2216,9 +2222,14 @@ async function initDataFile() {
       const data = await res.json();
       if (data.version === 1) {
         wordEdits = data.edits || {};
-        // Only import user_books from static file if none exist locally yet
-        if (data.user_books && data.user_books.length > 0 && !localStorage.getItem('es_user_books')) {
-          localStorage.setItem('es_user_books', JSON.stringify(data.user_books));
+        // Merge data.json books into local books — skip if same name already exists
+        if (data.user_books && data.user_books.length > 0) {
+          const existing = loadUserBooks();
+          const existingNames = new Set(existing.map(b => b.name));
+          const newBooks = data.user_books.filter(b => !existingNames.has(b.name));
+          if (newBooks.length > 0) {
+            saveUserBooks([...newBooks, ...existing]);
+          }
         }
         updateFileStatus('정적 파일 로드됨', true);
         return;
