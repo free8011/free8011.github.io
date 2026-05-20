@@ -1864,7 +1864,7 @@ async function handlePdfFile(file) {
       progressStatus.textContent = `페이지 ${pageNum} / ${numPages} 처리 중...`;
 
       const page = await pdf.getPage(pageNum);
-      const viewport = page.getViewport({ scale: 3.0 });
+      const viewport = page.getViewport({ scale: 2.0 });
       const cvs = document.createElement('canvas');
       cvs.width = viewport.width;
       cvs.height = viewport.height;

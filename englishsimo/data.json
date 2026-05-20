@@ -1,5 +1,8154 @@
-{
+﻿{
   "version": 1,
   "edits": {},
-  "user_books": []
+  "user_books": [
+    {
+      "id": "shared_book_001",
+      "name": "중학우선순위영단어",
+      "words": [
+        {
+          "id": 1,
+          "word": "decide",
+          "pronunciation": "",
+          "meaning": "결정하다, 결심하다"
+        },
+        {
+          "id": 2,
+          "word": "introduce",
+          "pronunciation": "",
+          "meaning": "소개하다, 도입하다"
+        },
+        {
+          "id": 3,
+          "word": "build",
+          "pronunciation": "",
+          "meaning": "짓다, 건축하다"
+        },
+        {
+          "id": 4,
+          "word": "continue",
+          "pronunciation": "",
+          "meaning": "계속하다, 계속되다"
+        },
+        {
+          "id": 5,
+          "word": "invent",
+          "pronunciation": "",
+          "meaning": "발명하다"
+        },
+        {
+          "id": 6,
+          "word": "imagine",
+          "pronunciation": "",
+          "meaning": "상상하다, 생각하다"
+        },
+        {
+          "id": 7,
+          "word": "happen",
+          "pronunciation": "",
+          "meaning": "동 일어나다, 우연히하다"
+        },
+        {
+          "id": 8,
+          "word": "depend",
+          "pronunciation": "",
+          "meaning": "의지하다, 달려있다"
+        },
+        {
+          "id": 9,
+          "word": "forgive",
+          "pronunciation": "",
+          "meaning": "용서하다"
+        },
+        {
+          "id": 10,
+          "word": "apply",
+          "pronunciation": "",
+          "meaning": "지원하다, 적용하다"
+        },
+        {
+          "id": 11,
+          "word": "allow",
+          "pronunciation": "",
+          "meaning": "허락하다"
+        },
+        {
+          "id": 12,
+          "word": "prepare",
+          "pronunciation": "",
+          "meaning": "동 준비하다, 대비하다"
+        },
+        {
+          "id": 13,
+          "word": "choose",
+          "pronunciation": "",
+          "meaning": "선택하다, 고르다"
+        },
+        {
+          "id": 14,
+          "word": "follow",
+          "pronunciation": "",
+          "meaning": "동 따르다, 뒤따르다"
+        },
+        {
+          "id": 15,
+          "word": "bring",
+          "pronunciation": "",
+          "meaning": "통가져오다, 데러오다"
+        },
+        {
+          "id": 16,
+          "word": "suffer",
+          "pronunciation": "",
+          "meaning": "고통받다, 겪다"
+        },
+        {
+          "id": 17,
+          "word": "offer",
+          "pronunciation": "",
+          "meaning": "제안하다, 제공하다"
+        },
+        {
+          "id": 18,
+          "word": "spend",
+          "pronunciation": "",
+          "meaning": "쓰다"
+        },
+        {
+          "id": 19,
+          "word": "expect",
+          "pronunciation": "",
+          "meaning": "기대하다, 이라고) 생각하다"
+        },
+        {
+          "id": 20,
+          "word": "fill",
+          "pronunciation": "",
+          "meaning": "채우다"
+        },
+        {
+          "id": 21,
+          "word": "shake",
+          "pronunciation": "",
+          "meaning": "흔들다, 떨다"
+        },
+        {
+          "id": 22,
+          "word": "lend",
+          "pronunciation": "",
+          "meaning": "빌려주다"
+        },
+        {
+          "id": 23,
+          "word": "borrow",
+          "pronunciation": "",
+          "meaning": "빌리다"
+        },
+        {
+          "id": 24,
+          "word": "sell",
+          "pronunciation": "",
+          "meaning": "팔다, 팔리다"
+        },
+        {
+          "id": 25,
+          "word": "guess",
+          "pronunciation": "",
+          "meaning": "추측하다, 알아맞히다"
+        },
+        {
+          "id": 26,
+          "word": "good",
+          "pronunciation": "",
+          "meaning": "타당한추측"
+        },
+        {
+          "id": 27,
+          "word": "need",
+          "pronunciation": "",
+          "meaning": "필요로하다"
+        },
+        {
+          "id": 28,
+          "word": "forget",
+          "pronunciation": "",
+          "meaning": "잊다, 잊어버리다"
+        },
+        {
+          "id": 29,
+          "word": "remember",
+          "pronunciation": "",
+          "meaning": "기억하다"
+        },
+        {
+          "id": 30,
+          "word": "wake",
+          "pronunciation": "",
+          "meaning": "잠에서) 깨다, 깨우다"
+        },
+        {
+          "id": 31,
+          "word": "call",
+          "pronunciation": "",
+          "meaning": "부 르다, 전화하다"
+        },
+        {
+          "id": 32,
+          "word": "carry",
+          "pronunciation": "",
+          "meaning": "가지고가다, 운반하다"
+        },
+        {
+          "id": 33,
+          "word": "suppose",
+          "pronunciation": "",
+          "meaning": "동 가정하다, 생각하다"
+        },
+        {
+          "id": 34,
+          "word": "invite",
+          "pronunciation": "",
+          "meaning": "초대하다"
+        },
+        {
+          "id": 35,
+          "word": "agree",
+          "pronunciation": "",
+          "meaning": "동 의하다"
+        },
+        {
+          "id": 36,
+          "word": "prevent",
+          "pronunciation": "",
+          "meaning": "막다, 예방하다"
+        },
+        {
+          "id": 37,
+          "word": "check",
+          "pronunciation": "",
+          "meaning": "확인하다, 점검하다"
+        },
+        {
+          "id": 38,
+          "word": "health",
+          "pronunciation": "",
+          "meaning": "건강검진"
+        },
+        {
+          "id": 39,
+          "word": "improve",
+          "pronunciation": "",
+          "meaning": "개선하다, 나아지다"
+        },
+        {
+          "id": 40,
+          "word": "join",
+          "pronunciation": "",
+          "meaning": "함께하다, 가입하다"
+        },
+        {
+          "id": 41,
+          "word": "explain",
+          "pronunciation": "",
+          "meaning": "설명하다"
+        },
+        {
+          "id": 42,
+          "word": "wish",
+          "pronunciation": "",
+          "meaning": "소망하다, 하면좋겠다"
+        },
+        {
+          "id": 43,
+          "word": "make",
+          "pronunciation": "",
+          "meaning": "소원을빌다"
+        },
+        {
+          "id": 44,
+          "word": "receive",
+          "pronunciation": "",
+          "meaning": "상을받다"
+        },
+        {
+          "id": 45,
+          "word": "live",
+          "pronunciation": "",
+          "meaning": "살다"
+        },
+        {
+          "id": 46,
+          "word": "lift",
+          "pronunciation": "",
+          "meaning": "들어올리다, 들다"
+        },
+        {
+          "id": 47,
+          "word": "connect",
+          "pronunciation": "",
+          "meaning": "연결하다, 접속하다, 관계하다"
+        },
+        {
+          "id": 48,
+          "word": "kites",
+          "pronunciation": "",
+          "meaning": "연을날리다"
+        },
+        {
+          "id": 49,
+          "word": "understand",
+          "pronunciation": "",
+          "meaning": "동 이해하다, 알다"
+        },
+        {
+          "id": 50,
+          "word": "provide",
+          "pronunciation": "",
+          "meaning": "제공하다, 공급하다"
+        },
+        {
+          "id": 51,
+          "word": "medal",
+          "pronunciation": "",
+          "meaning": "메달을따다"
+        },
+        {
+          "id": 52,
+          "word": "kill",
+          "pronunciation": "",
+          "meaning": "죽이다"
+        },
+        {
+          "id": 53,
+          "word": "worry",
+          "pronunciation": "",
+          "meaning": "걱정시키다"
+        },
+        {
+          "id": 54,
+          "word": "pull",
+          "pronunciation": "",
+          "meaning": "끌다당기다"
+        },
+        {
+          "id": 55,
+          "word": "push",
+          "pronunciation": "",
+          "meaning": "밀다"
+        },
+        {
+          "id": 56,
+          "word": "rope",
+          "pronunciation": "",
+          "meaning": "잡아당기다"
+        },
+        {
+          "id": 57,
+          "word": "grow",
+          "pronunciation": "",
+          "meaning": "자라다, 재배하다"
+        },
+        {
+          "id": 58,
+          "word": "study",
+          "pronunciation": "",
+          "meaning": "공부하다"
+        },
+        {
+          "id": 59,
+          "word": "repair",
+          "pronunciation": "",
+          "meaning": "수리하다, 수선하다"
+        },
+        {
+          "id": 60,
+          "word": "celebrate",
+          "pronunciation": "",
+          "meaning": "동 축하하다, 기념하다"
+        },
+        {
+          "id": 61,
+          "word": "keep",
+          "pronunciation": "",
+          "meaning": "유지하다, 보관하다"
+        },
+        {
+          "id": 62,
+          "word": "collect",
+          "pronunciation": "",
+          "meaning": "수집하다, 모으다"
+        },
+        {
+          "id": 63,
+          "word": "fail",
+          "pronunciation": "",
+          "meaning": "실패하다, 하지못하다"
+        },
+        {
+          "id": 64,
+          "word": "cancer",
+          "pronunciation": "",
+          "meaning": "암으로죽다"
+        },
+        {
+          "id": 65,
+          "word": "climb",
+          "pronunciation": "",
+          "meaning": "올라가다, 등산하다"
+        },
+        {
+          "id": 66,
+          "word": "appear",
+          "pronunciation": "",
+          "meaning": "나타나다, 인것같다"
+        },
+        {
+          "id": 67,
+          "word": "complain",
+          "pronunciation": "",
+          "meaning": "불펑하다"
+        },
+        {
+          "id": 68,
+          "word": "hurry",
+          "pronunciation": "",
+          "meaning": "서두르다, 재촉하다"
+        },
+        {
+          "id": 69,
+          "word": "discuss",
+          "pronunciation": "",
+          "meaning": "토론하다"
+        },
+        {
+          "id": 70,
+          "word": "believe",
+          "pronunciation": "",
+          "meaning": "믿다, 성각하다"
+        },
+        {
+          "id": 71,
+          "word": "stay",
+          "pronunciation": "",
+          "meaning": "머무르다"
+        },
+        {
+          "id": 72,
+          "word": "pick",
+          "pronunciation": "",
+          "meaning": "고르다, 따다"
+        },
+        {
+          "id": 73,
+          "word": "flowers",
+          "pronunciation": "",
+          "meaning": "꽃을따다"
+        },
+        {
+          "id": 74,
+          "word": "wear",
+          "pronunciation": "",
+          "meaning": "입다, 착용하다"
+        },
+        {
+          "id": 75,
+          "word": "ride",
+          "pronunciation": "",
+          "meaning": "타다, 타고가다"
+        },
+        {
+          "id": 76,
+          "word": "hand",
+          "pronunciation": "",
+          "meaning": "건네주다, 주다"
+        },
+        {
+          "id": 77,
+          "word": "remove",
+          "pronunciation": "",
+          "meaning": "제거하다, 치우다"
+        },
+        {
+          "id": 78,
+          "word": "help",
+          "pronunciation": "",
+          "meaning": "돕다, 피하다"
+        },
+        {
+          "id": 79,
+          "word": "warn",
+          "pronunciation": "",
+          "meaning": "경고하다"
+        },
+        {
+          "id": 80,
+          "word": "create",
+          "pronunciation": "",
+          "meaning": "창조하다, 만들어내다"
+        },
+        {
+          "id": 81,
+          "word": "charge",
+          "pronunciation": "",
+          "meaning": "청구하다, 충전하다"
+        },
+        {
+          "id": 82,
+          "word": "share",
+          "pronunciation": "",
+          "meaning": "공유하다, 함께쓰다"
+        },
+        {
+          "id": 83,
+          "word": "succeed",
+          "pronunciation": "",
+          "meaning": "동 성공하다"
+        },
+        {
+          "id": 84,
+          "word": "avoid",
+          "pronunciation": "",
+          "meaning": "피하다, 회피하다"
+        },
+        {
+          "id": 85,
+          "word": "increase",
+          "pronunciation": "",
+          "meaning": "증가하다"
+        },
+        {
+          "id": 86,
+          "word": "decrease",
+          "pronunciation": "",
+          "meaning": "감소하다; 감소"
+        },
+        {
+          "id": 87,
+          "word": "steady",
+          "pronunciation": "",
+          "meaning": "꾸준한중가"
+        },
+        {
+          "id": 88,
+          "word": "form",
+          "pronunciation": "",
+          "meaning": "형 성하다, 형태를) 만들다"
+        },
+        {
+          "id": 89,
+          "word": "realize",
+          "pronunciation": "",
+          "meaning": "깨닫다, 실현하다"
+        },
+        {
+          "id": 90,
+          "word": "refuse",
+          "pronunciation": "",
+          "meaning": "거부하다, 거절하다"
+        },
+        {
+          "id": 91,
+          "word": "remind",
+          "pronunciation": "",
+          "meaning": "상기시키다"
+        },
+        {
+          "id": 92,
+          "word": "consider",
+          "pronunciation": "",
+          "meaning": "숙고하다, 여기다"
+        },
+        {
+          "id": 93,
+          "word": "recover",
+          "pronunciation": "",
+          "meaning": "회복하다, 되찾다"
+        },
+        {
+          "id": 94,
+          "word": "include",
+          "pronunciation": "",
+          "meaning": "포함하다"
+        },
+        {
+          "id": 95,
+          "word": "reduce",
+          "pronunciation": "",
+          "meaning": "줄이다"
+        },
+        {
+          "id": 96,
+          "word": "delete",
+          "pronunciation": "",
+          "meaning": "삭제하다"
+        },
+        {
+          "id": 97,
+          "word": "require",
+          "pronunciation": "",
+          "meaning": "하다, 요구하다"
+        },
+        {
+          "id": 98,
+          "word": "participate",
+          "pronunciation": "",
+          "meaning": "동 참가하다, 참여하다"
+        },
+        {
+          "id": 99,
+          "word": "develop",
+          "pronunciation": "",
+          "meaning": "발달시키다, 개발하다"
+        },
+        {
+          "id": 100,
+          "word": "employ",
+          "pronunciation": "",
+          "meaning": "고용하다"
+        },
+        {
+          "id": 101,
+          "word": "deliver",
+          "pronunciation": "",
+          "meaning": "동 배달하다, 전하다"
+        },
+        {
+          "id": 102,
+          "word": "exercise",
+          "pronunciation": "",
+          "meaning": "운동하다, 연습하다"
+        },
+        {
+          "id": 103,
+          "word": "physical",
+          "pronunciation": "",
+          "meaning": "신체운동"
+        },
+        {
+          "id": 104,
+          "word": "exercises",
+          "pronunciation": "",
+          "meaning": "영어연습"
+        },
+        {
+          "id": 105,
+          "word": "english",
+          "pronunciation": "",
+          "meaning": "영어연습"
+        },
+        {
+          "id": 106,
+          "word": "attend",
+          "pronunciation": "",
+          "meaning": "동 참석하다, 다니다"
+        },
+        {
+          "id": 107,
+          "word": "suggest",
+          "pronunciation": "",
+          "meaning": "동 제안하다, 암시하다"
+        },
+        {
+          "id": 108,
+          "word": "serve",
+          "pronunciation": "",
+          "meaning": "음식을) 내놓다, 제공하다, (식당"
+        },
+        {
+          "id": 109,
+          "word": "demand",
+          "pronunciation": "",
+          "meaning": "동 요구하다"
+        },
+        {
+          "id": 110,
+          "word": "supply",
+          "pronunciation": "",
+          "meaning": "공급하다, 공급"
+        },
+        {
+          "id": 111,
+          "word": "survey",
+          "pronunciation": "",
+          "meaning": "(설문) 조사하다"
+        },
+        {
+          "id": 112,
+          "word": "defend",
+          "pronunciation": "",
+          "meaning": "방어하다"
+        },
+        {
+          "id": 113,
+          "word": "affect",
+          "pronunciation": "",
+          "meaning": "주다"
+        },
+        {
+          "id": 114,
+          "word": "operate",
+          "pronunciation": "",
+          "meaning": "작동하다, 수술하다"
+        },
+        {
+          "id": 115,
+          "word": "discover",
+          "pronunciation": "",
+          "meaning": "동 발견하다, 을알게되다"
+        },
+        {
+          "id": 116,
+          "word": "upload",
+          "pronunciation": "",
+          "meaning": "업로드하다"
+        },
+        {
+          "id": 117,
+          "word": "survive",
+          "pronunciation": "",
+          "meaning": "살아남다, 남아있다"
+        },
+        {
+          "id": 118,
+          "word": "compare",
+          "pronunciation": "",
+          "meaning": "비교하다, 비유하다"
+        },
+        {
+          "id": 119,
+          "word": "explore",
+          "pronunciation": "",
+          "meaning": "탐험하다"
+        },
+        {
+          "id": 120,
+          "word": "waste",
+          "pronunciation": "",
+          "meaning": "낭비하다"
+        },
+        {
+          "id": 121,
+          "word": "save",
+          "pronunciation": "",
+          "meaning": "저축하다"
+        },
+        {
+          "id": 122,
+          "word": "respect",
+          "pronunciation": "",
+          "meaning": "존경하다, 존중하다"
+        },
+        {
+          "id": 123,
+          "word": "recycle",
+          "pronunciation": "",
+          "meaning": "재활용하다"
+        },
+        {
+          "id": 124,
+          "word": "blow",
+          "pronunciation": "",
+          "meaning": "바람이불다"
+        },
+        {
+          "id": 125,
+          "word": "disappoint",
+          "pronunciation": "",
+          "meaning": "실망시키다"
+        },
+        {
+          "id": 126,
+          "word": "explode",
+          "pronunciation": "",
+          "meaning": "독발하다"
+        },
+        {
+          "id": 127,
+          "word": "protect",
+          "pronunciation": "",
+          "meaning": "보호하다"
+        },
+        {
+          "id": 128,
+          "word": "produce",
+          "pronunciation": "",
+          "meaning": "동 생산하다"
+        },
+        {
+          "id": 129,
+          "word": "gain",
+          "pronunciation": "",
+          "meaning": "얻다"
+        },
+        {
+          "id": 130,
+          "word": "lose",
+          "pronunciation": "",
+          "meaning": "잃다, 지다"
+        },
+        {
+          "id": 131,
+          "word": "roman",
+          "pronunciation": "",
+          "meaning": "로마유적"
+        },
+        {
+          "id": 132,
+          "word": "remains",
+          "pronunciation": "",
+          "meaning": "로마유적"
+        },
+        {
+          "id": 133,
+          "word": "book",
+          "pronunciation": "",
+          "meaning": "통독하다"
+        },
+        {
+          "id": 134,
+          "word": "cover",
+          "pronunciation": "",
+          "meaning": "통독하다"
+        },
+        {
+          "id": 135,
+          "word": "weather",
+          "pronunciation": "",
+          "meaning": "날씨"
+        },
+        {
+          "id": 136,
+          "word": "weight",
+          "pronunciation": "",
+          "meaning": "무게, 체중, 중량"
+        },
+        {
+          "id": 137,
+          "word": "chance",
+          "pronunciation": "",
+          "meaning": "가능성"
+        },
+        {
+          "id": 138,
+          "word": "habit",
+          "pronunciation": "",
+          "meaning": "버릇"
+        },
+        {
+          "id": 139,
+          "word": "diet",
+          "pronunciation": "",
+          "meaning": "식단, 다이어트"
+        },
+        {
+          "id": 140,
+          "word": "taste",
+          "pronunciation": "",
+          "meaning": "명 맛기호"
+        },
+        {
+          "id": 141,
+          "word": "arecipe",
+          "pronunciation": "",
+          "meaning": "오리책"
+        },
+        {
+          "id": 142,
+          "word": "lock",
+          "pronunciation": "",
+          "meaning": "자물쇠"
+        },
+        {
+          "id": 143,
+          "word": "library",
+          "pronunciation": "",
+          "meaning": "도서관"
+        },
+        {
+          "id": 144,
+          "word": "bright",
+          "pronunciation": "",
+          "meaning": "기발한생각"
+        },
+        {
+          "id": 145,
+          "word": "idea",
+          "pronunciation": "",
+          "meaning": "기발한생각"
+        },
+        {
+          "id": 146,
+          "word": "reason",
+          "pronunciation": "",
+          "meaning": "이성"
+        },
+        {
+          "id": 147,
+          "word": "hospital",
+          "pronunciation": "",
+          "meaning": "병원"
+        },
+        {
+          "id": 148,
+          "word": "mental",
+          "pronunciation": "",
+          "meaning": "정신질환, 정신병"
+        },
+        {
+          "id": 149,
+          "word": "sickness",
+          "pronunciation": "",
+          "meaning": "질병, 메스꺼움"
+        },
+        {
+          "id": 150,
+          "word": "past",
+          "pronunciation": "",
+          "meaning": "과거 (의) 현재 (의)"
+        },
+        {
+          "id": 151,
+          "word": "success",
+          "pronunciation": "",
+          "meaning": "성공"
+        },
+        {
+          "id": 152,
+          "word": "seat",
+          "pronunciation": "",
+          "meaning": "좌석"
+        },
+        {
+          "id": 153,
+          "word": "beach",
+          "pronunciation": "",
+          "meaning": "해변"
+        },
+        {
+          "id": 154,
+          "word": "model",
+          "pronunciation": "",
+          "meaning": "홍모델, 모형"
+        },
+        {
+          "id": 155,
+          "word": "amodel",
+          "pronunciation": "",
+          "meaning": "모형비행기"
+        },
+        {
+          "id": 156,
+          "word": "airplane",
+          "pronunciation": "",
+          "meaning": "모형비행기"
+        },
+        {
+          "id": 157,
+          "word": "meaning",
+          "pronunciation": "",
+          "meaning": "의미,"
+        },
+        {
+          "id": 158,
+          "word": "customer",
+          "pronunciation": "",
+          "meaning": "고객, 손님"
+        },
+        {
+          "id": 159,
+          "word": "world",
+          "pronunciation": "",
+          "meaning": "세계, 세상"
+        },
+        {
+          "id": 160,
+          "word": "reality",
+          "pronunciation": "",
+          "meaning": "현실"
+        },
+        {
+          "id": 161,
+          "word": "attention",
+          "pronunciation": "",
+          "meaning": "주의, 주목"
+        },
+        {
+          "id": 162,
+          "word": "headache",
+          "pronunciation": "",
+          "meaning": "두통,"
+        },
+        {
+          "id": 163,
+          "word": "head",
+          "pronunciation": "",
+          "meaning": "머리, 책임자"
+        },
+        {
+          "id": 164,
+          "word": "chef",
+          "pronunciation": "",
+          "meaning": "주방장"
+        },
+        {
+          "id": 165,
+          "word": "fees",
+          "pronunciation": "",
+          "meaning": "돌본다,"
+        },
+        {
+          "id": 166,
+          "word": "knowledge",
+          "pronunciation": "",
+          "meaning": "지식"
+        },
+        {
+          "id": 167,
+          "word": "garlic",
+          "pronunciation": "",
+          "meaning": "마늘"
+        },
+        {
+          "id": 168,
+          "word": "culture",
+          "pronunciation": "",
+          "meaning": "문화"
+        },
+        {
+          "id": 169,
+          "word": "western",
+          "pronunciation": "",
+          "meaning": "서구문화"
+        },
+        {
+          "id": 170,
+          "word": "adult",
+          "pronunciation": "",
+          "meaning": "어른, 다자란동물"
+        },
+        {
+          "id": 171,
+          "word": "child",
+          "pronunciation": "",
+          "meaning": "아이"
+        },
+        {
+          "id": 172,
+          "word": "adults",
+          "pronunciation": "",
+          "meaning": "성인용"
+        },
+        {
+          "id": 173,
+          "word": "only",
+          "pronunciation": "",
+          "meaning": "성인용"
+        },
+        {
+          "id": 174,
+          "word": "population",
+          "pronunciation": "",
+          "meaning": "성인인구"
+        },
+        {
+          "id": 175,
+          "word": "difference",
+          "pronunciation": "",
+          "meaning": "형 차이다름"
+        },
+        {
+          "id": 176,
+          "word": "effect",
+          "pronunciation": "",
+          "meaning": "결과, 영향, 효과"
+        },
+        {
+          "id": 177,
+          "word": "cause",
+          "pronunciation": "",
+          "meaning": "원인과결과"
+        },
+        {
+          "id": 178,
+          "word": "aside",
+          "pronunciation": "",
+          "meaning": "부 작용"
+        },
+        {
+          "id": 179,
+          "word": "behavior",
+          "pronunciation": "",
+          "meaning": "행동,"
+        },
+        {
+          "id": 180,
+          "word": "complaint",
+          "pronunciation": "",
+          "meaning": "불평, 항의"
+        },
+        {
+          "id": 181,
+          "word": "town",
+          "pronunciation": "",
+          "meaning": "작은도시, 시내"
+        },
+        {
+          "id": 182,
+          "word": "situation",
+          "pronunciation": "",
+          "meaning": "상황처지"
+        },
+        {
+          "id": 183,
+          "word": "president",
+          "pronunciation": "",
+          "meaning": "대통령, 사장, 회장"
+        },
+        {
+          "id": 184,
+          "word": "guide",
+          "pronunciation": "",
+          "meaning": "안내자, 안내서"
+        },
+        {
+          "id": 185,
+          "word": "heavy",
+          "pronunciation": "",
+          "meaning": "일정"
+        },
+        {
+          "id": 186,
+          "word": "schedule",
+          "pronunciation": "",
+          "meaning": "일정"
+        },
+        {
+          "id": 187,
+          "word": "accident",
+          "pronunciation": "",
+          "meaning": "뜻밖의사건"
+        },
+        {
+          "id": 188,
+          "word": "desk",
+          "pronunciation": "",
+          "meaning": "안내소"
+        },
+        {
+          "id": 189,
+          "word": "damage",
+          "pronunciation": "",
+          "meaning": "손상, 피해"
+        },
+        {
+          "id": 190,
+          "word": "serious",
+          "pronunciation": "",
+          "meaning": "심한손상"
+        },
+        {
+          "id": 191,
+          "word": "language",
+          "pronunciation": "",
+          "meaning": "언어, 말"
+        },
+        {
+          "id": 192,
+          "word": "tongue",
+          "pronunciation": "",
+          "meaning": "혀언어"
+        },
+        {
+          "id": 193,
+          "word": "mother",
+          "pronunciation": "",
+          "meaning": "모국어"
+        },
+        {
+          "id": 194,
+          "word": "fongue",
+          "pronunciation": "",
+          "meaning": "모국어"
+        },
+        {
+          "id": 195,
+          "word": "speech",
+          "pronunciation": "",
+          "meaning": "연설"
+        },
+        {
+          "id": 196,
+          "word": "practice",
+          "pronunciation": "",
+          "meaning": "연습,"
+        },
+        {
+          "id": 197,
+          "word": "football",
+          "pronunciation": "",
+          "meaning": "축구연습 (훈련)"
+        },
+        {
+          "id": 198,
+          "word": "opinion",
+          "pronunciation": "",
+          "meaning": "의견, 성각"
+        },
+        {
+          "id": 199,
+          "word": "public",
+          "pronunciation": "",
+          "meaning": "여론"
+        },
+        {
+          "id": 200,
+          "word": "choice",
+          "pronunciation": "",
+          "meaning": "선택, 선택권"
+        },
+        {
+          "id": 201,
+          "word": "freedom",
+          "pronunciation": "",
+          "meaning": "선택의자유"
+        },
+        {
+          "id": 202,
+          "word": "grammar",
+          "pronunciation": "",
+          "meaning": "영문법"
+        },
+        {
+          "id": 203,
+          "word": "earthquake",
+          "pronunciation": "",
+          "meaning": "지진"
+        },
+        {
+          "id": 204,
+          "word": "earth",
+          "pronunciation": "",
+          "meaning": "지구흙"
+        },
+        {
+          "id": 205,
+          "word": "space",
+          "pronunciation": "",
+          "meaning": "우주"
+        },
+        {
+          "id": 206,
+          "word": "flight",
+          "pronunciation": "",
+          "meaning": "우주비행"
+        },
+        {
+          "id": 207,
+          "word": "surface",
+          "pronunciation": "",
+          "meaning": "지구의표면"
+        },
+        {
+          "id": 208,
+          "word": "ocean",
+          "pronunciation": "",
+          "meaning": "대양, 바다"
+        },
+        {
+          "id": 209,
+          "word": "pacific",
+          "pronunciation": "",
+          "meaning": "태평양"
+        },
+        {
+          "id": 210,
+          "word": "tool",
+          "pronunciation": "",
+          "meaning": "도구, 수단"
+        },
+        {
+          "id": 211,
+          "word": "purpose",
+          "pronunciation": "",
+          "meaning": "목적, 의도"
+        },
+        {
+          "id": 212,
+          "word": "environment",
+          "pronunciation": "",
+          "meaning": "환경"
+        },
+        {
+          "id": 213,
+          "word": "work",
+          "pronunciation": "",
+          "meaning": "근무환경"
+        },
+        {
+          "id": 214,
+          "word": "judge",
+          "pronunciation": "",
+          "meaning": "재판관"
+        },
+        {
+          "id": 215,
+          "word": "decision",
+          "pronunciation": "",
+          "meaning": "결정, 판단"
+        },
+        {
+          "id": 216,
+          "word": "beauty",
+          "pronunciation": "",
+          "meaning": "아름다움, 미인"
+        },
+        {
+          "id": 217,
+          "word": "contest",
+          "pronunciation": "",
+          "meaning": "미인대회"
+        },
+        {
+          "id": 218,
+          "word": "beast",
+          "pronunciation": "",
+          "meaning": "미녀와야수 (책제목)"
+        },
+        {
+          "id": 219,
+          "word": "sunrise",
+          "pronunciation": "",
+          "meaning": "해돋이, 일출"
+        },
+        {
+          "id": 220,
+          "word": "sunset",
+          "pronunciation": "",
+          "meaning": "해넘이, 일몰"
+        },
+        {
+          "id": 221,
+          "word": "skill",
+          "pronunciation": "",
+          "meaning": "기술"
+        },
+        {
+          "id": 222,
+          "word": "teaching",
+          "pronunciation": "",
+          "meaning": "교수기법"
+        },
+        {
+          "id": 223,
+          "word": "skills",
+          "pronunciation": "",
+          "meaning": "교수기법"
+        },
+        {
+          "id": 224,
+          "word": "journey",
+          "pronunciation": "",
+          "meaning": "여행여정"
+        },
+        {
+          "id": 225,
+          "word": "event",
+          "pronunciation": "",
+          "meaning": "사건, 행사, 경기종목"
+        },
+        {
+          "id": 226,
+          "word": "theater",
+          "pronunciation": "",
+          "meaning": "극장"
+        },
+        {
+          "id": 227,
+          "word": "amovie",
+          "pronunciation": "",
+          "meaning": "영화관"
+        },
+        {
+          "id": 228,
+          "word": "stage",
+          "pronunciation": "",
+          "meaning": "무대, 단계"
+        },
+        {
+          "id": 229,
+          "word": "voice",
+          "pronunciation": "",
+          "meaning": "영목소리"
+        },
+        {
+          "id": 230,
+          "word": "import",
+          "pronunciation": "",
+          "meaning": "수입제한"
+        },
+        {
+          "id": 231,
+          "word": "control",
+          "pronunciation": "",
+          "meaning": "수입제한"
+        },
+        {
+          "id": 232,
+          "word": "stripe",
+          "pronunciation": "",
+          "meaning": "앵줄무늬"
+        },
+        {
+          "id": 233,
+          "word": "stars",
+          "pronunciation": "",
+          "meaning": "성조기 (미국국기)"
+        },
+        {
+          "id": 234,
+          "word": "stripes",
+          "pronunciation": "",
+          "meaning": "성조기 (미국국기)"
+        },
+        {
+          "id": 235,
+          "word": "army",
+          "pronunciation": "",
+          "meaning": "군대"
+        },
+        {
+          "id": 236,
+          "word": "battle",
+          "pronunciation": "",
+          "meaning": "전 투, 싸움"
+        },
+        {
+          "id": 237,
+          "word": "soldier",
+          "pronunciation": "",
+          "meaning": "군인, 병사"
+        },
+        {
+          "id": 238,
+          "word": "sailor",
+          "pronunciation": "",
+          "meaning": "해군의군인,"
+        },
+        {
+          "id": 239,
+          "word": "difficulty",
+          "pronunciation": "",
+          "meaning": "어려움, 장애"
+        },
+        {
+          "id": 240,
+          "word": "prison",
+          "pronunciation": "",
+          "meaning": "탈옥"
+        },
+        {
+          "id": 241,
+          "word": "break",
+          "pronunciation": "",
+          "meaning": "탈옥"
+        },
+        {
+          "id": 242,
+          "word": "fact",
+          "pronunciation": "",
+          "meaning": "사실"
+        },
+        {
+          "id": 243,
+          "word": "joys",
+          "pronunciation": "",
+          "meaning": "인생의"
+        },
+        {
+          "id": 244,
+          "word": "heat",
+          "pronunciation": "",
+          "meaning": "더위"
+        },
+        {
+          "id": 245,
+          "word": "fever",
+          "pronunciation": "",
+          "meaning": "열병"
+        },
+        {
+          "id": 246,
+          "word": "blood",
+          "pronunciation": "",
+          "meaning": "검사"
+        },
+        {
+          "id": 247,
+          "word": "test",
+          "pronunciation": "",
+          "meaning": "검사"
+        },
+        {
+          "id": 248,
+          "word": "thief",
+          "pronunciation": "",
+          "meaning": "도둑"
+        },
+        {
+          "id": 249,
+          "word": "officer",
+          "pronunciation": "",
+          "meaning": "경관"
+        },
+        {
+          "id": 250,
+          "word": "favor",
+          "pronunciation": "",
+          "meaning": "호의, 찬성"
+        },
+        {
+          "id": 251,
+          "word": "musician",
+          "pronunciation": "",
+          "meaning": "음악가"
+        },
+        {
+          "id": 252,
+          "word": "poet",
+          "pronunciation": "",
+          "meaning": "시인"
+        },
+        {
+          "id": 253,
+          "word": "cost",
+          "pronunciation": "",
+          "meaning": "생활비"
+        },
+        {
+          "id": 254,
+          "word": "living",
+          "pronunciation": "",
+          "meaning": "생활비"
+        },
+        {
+          "id": 255,
+          "word": "diary",
+          "pronunciation": "",
+          "meaning": "일기"
+        },
+        {
+          "id": 256,
+          "word": "neighbor",
+          "pronunciation": "",
+          "meaning": "이웃사람"
+        },
+        {
+          "id": 257,
+          "word": "neighborhood",
+          "pronunciation": "",
+          "meaning": "동 네, 이웃"
+        },
+        {
+          "id": 258,
+          "word": "natural",
+          "pronunciation": "",
+          "meaning": "자연림"
+        },
+        {
+          "id": 259,
+          "word": "forest",
+          "pronunciation": "",
+          "meaning": "자연림"
+        },
+        {
+          "id": 260,
+          "word": "nature",
+          "pronunciation": "",
+          "meaning": "자연, 천성"
+        },
+        {
+          "id": 261,
+          "word": "death",
+          "pronunciation": "",
+          "meaning": "사망"
+        },
+        {
+          "id": 262,
+          "word": "factory",
+          "pronunciation": "",
+          "meaning": "공장"
+        },
+        {
+          "id": 263,
+          "word": "machine",
+          "pronunciation": "",
+          "meaning": "기계"
+        },
+        {
+          "id": 264,
+          "word": "type",
+          "pronunciation": "",
+          "meaning": "유형, 타입"
+        },
+        {
+          "id": 265,
+          "word": "clerk",
+          "pronunciation": "",
+          "meaning": "사무원, 점원"
+        },
+        {
+          "id": 266,
+          "word": "bank",
+          "pronunciation": "",
+          "meaning": "은행원"
+        },
+        {
+          "id": 267,
+          "word": "million",
+          "pronunciation": "",
+          "meaning": "백만, 다수"
+        },
+        {
+          "id": 268,
+          "word": "office",
+          "pronunciation": "",
+          "meaning": "사무소, 사무실"
+        },
+        {
+          "id": 269,
+          "word": "ticket",
+          "pronunciation": "",
+          "meaning": "매표소"
+        },
+        {
+          "id": 270,
+          "word": "prize",
+          "pronunciation": "",
+          "meaning": "형 상, 상품"
+        },
+        {
+          "id": 271,
+          "word": "subway",
+          "pronunciation": "",
+          "meaning": "지하철"
+        },
+        {
+          "id": 272,
+          "word": "science",
+          "pronunciation": "",
+          "meaning": "자연과학"
+        },
+        {
+          "id": 273,
+          "word": "history",
+          "pronunciation": "",
+          "meaning": "역사"
+        },
+        {
+          "id": 274,
+          "word": "human",
+          "pronunciation": "",
+          "meaning": "인류의역사"
+        },
+        {
+          "id": 275,
+          "word": "holiday",
+          "pronunciation": "",
+          "meaning": "휴가"
+        },
+        {
+          "id": 276,
+          "word": "center",
+          "pronunciation": "",
+          "meaning": "중심, 중심지 (센터)"
+        },
+        {
+          "id": 277,
+          "word": "couple",
+          "pronunciation": "",
+          "meaning": "부 부"
+        },
+        {
+          "id": 278,
+          "word": "anewly",
+          "pronunciation": "",
+          "meaning": "신혼부부"
+        },
+        {
+          "id": 279,
+          "word": "wedded",
+          "pronunciation": "",
+          "meaning": "신혼부부"
+        },
+        {
+          "id": 280,
+          "word": "group",
+          "pronunciation": "",
+          "meaning": "집단, 무리"
+        },
+        {
+          "id": 281,
+          "word": "activity",
+          "pronunciation": "",
+          "meaning": "활동"
+        },
+        {
+          "id": 282,
+          "word": "village",
+          "pronunciation": "",
+          "meaning": "마을"
+        },
+        {
+          "id": 283,
+          "word": "beef",
+          "pronunciation": "",
+          "meaning": "소고기"
+        },
+        {
+          "id": 284,
+          "word": "airport",
+          "pronunciation": "",
+          "meaning": "공항"
+        },
+        {
+          "id": 285,
+          "word": "airline",
+          "pronunciation": "",
+          "meaning": "항공사"
+        },
+        {
+          "id": 286,
+          "word": "passport",
+          "pronunciation": "",
+          "meaning": "여권"
+        },
+        {
+          "id": 287,
+          "word": "tower",
+          "pronunciation": "",
+          "meaning": "영탑"
+        },
+        {
+          "id": 288,
+          "word": "mistake",
+          "pronunciation": "",
+          "meaning": "실수잘못"
+        },
+        {
+          "id": 289,
+          "word": "birth",
+          "pronunciation": "",
+          "meaning": "출생"
+        },
+        {
+          "id": 290,
+          "word": "school",
+          "pronunciation": "",
+          "meaning": "학교체육관"
+        },
+        {
+          "id": 291,
+          "word": "nation",
+          "pronunciation": "",
+          "meaning": "국민"
+        },
+        {
+          "id": 292,
+          "word": "nations",
+          "pronunciation": "",
+          "meaning": "서방국가들"
+        },
+        {
+          "id": 293,
+          "word": "united",
+          "pronunciation": "",
+          "meaning": "유엔"
+        },
+        {
+          "id": 294,
+          "word": "pilot",
+          "pronunciation": "",
+          "meaning": "조종사"
+        },
+        {
+          "id": 295,
+          "word": "principal",
+          "pronunciation": "",
+          "meaning": "교장, 장"
+        },
+        {
+          "id": 296,
+          "word": "principle",
+          "pronunciation": "",
+          "meaning": "원칙"
+        },
+        {
+          "id": 297,
+          "word": "appointment",
+          "pronunciation": "",
+          "meaning": "약속, 임명"
+        },
+        {
+          "id": 298,
+          "word": "individual",
+          "pronunciation": "",
+          "meaning": "가인"
+        },
+        {
+          "id": 299,
+          "word": "rights",
+          "pronunciation": "",
+          "meaning": "개인의권리"
+        },
+        {
+          "id": 300,
+          "word": "pizza",
+          "pronunciation": "",
+          "meaning": "인용피자"
+        },
+        {
+          "id": 301,
+          "word": "economy",
+          "pronunciation": "",
+          "meaning": "경제"
+        },
+        {
+          "id": 302,
+          "word": "border",
+          "pronunciation": "",
+          "meaning": "영국경, 경계"
+        },
+        {
+          "id": 303,
+          "word": "government",
+          "pronunciation": "",
+          "meaning": "정부"
+        },
+        {
+          "id": 304,
+          "word": "pollution",
+          "pronunciation": "",
+          "meaning": "오염공해"
+        },
+        {
+          "id": 305,
+          "word": "climate",
+          "pronunciation": "",
+          "meaning": "기후, 분위기"
+        },
+        {
+          "id": 306,
+          "word": "social",
+          "pronunciation": "",
+          "meaning": "사회적풍토"
+        },
+        {
+          "id": 307,
+          "word": "thought",
+          "pronunciation": "",
+          "meaning": "생각, 사고"
+        },
+        {
+          "id": 308,
+          "word": "half",
+          "pronunciation": "",
+          "meaning": "반절반"
+        },
+        {
+          "id": 309,
+          "word": "handle",
+          "pronunciation": "",
+          "meaning": "손잡이"
+        },
+        {
+          "id": 310,
+          "word": "peace",
+          "pronunciation": "",
+          "meaning": "평온"
+        },
+        {
+          "id": 311,
+          "word": "anger",
+          "pronunciation": "",
+          "meaning": "화분노"
+        },
+        {
+          "id": 312,
+          "word": "university",
+          "pronunciation": "",
+          "meaning": "종합대학"
+        },
+        {
+          "id": 313,
+          "word": "academy",
+          "pronunciation": "",
+          "meaning": "아카데미상"
+        },
+        {
+          "id": 314,
+          "word": "award",
+          "pronunciation": "",
+          "meaning": "아카데미상"
+        },
+        {
+          "id": 315,
+          "word": "drug",
+          "pronunciation": "",
+          "meaning": "약마약"
+        },
+        {
+          "id": 316,
+          "word": "role",
+          "pronunciation": "",
+          "meaning": "역할"
+        },
+        {
+          "id": 317,
+          "word": "leader",
+          "pronunciation": "",
+          "meaning": "역할"
+        },
+        {
+          "id": 318,
+          "word": "product",
+          "pronunciation": "",
+          "meaning": "제품, 상산품"
+        },
+        {
+          "id": 319,
+          "word": "strength",
+          "pronunciation": "",
+          "meaning": "힘강점"
+        },
+        {
+          "id": 320,
+          "word": "audience",
+          "pronunciation": "",
+          "meaning": "청중, 시청자"
+        },
+        {
+          "id": 321,
+          "word": "fuel",
+          "pronunciation": "",
+          "meaning": "연료"
+        },
+        {
+          "id": 322,
+          "word": "trip",
+          "pronunciation": "",
+          "meaning": "여행"
+        },
+        {
+          "id": 323,
+          "word": "baggage",
+          "pronunciation": "",
+          "meaning": "수하물, 짐"
+        },
+        {
+          "id": 324,
+          "word": "secret",
+          "pronunciation": "",
+          "meaning": "비밀"
+        },
+        {
+          "id": 325,
+          "word": "risk",
+          "pronunciation": "",
+          "meaning": "위험"
+        },
+        {
+          "id": 326,
+          "word": "responsibility",
+          "pronunciation": "",
+          "meaning": "책임감"
+        },
+        {
+          "id": 327,
+          "word": "wheel",
+          "pronunciation": "",
+          "meaning": "바퀴, (자동차등의) 핸들"
+        },
+        {
+          "id": 328,
+          "word": "front",
+          "pronunciation": "",
+          "meaning": "차의앞바퀴"
+        },
+        {
+          "id": 329,
+          "word": "wheels",
+          "pronunciation": "",
+          "meaning": "차의앞바퀴"
+        },
+        {
+          "id": 330,
+          "word": "interview",
+          "pronunciation": "",
+          "meaning": "면접, 인터뷰"
+        },
+        {
+          "id": 331,
+          "word": "personality",
+          "pronunciation": "",
+          "meaning": "성격, 인격"
+        },
+        {
+          "id": 332,
+          "word": "delay",
+          "pronunciation": "",
+          "meaning": "지연"
+        },
+        {
+          "id": 333,
+          "word": "opportunity",
+          "pronunciation": "",
+          "meaning": "기회"
+        },
+        {
+          "id": 334,
+          "word": "ability",
+          "pronunciation": "",
+          "meaning": "능력, 재능"
+        },
+        {
+          "id": 335,
+          "word": "staff",
+          "pronunciation": "",
+          "meaning": "(전체) 직원"
+        },
+        {
+          "id": 336,
+          "word": "attitude",
+          "pronunciation": "",
+          "meaning": "영태도"
+        },
+        {
+          "id": 337,
+          "word": "some",
+          "pronunciation": "",
+          "meaning": "약간의사업"
+        },
+        {
+          "id": 338,
+          "word": "symbol",
+          "pronunciation": "",
+          "meaning": "상징, 기호"
+        },
+        {
+          "id": 339,
+          "word": "chemical",
+          "pronunciation": "",
+          "meaning": "화학기호"
+        },
+        {
+          "id": 340,
+          "word": "family",
+          "pronunciation": "",
+          "meaning": "집안일"
+        },
+        {
+          "id": 341,
+          "word": "comfort",
+          "pronunciation": "",
+          "meaning": "안락, 위안"
+        },
+        {
+          "id": 342,
+          "word": "honor",
+          "pronunciation": "",
+          "meaning": "명 예, 영광"
+        },
+        {
+          "id": 343,
+          "word": "revolution",
+          "pronunciation": "",
+          "meaning": "혁명"
+        },
+        {
+          "id": 344,
+          "word": "french",
+          "pronunciation": "",
+          "meaning": "프랑스혁명"
+        },
+        {
+          "id": 345,
+          "word": "foundation",
+          "pronunciation": "",
+          "meaning": "기초, 근거"
+        },
+        {
+          "id": 346,
+          "word": "belief",
+          "pronunciation": "",
+          "meaning": "믿음의기초"
+        },
+        {
+          "id": 347,
+          "word": "competition",
+          "pronunciation": "",
+          "meaning": "경쟁"
+        },
+        {
+          "id": 348,
+          "word": "section",
+          "pronunciation": "",
+          "meaning": "부 분, 신문의) 면"
+        },
+        {
+          "id": 349,
+          "word": "tradition",
+          "pronunciation": "",
+          "meaning": "전 통풍습"
+        },
+        {
+          "id": 350,
+          "word": "historical",
+          "pronunciation": "",
+          "meaning": "역사적전통"
+        },
+        {
+          "id": 351,
+          "word": "duty",
+          "pronunciation": "",
+          "meaning": "의무"
+        },
+        {
+          "id": 352,
+          "word": "method",
+          "pronunciation": "",
+          "meaning": "방법"
+        },
+        {
+          "id": 353,
+          "word": "voyage",
+          "pronunciation": "",
+          "meaning": "항해, 여행"
+        },
+        {
+          "id": 354,
+          "word": "muscle",
+          "pronunciation": "",
+          "meaning": "근육"
+        },
+        {
+          "id": 355,
+          "word": "instrument",
+          "pronunciation": "",
+          "meaning": "기구악기"
+        },
+        {
+          "id": 356,
+          "word": "medical",
+          "pronunciation": "",
+          "meaning": "의료기구"
+        },
+        {
+          "id": 357,
+          "word": "adventure",
+          "pronunciation": "",
+          "meaning": "모험"
+        },
+        {
+          "id": 358,
+          "word": "story",
+          "pronunciation": "",
+          "meaning": "모험담"
+        },
+        {
+          "id": 359,
+          "word": "view",
+          "pronunciation": "",
+          "meaning": "경치, 의견"
+        },
+        {
+          "id": 360,
+          "word": "wealth",
+          "pronunciation": "",
+          "meaning": "재산,"
+        },
+        {
+          "id": 361,
+          "word": "resource",
+          "pronunciation": "",
+          "meaning": "자산"
+        },
+        {
+          "id": 362,
+          "word": "ruin",
+          "pronunciation": "",
+          "meaning": "파멸, 폐허"
+        },
+        {
+          "id": 363,
+          "word": "ruins",
+          "pronunciation": "",
+          "meaning": "로마의유적"
+        },
+        {
+          "id": 364,
+          "word": "rome",
+          "pronunciation": "",
+          "meaning": "로마의유적"
+        },
+        {
+          "id": 365,
+          "word": "minute",
+          "pronunciation": "",
+          "meaning": "순간"
+        },
+        {
+          "id": 366,
+          "word": "mystery",
+          "pronunciation": "",
+          "meaning": "신비, 불가사의, 추리소설"
+        },
+        {
+          "id": 367,
+          "word": "mysteries",
+          "pronunciation": "",
+          "meaning": "자연의신비"
+        },
+        {
+          "id": 368,
+          "word": "amystery",
+          "pronunciation": "",
+          "meaning": "추리소설"
+        },
+        {
+          "id": 369,
+          "word": "novel",
+          "pronunciation": "",
+          "meaning": "추리소설"
+        },
+        {
+          "id": 370,
+          "word": "cash",
+          "pronunciation": "",
+          "meaning": "현금"
+        },
+        {
+          "id": 371,
+          "word": "visitor",
+          "pronunciation": "",
+          "meaning": "방문자, 방문객"
+        },
+        {
+          "id": 372,
+          "word": "dish",
+          "pronunciation": "",
+          "meaning": "접 시, 요리"
+        },
+        {
+          "id": 373,
+          "word": "victories",
+          "pronunciation": "",
+          "meaning": "언전연승 (잇단승리)"
+        },
+        {
+          "id": 374,
+          "word": "clue",
+          "pronunciation": "",
+          "meaning": "실마리, 단서"
+        },
+        {
+          "id": 375,
+          "word": "debt",
+          "pronunciation": "",
+          "meaning": "빚부채"
+        },
+        {
+          "id": 376,
+          "word": "uniform",
+          "pronunciation": "",
+          "meaning": "교군복"
+        },
+        {
+          "id": 377,
+          "word": "design",
+          "pronunciation": "",
+          "meaning": "행디자인, 설계"
+        },
+        {
+          "id": 378,
+          "word": "furniture",
+          "pronunciation": "",
+          "meaning": "가구"
+        },
+        {
+          "id": 379,
+          "word": "greeting",
+          "pronunciation": "",
+          "meaning": "인사, 인사말"
+        },
+        {
+          "id": 380,
+          "word": "electricity",
+          "pronunciation": "",
+          "meaning": "전 기"
+        },
+        {
+          "id": 381,
+          "word": "passion",
+          "pronunciation": "",
+          "meaning": "열정, 정열"
+        },
+        {
+          "id": 382,
+          "word": "project",
+          "pronunciation": "",
+          "meaning": "계획"
+        },
+        {
+          "id": 383,
+          "word": "senior",
+          "pronunciation": "",
+          "meaning": "선배, 연장자"
+        },
+        {
+          "id": 384,
+          "word": "junior",
+          "pronunciation": "",
+          "meaning": "후버, 연소자"
+        },
+        {
+          "id": 385,
+          "word": "edge",
+          "pronunciation": "",
+          "meaning": "가장자리, 날"
+        },
+        {
+          "id": 386,
+          "word": "pause",
+          "pronunciation": "",
+          "meaning": "일시중지, 잠깐멈춤"
+        },
+        {
+          "id": 387,
+          "word": "trouble",
+          "pronunciation": "",
+          "meaning": "문제"
+        },
+        {
+          "id": 388,
+          "word": "victory",
+          "pronunciation": "",
+          "meaning": "승리"
+        },
+        {
+          "id": 389,
+          "word": "dramatic",
+          "pronunciation": "",
+          "meaning": "극적인승리"
+        },
+        {
+          "id": 390,
+          "word": "saying",
+          "pronunciation": "",
+          "meaning": "격언, 속담"
+        },
+        {
+          "id": 391,
+          "word": "talent",
+          "pronunciation": "",
+          "meaning": "재주, 재능"
+        },
+        {
+          "id": 392,
+          "word": "slave",
+          "pronunciation": "",
+          "meaning": "노예"
+        },
+        {
+          "id": 393,
+          "word": "proverb",
+          "pronunciation": "",
+          "meaning": "속담, 격언"
+        },
+        {
+          "id": 394,
+          "word": "election",
+          "pronunciation": "",
+          "meaning": "선거"
+        },
+        {
+          "id": 395,
+          "word": "desire",
+          "pronunciation": "",
+          "meaning": "욕망"
+        },
+        {
+          "id": 396,
+          "word": "devil",
+          "pronunciation": "",
+          "meaning": "악마,"
+        },
+        {
+          "id": 397,
+          "word": "length",
+          "pronunciation": "",
+          "meaning": "길이"
+        },
+        {
+          "id": 398,
+          "word": "depth",
+          "pronunciation": "",
+          "meaning": "깊이"
+        },
+        {
+          "id": 399,
+          "word": "childhood",
+          "pronunciation": "",
+          "meaning": "어린시절"
+        },
+        {
+          "id": 400,
+          "word": "friendship",
+          "pronunciation": "",
+          "meaning": "우정"
+        },
+        {
+          "id": 401,
+          "word": "areal",
+          "pronunciation": "",
+          "meaning": "진정한우정"
+        },
+        {
+          "id": 402,
+          "word": "care",
+          "pronunciation": "",
+          "meaning": "조심, 돌봄"
+        },
+        {
+          "id": 403,
+          "word": "magazine",
+          "pronunciation": "",
+          "meaning": "잡지"
+        },
+        {
+          "id": 404,
+          "word": "passenger",
+          "pronunciation": "",
+          "meaning": "승객"
+        },
+        {
+          "id": 405,
+          "word": "rail",
+          "pronunciation": "",
+          "meaning": "기자승객"
+        },
+        {
+          "id": 406,
+          "word": "passengers",
+          "pronunciation": "",
+          "meaning": "기자승객"
+        },
+        {
+          "id": 407,
+          "word": "trick",
+          "pronunciation": "",
+          "meaning": "속임수, 장난"
+        },
+        {
+          "id": 408,
+          "word": "failure",
+          "pronunciation": "",
+          "meaning": "실패, 실패한것 [사람]"
+        },
+        {
+          "id": 409,
+          "word": "step",
+          "pronunciation": "",
+          "meaning": "한걸음"
+        },
+        {
+          "id": 410,
+          "word": "example",
+          "pronunciation": "",
+          "meaning": "예본보기"
+        },
+        {
+          "id": 411,
+          "word": "error",
+          "pronunciation": "",
+          "meaning": "잘못, 오류"
+        },
+        {
+          "id": 412,
+          "word": "spelling",
+          "pronunciation": "",
+          "meaning": "철자오류"
+        },
+        {
+          "id": 413,
+          "word": "errors",
+          "pronunciation": "",
+          "meaning": "철자오류"
+        },
+        {
+          "id": 414,
+          "word": "mars",
+          "pronunciation": "",
+          "meaning": "화성"
+        },
+        {
+          "id": 415,
+          "word": "area",
+          "pronunciation": "",
+          "meaning": "지역, 면적"
+        },
+        {
+          "id": 416,
+          "word": "guest",
+          "pronunciation": "",
+          "meaning": "초대손님"
+        },
+        {
+          "id": 417,
+          "word": "powder",
+          "pronunciation": "",
+          "meaning": "분말"
+        },
+        {
+          "id": 418,
+          "word": "soap",
+          "pronunciation": "",
+          "meaning": "가루비누"
+        },
+        {
+          "id": 419,
+          "word": "flood",
+          "pronunciation": "",
+          "meaning": "홍수"
+        },
+        {
+          "id": 420,
+          "word": "gallery",
+          "pronunciation": "",
+          "meaning": "월화랑, 미술관"
+        },
+        {
+          "id": 421,
+          "word": "base",
+          "pronunciation": "",
+          "meaning": "영기초, 토대"
+        },
+        {
+          "id": 422,
+          "word": "branch",
+          "pronunciation": "",
+          "meaning": "가지, 지점"
+        },
+        {
+          "id": 423,
+          "word": "hero",
+          "pronunciation": "",
+          "meaning": "영웅, 남자주인공"
+        },
+        {
+          "id": 424,
+          "word": "heroine",
+          "pronunciation": "",
+          "meaning": "여걸, 여자주인공"
+        },
+        {
+          "id": 425,
+          "word": "stomachache",
+          "pronunciation": "",
+          "meaning": "복통"
+        },
+        {
+          "id": 426,
+          "word": "stair",
+          "pronunciation": "",
+          "meaning": "계단"
+        },
+        {
+          "id": 427,
+          "word": "wood",
+          "pronunciation": "",
+          "meaning": "(종종숲"
+        },
+        {
+          "id": 428,
+          "word": "tourist",
+          "pronunciation": "",
+          "meaning": "관광객, 여행자"
+        },
+        {
+          "id": 429,
+          "word": "plate",
+          "pronunciation": "",
+          "meaning": "접 시, (특정음식의) 한접시"
+        },
+        {
+          "id": 430,
+          "word": "trust",
+          "pronunciation": "",
+          "meaning": "신뢰"
+        },
+        {
+          "id": 431,
+          "word": "brain",
+          "pronunciation": "",
+          "meaning": "머리"
+        },
+        {
+          "id": 432,
+          "word": "pepper",
+          "pronunciation": "",
+          "meaning": "후추"
+        },
+        {
+          "id": 433,
+          "word": "sunshine",
+          "pronunciation": "",
+          "meaning": "햇빛"
+        },
+        {
+          "id": 434,
+          "word": "huge",
+          "pronunciation": "",
+          "meaning": "거대한, 막대한"
+        },
+        {
+          "id": 435,
+          "word": "delicious",
+          "pronunciation": "",
+          "meaning": "맛있는"
+        },
+        {
+          "id": 436,
+          "word": "thirsty",
+          "pronunciation": "",
+          "meaning": "목마른"
+        },
+        {
+          "id": 437,
+          "word": "feel",
+          "pronunciation": "",
+          "meaning": "목이마르다"
+        },
+        {
+          "id": 438,
+          "word": "wonderful",
+          "pronunciation": "",
+          "meaning": "놀랄만한, 멋진"
+        },
+        {
+          "id": 439,
+          "word": "colorful",
+          "pronunciation": "",
+          "meaning": "화려한"
+        },
+        {
+          "id": 440,
+          "word": "thin",
+          "pronunciation": "",
+          "meaning": "않은, 야윈"
+        },
+        {
+          "id": 441,
+          "word": "thick",
+          "pronunciation": "",
+          "meaning": "두꺼운"
+        },
+        {
+          "id": 442,
+          "word": "famous",
+          "pronunciation": "",
+          "meaning": "유명한"
+        },
+        {
+          "id": 443,
+          "word": "painter",
+          "pronunciation": "",
+          "meaning": "유명한화가"
+        },
+        {
+          "id": 444,
+          "word": "dark",
+          "pronunciation": "",
+          "meaning": "어두운"
+        },
+        {
+          "id": 445,
+          "word": "girl",
+          "pronunciation": "",
+          "meaning": "영리한소녀"
+        },
+        {
+          "id": 446,
+          "word": "poor",
+          "pronunciation": "",
+          "meaning": "가난한, 불쌍한"
+        },
+        {
+          "id": 447,
+          "word": "rich",
+          "pronunciation": "",
+          "meaning": "부 유한"
+        },
+        {
+          "id": 448,
+          "word": "absent",
+          "pronunciation": "",
+          "meaning": "결석한"
+        },
+        {
+          "id": 449,
+          "word": "weak",
+          "pronunciation": "",
+          "meaning": "약한"
+        },
+        {
+          "id": 450,
+          "word": "strong",
+          "pronunciation": "",
+          "meaning": "강한"
+        },
+        {
+          "id": 451,
+          "word": "team",
+          "pronunciation": "",
+          "meaning": "약한팀"
+        },
+        {
+          "id": 452,
+          "word": "careful",
+          "pronunciation": "",
+          "meaning": "조심하는, 세심한"
+        },
+        {
+          "id": 453,
+          "word": "careless",
+          "pronunciation": "",
+          "meaning": "부 주의한"
+        },
+        {
+          "id": 454,
+          "word": "honest",
+          "pronunciation": "",
+          "meaning": "정직한"
+        },
+        {
+          "id": 455,
+          "word": "cheap",
+          "pronunciation": "",
+          "meaning": "값싼"
+        },
+        {
+          "id": 456,
+          "word": "flights",
+          "pronunciation": "",
+          "meaning": "저가항공편"
+        },
+        {
+          "id": 457,
+          "word": "loud",
+          "pronunciation": "",
+          "meaning": "목소리의, 시끄러운"
+        },
+        {
+          "id": 458,
+          "word": "quiet",
+          "pronunciation": "",
+          "meaning": "조용한"
+        },
+        {
+          "id": 459,
+          "word": "calm",
+          "pronunciation": "",
+          "meaning": "평온한, 침착한"
+        },
+        {
+          "id": 460,
+          "word": "bored",
+          "pronunciation": "",
+          "meaning": "지루해하는, 싫증난"
+        },
+        {
+          "id": 461,
+          "word": "boring",
+          "pronunciation": "",
+          "meaning": "지루한, 따분한"
+        },
+        {
+          "id": 462,
+          "word": "person",
+          "pronunciation": "",
+          "meaning": "따분한사람"
+        },
+        {
+          "id": 463,
+          "word": "middle",
+          "pronunciation": "",
+          "meaning": "가운데의"
+        },
+        {
+          "id": 464,
+          "word": "embarrassed",
+          "pronunciation": "",
+          "meaning": "당황한, 난처한"
+        },
+        {
+          "id": 465,
+          "word": "friendly",
+          "pronunciation": "",
+          "meaning": "친절한, 사이가좋은"
+        },
+        {
+          "id": 466,
+          "word": "enough",
+          "pronunciation": "",
+          "meaning": "충분한"
+        },
+        {
+          "id": 467,
+          "word": "fast",
+          "pronunciation": "",
+          "meaning": "빠른"
+        },
+        {
+          "id": 468,
+          "word": "slow",
+          "pronunciation": "",
+          "meaning": "느린; 천천히"
+        },
+        {
+          "id": 469,
+          "word": "walk",
+          "pronunciation": "",
+          "meaning": "빨리걷다"
+        },
+        {
+          "id": 470,
+          "word": "wise",
+          "pronunciation": "",
+          "meaning": "현명한"
+        },
+        {
+          "id": 471,
+          "word": "deep",
+          "pronunciation": "",
+          "meaning": "깊은"
+        },
+        {
+          "id": 472,
+          "word": "important",
+          "pronunciation": "",
+          "meaning": "중요한"
+        },
+        {
+          "id": 473,
+          "word": "wrong",
+          "pronunciation": "",
+          "meaning": "틀린, 잘못된"
+        },
+        {
+          "id": 474,
+          "word": "right",
+          "pronunciation": "",
+          "meaning": "올바른"
+        },
+        {
+          "id": 475,
+          "word": "light",
+          "pronunciation": "",
+          "meaning": "가벼운"
+        },
+        {
+          "id": 476,
+          "word": "noisy",
+          "pronunciation": "",
+          "meaning": "시끄러운"
+        },
+        {
+          "id": 477,
+          "word": "different",
+          "pronunciation": "",
+          "meaning": "다른"
+        },
+        {
+          "id": 478,
+          "word": "same",
+          "pronunciation": "",
+          "meaning": "같은"
+        },
+        {
+          "id": 479,
+          "word": "difficult",
+          "pronunciation": "",
+          "meaning": "어려운"
+        },
+        {
+          "id": 480,
+          "word": "easy",
+          "pronunciation": "",
+          "meaning": "쉬운"
+        },
+        {
+          "id": 481,
+          "word": "interesting",
+          "pronunciation": "",
+          "meaning": "홍미를끄는"
+        },
+        {
+          "id": 482,
+          "word": "cool",
+          "pronunciation": "",
+          "meaning": "시원한, 멋진, 냉담한"
+        },
+        {
+          "id": 483,
+          "word": "warm",
+          "pronunciation": "",
+          "meaning": "따뜻한"
+        },
+        {
+          "id": 484,
+          "word": "excited",
+          "pronunciation": "",
+          "meaning": "흥분한"
+        },
+        {
+          "id": 485,
+          "word": "exciting",
+          "pronunciation": "",
+          "meaning": "흥미진진한"
+        },
+        {
+          "id": 486,
+          "word": "alone",
+          "pronunciation": "",
+          "meaning": "혼자살다"
+        },
+        {
+          "id": 487,
+          "word": "lonely",
+          "pronunciation": "",
+          "meaning": "외로운"
+        },
+        {
+          "id": 488,
+          "word": "satisfying",
+          "pronunciation": "",
+          "meaning": "만족스러운"
+        },
+        {
+          "id": 489,
+          "word": "male",
+          "pronunciation": "",
+          "meaning": "형 남성의, 수컷의"
+        },
+        {
+          "id": 490,
+          "word": "models",
+          "pronunciation": "",
+          "meaning": "남자모델들"
+        },
+        {
+          "id": 491,
+          "word": "tiger",
+          "pronunciation": "",
+          "meaning": "수컷호랑이"
+        },
+        {
+          "id": 492,
+          "word": "female",
+          "pronunciation": "",
+          "meaning": "여성의, 암컷의"
+        },
+        {
+          "id": 493,
+          "word": "officers",
+          "pronunciation": "",
+          "meaning": "이성장교들"
+        },
+        {
+          "id": 494,
+          "word": "narrow",
+          "pronunciation": "",
+          "meaning": "좁고긴"
+        },
+        {
+          "id": 495,
+          "word": "wide",
+          "pronunciation": "",
+          "meaning": "넓은"
+        },
+        {
+          "id": 496,
+          "word": "organic",
+          "pronunciation": "",
+          "meaning": "유기농의"
+        },
+        {
+          "id": 497,
+          "word": "farming",
+          "pronunciation": "",
+          "meaning": "유기농업"
+        },
+        {
+          "id": 498,
+          "word": "peaceful",
+          "pronunciation": "",
+          "meaning": "평온한"
+        },
+        {
+          "id": 499,
+          "word": "maize",
+          "pronunciation": "",
+          "meaning": "평온한"
+        },
+        {
+          "id": 500,
+          "word": "safe",
+          "pronunciation": "",
+          "meaning": "안전한"
+        },
+        {
+          "id": 501,
+          "word": "dangerous",
+          "pronunciation": "",
+          "meaning": "위험한"
+        },
+        {
+          "id": 502,
+          "word": "pleased",
+          "pronunciation": "",
+          "meaning": "만족해하는, 기뻐하는"
+        },
+        {
+          "id": 503,
+          "word": "pleasing",
+          "pronunciation": "",
+          "meaning": "즐거운, 만족을주는"
+        },
+        {
+          "id": 504,
+          "word": "surprised",
+          "pronunciation": "",
+          "meaning": "놀란"
+        },
+        {
+          "id": 505,
+          "word": "surprising",
+          "pronunciation": "",
+          "meaning": "놀라운"
+        },
+        {
+          "id": 506,
+          "word": "results",
+          "pronunciation": "",
+          "meaning": "놀라운결과"
+        },
+        {
+          "id": 507,
+          "word": "popular",
+          "pronunciation": "",
+          "meaning": "인기있는, 대중적인"
+        },
+        {
+          "id": 508,
+          "word": "music",
+          "pronunciation": "",
+          "meaning": "대중음악"
+        },
+        {
+          "id": 509,
+          "word": "regular",
+          "pronunciation": "",
+          "meaning": "규칙적인"
+        },
+        {
+          "id": 510,
+          "word": "aregular",
+          "pronunciation": "",
+          "meaning": "단골손님"
+        },
+        {
+          "id": 511,
+          "word": "empty",
+          "pronunciation": "",
+          "meaning": "빈비어있는"
+        },
+        {
+          "id": 512,
+          "word": "national",
+          "pronunciation": "",
+          "meaning": "국가의, 국립의"
+        },
+        {
+          "id": 513,
+          "word": "park",
+          "pronunciation": "",
+          "meaning": "국립공원"
+        },
+        {
+          "id": 514,
+          "word": "dirty",
+          "pronunciation": "",
+          "meaning": "형 야비한"
+        },
+        {
+          "id": 515,
+          "word": "clean",
+          "pronunciation": "",
+          "meaning": "깨끗한"
+        },
+        {
+          "id": 516,
+          "word": "possible",
+          "pronunciation": "",
+          "meaning": "가능한"
+        },
+        {
+          "id": 517,
+          "word": "impossible",
+          "pronunciation": "",
+          "meaning": "불가능한"
+        },
+        {
+          "id": 518,
+          "word": "fresh",
+          "pronunciation": "",
+          "meaning": "신선한, 새로운"
+        },
+        {
+          "id": 519,
+          "word": "amazing",
+          "pronunciation": "",
+          "meaning": "놀라운, 대단한"
+        },
+        {
+          "id": 520,
+          "word": "amazed",
+          "pronunciation": "",
+          "meaning": "놀란"
+        },
+        {
+          "id": 521,
+          "word": "main",
+          "pronunciation": "",
+          "meaning": "주요한"
+        },
+        {
+          "id": 522,
+          "word": "scientific",
+          "pronunciation": "",
+          "meaning": "과학의, 과학적인"
+        },
+        {
+          "id": 523,
+          "word": "experiment",
+          "pronunciation": "",
+          "meaning": "과학실험"
+        },
+        {
+          "id": 524,
+          "word": "common",
+          "pronunciation": "",
+          "meaning": "보통의, 평범한"
+        },
+        {
+          "id": 525,
+          "word": "special",
+          "pronunciation": "",
+          "meaning": "특가제공"
+        },
+        {
+          "id": 526,
+          "word": "police",
+          "pronunciation": "",
+          "meaning": "경찰서장"
+        },
+        {
+          "id": 527,
+          "word": "anecessary",
+          "pronunciation": "",
+          "meaning": "필요악"
+        },
+        {
+          "id": 528,
+          "word": "evil",
+          "pronunciation": "",
+          "meaning": "필요악"
+        },
+        {
+          "id": 529,
+          "word": "similar",
+          "pronunciation": "",
+          "meaning": "영비슷한, 같은모양의"
+        },
+        {
+          "id": 530,
+          "word": "practical",
+          "pronunciation": "",
+          "meaning": "실질적인, 실용적인"
+        },
+        {
+          "id": 531,
+          "word": "sense",
+          "pronunciation": "",
+          "meaning": "상식"
+        },
+        {
+          "id": 532,
+          "word": "wild",
+          "pronunciation": "",
+          "meaning": "야생의, 거친"
+        },
+        {
+          "id": 533,
+          "word": "animals",
+          "pronunciation": "",
+          "meaning": "야생동물"
+        },
+        {
+          "id": 534,
+          "word": "blind",
+          "pronunciation": "",
+          "meaning": "눈먼, 앞을못보는"
+        },
+        {
+          "id": 535,
+          "word": "dumb",
+          "pronunciation": "",
+          "meaning": "말을못하는"
+        },
+        {
+          "id": 536,
+          "word": "sharp",
+          "pronunciation": "",
+          "meaning": "날카로운, 예리한"
+        },
+        {
+          "id": 537,
+          "word": "dull",
+          "pronunciation": "",
+          "meaning": "무딘"
+        },
+        {
+          "id": 538,
+          "word": "terrible",
+          "pronunciation": "",
+          "meaning": "끔찍한, 지독한"
+        },
+        {
+          "id": 539,
+          "word": "strange",
+          "pronunciation": "",
+          "meaning": "이상한, 낮선"
+        },
+        {
+          "id": 540,
+          "word": "pleasant",
+          "pronunciation": "",
+          "meaning": "즐거운, 기분좋은"
+        },
+        {
+          "id": 541,
+          "word": "simple",
+          "pronunciation": "",
+          "meaning": "간단한, 단순한"
+        },
+        {
+          "id": 542,
+          "word": "slim",
+          "pronunciation": "",
+          "meaning": "날씬한,"
+        },
+        {
+          "id": 543,
+          "word": "clever",
+          "pronunciation": "",
+          "meaning": "영리한, 기발한"
+        },
+        {
+          "id": 544,
+          "word": "stupid",
+          "pronunciation": "",
+          "meaning": "어리석은"
+        },
+        {
+          "id": 545,
+          "word": "foolish",
+          "pronunciation": "",
+          "meaning": "어리석은"
+        },
+        {
+          "id": 546,
+          "word": "crowded",
+          "pronunciation": "",
+          "meaning": "붐비는, 혼잡한"
+        },
+        {
+          "id": 547,
+          "word": "successful",
+          "pronunciation": "",
+          "meaning": "성공한, 성공적인"
+        },
+        {
+          "id": 548,
+          "word": "solar",
+          "pronunciation": "",
+          "meaning": "형 태양의"
+        },
+        {
+          "id": 549,
+          "word": "lunar",
+          "pronunciation": "",
+          "meaning": "달의"
+        },
+        {
+          "id": 550,
+          "word": "system",
+          "pronunciation": "",
+          "meaning": "태양계"
+        },
+        {
+          "id": 551,
+          "word": "clear",
+          "pronunciation": "",
+          "meaning": "형 맑은, 명백한"
+        },
+        {
+          "id": 552,
+          "word": "street",
+          "pronunciation": "",
+          "meaning": "넓은거리"
+        },
+        {
+          "id": 553,
+          "word": "alive",
+          "pronunciation": "",
+          "meaning": "살아있는"
+        },
+        {
+          "id": 554,
+          "word": "dead",
+          "pronunciation": "",
+          "meaning": "죽은"
+        },
+        {
+          "id": 555,
+          "word": "useless",
+          "pronunciation": "",
+          "meaning": "쓸모없는"
+        },
+        {
+          "id": 556,
+          "word": "useful",
+          "pronunciation": "",
+          "meaning": "쓸모있는"
+        },
+        {
+          "id": 557,
+          "word": "busy",
+          "pronunciation": "",
+          "meaning": "바쁜, 붐비는"
+        },
+        {
+          "id": 558,
+          "word": "foreign",
+          "pronunciation": "",
+          "meaning": "외국의"
+        },
+        {
+          "id": 559,
+          "word": "true",
+          "pronunciation": "",
+          "meaning": "사실인, 진정한"
+        },
+        {
+          "id": 560,
+          "word": "modern",
+          "pronunciation": "",
+          "meaning": "현대의, 현대적인"
+        },
+        {
+          "id": 561,
+          "word": "diligent",
+          "pronunciation": "",
+          "meaning": "부 지런한"
+        },
+        {
+          "id": 562,
+          "word": "idle",
+          "pronunciation": "",
+          "meaning": "게으른"
+        },
+        {
+          "id": 563,
+          "word": "student",
+          "pronunciation": "",
+          "meaning": "부 지런한학생"
+        },
+        {
+          "id": 564,
+          "word": "single",
+          "pronunciation": "",
+          "meaning": "단하나의, 미혼의"
+        },
+        {
+          "id": 565,
+          "word": "scared",
+          "pronunciation": "",
+          "meaning": "무서워하는,"
+        },
+        {
+          "id": 566,
+          "word": "awake",
+          "pronunciation": "",
+          "meaning": "깨어있는"
+        },
+        {
+          "id": 567,
+          "word": "born",
+          "pronunciation": "",
+          "meaning": "타고난"
+        },
+        {
+          "id": 568,
+          "word": "daily",
+          "pronunciation": "",
+          "meaning": "매일의"
+        },
+        {
+          "id": 569,
+          "word": "newspaper",
+          "pronunciation": "",
+          "meaning": "일간지"
+        },
+        {
+          "id": 570,
+          "word": "false",
+          "pronunciation": "",
+          "meaning": "거짓인, 가짜의"
+        },
+        {
+          "id": 571,
+          "word": "less",
+          "pronunciation": "",
+          "meaning": "형 더적은"
+        },
+        {
+          "id": 572,
+          "word": "confident",
+          "pronunciation": "",
+          "meaning": "자신있는, 확신하는"
+        },
+        {
+          "id": 573,
+          "word": "ugly",
+          "pronunciation": "",
+          "meaning": "형 못생긴, 보기흉한"
+        },
+        {
+          "id": 574,
+          "word": "real",
+          "pronunciation": "",
+          "meaning": "실제의, 진짜의"
+        },
+        {
+          "id": 575,
+          "word": "name",
+          "pronunciation": "",
+          "meaning": "본명, 실명"
+        },
+        {
+          "id": 576,
+          "word": "scary",
+          "pronunciation": "",
+          "meaning": "무서운"
+        },
+        {
+          "id": 577,
+          "word": "available",
+          "pronunciation": "",
+          "meaning": "이용가능한, 시간이있는"
+        },
+        {
+          "id": 578,
+          "word": "convenient",
+          "pronunciation": "",
+          "meaning": "편리한"
+        },
+        {
+          "id": 579,
+          "word": "effective",
+          "pronunciation": "",
+          "meaning": "효과적인, 유효한"
+        },
+        {
+          "id": 580,
+          "word": "efficient",
+          "pronunciation": "",
+          "meaning": "효율적인"
+        },
+        {
+          "id": 581,
+          "word": "original",
+          "pronunciation": "",
+          "meaning": "형 원래의, 독창적인"
+        },
+        {
+          "id": 582,
+          "word": "upset",
+          "pronunciation": "",
+          "meaning": "속상한"
+        },
+        {
+          "id": 583,
+          "word": "entire",
+          "pronunciation": "",
+          "meaning": "전 체의"
+        },
+        {
+          "id": 584,
+          "word": "precious",
+          "pronunciation": "",
+          "meaning": "귀중한, 소중한"
+        },
+        {
+          "id": 585,
+          "word": "normal",
+          "pronunciation": "",
+          "meaning": "정상인, 보통의"
+        },
+        {
+          "id": 586,
+          "word": "usually",
+          "pronunciation": "",
+          "meaning": "보통, 대개"
+        },
+        {
+          "id": 587,
+          "word": "finally",
+          "pronunciation": "",
+          "meaning": "마지막으로, 마침내"
+        },
+        {
+          "id": 588,
+          "word": "suddenly",
+          "pronunciation": "",
+          "meaning": "쑤갑자기"
+        },
+        {
+          "id": 589,
+          "word": "immediately",
+          "pronunciation": "",
+          "meaning": "즉시"
+        },
+        {
+          "id": 590,
+          "word": "actually",
+          "pronunciation": "",
+          "meaning": "우실제로"
+        },
+        {
+          "id": 591,
+          "word": "later",
+          "pronunciation": "",
+          "meaning": "나중에, 후에"
+        },
+        {
+          "id": 592,
+          "word": "near",
+          "pronunciation": "",
+          "meaning": "뿌가까이"
+        },
+        {
+          "id": 593,
+          "word": "quickly",
+          "pronunciation": "",
+          "meaning": "빨리, 금방"
+        },
+        {
+          "id": 594,
+          "word": "slowly",
+          "pronunciation": "",
+          "meaning": "천천히, 느리게"
+        },
+        {
+          "id": 595,
+          "word": "mostly",
+          "pronunciation": "",
+          "meaning": "대부분, 대개"
+        },
+        {
+          "id": 596,
+          "word": "sometime",
+          "pronunciation": "",
+          "meaning": "언젠가"
+        },
+        {
+          "id": 597,
+          "word": "sometimes",
+          "pronunciation": "",
+          "meaning": "때때로"
+        },
+        {
+          "id": 598,
+          "word": "hardly",
+          "pronunciation": "",
+          "meaning": "거의아니다"
+        },
+        {
+          "id": 599,
+          "word": "hard",
+          "pronunciation": "",
+          "meaning": "단단한, 어려운; 열심히"
+        },
+        {
+          "id": 600,
+          "word": "seldom",
+          "pronunciation": "",
+          "meaning": "좀처럼않는"
+        },
+        {
+          "id": 601,
+          "word": "especially",
+          "pronunciation": "",
+          "meaning": "쑤특히"
+        },
+        {
+          "id": 602,
+          "word": "else",
+          "pronunciation": "",
+          "meaning": "그밖에"
+        },
+        {
+          "id": 603,
+          "word": "rather",
+          "pronunciation": "",
+          "meaning": "꽤오히려"
+        },
+        {
+          "id": 604,
+          "word": "downtown",
+          "pronunciation": "",
+          "meaning": "우시나로"
+        },
+        {
+          "id": 605,
+          "word": "nearby",
+          "pronunciation": "",
+          "meaning": "근처에"
+        },
+        {
+          "id": 606,
+          "word": "anearby",
+          "pronunciation": "",
+          "meaning": "이웃도시"
+        },
+        {
+          "id": 607,
+          "word": "abroad",
+          "pronunciation": "",
+          "meaning": "외국에, 해외에"
+        },
+        {
+          "id": 608,
+          "word": "forward",
+          "pronunciation": "",
+          "meaning": "(위치, 시간상으로) 앞으로"
+        },
+        {
+          "id": 609,
+          "word": "backward",
+          "pronunciation": "",
+          "meaning": "뒤쪽으로"
+        },
+        {
+          "id": 610,
+          "word": "nowadays",
+          "pronunciation": "",
+          "meaning": "오늘날에는, 요즘에는"
+        },
+        {
+          "id": 611,
+          "word": "almost",
+          "pronunciation": "",
+          "meaning": "거의"
+        },
+        {
+          "id": 612,
+          "word": "once",
+          "pronunciation": "",
+          "meaning": "한번한때"
+        },
+        {
+          "id": 613,
+          "word": "either",
+          "pronunciation": "",
+          "meaning": "부 정문에써서) 도역시 (그렇다)"
+        },
+        {
+          "id": 614,
+          "word": "quite",
+          "pronunciation": "",
+          "meaning": "상당히"
+        },
+        {
+          "id": 615,
+          "word": "probably",
+          "pronunciation": "",
+          "meaning": "아마, 아마도"
+        },
+        {
+          "id": 616,
+          "word": "ever",
+          "pronunciation": "",
+          "meaning": "지금까지, 계속, 언제든"
+        },
+        {
+          "id": 617,
+          "word": "however",
+          "pronunciation": "",
+          "meaning": "아무리해도, 그러나"
+        },
+        {
+          "id": 618,
+          "word": "nobody",
+          "pronunciation": "",
+          "meaning": "(단수취급) 아무도않다"
+        },
+        {
+          "id": 619,
+          "word": "something",
+          "pronunciation": "",
+          "meaning": "어떤것"
+        },
+        {
+          "id": 620,
+          "word": "everything",
+          "pronunciation": "",
+          "meaning": "모든것"
+        },
+        {
+          "id": 621,
+          "word": "except",
+          "pronunciation": "",
+          "meaning": "제외하고"
+        },
+        {
+          "id": 622,
+          "word": "against",
+          "pronunciation": "",
+          "meaning": "에반대해, 에기대어"
+        },
+        {
+          "id": 623,
+          "word": "toward",
+          "pronunciation": "",
+          "meaning": "쪽으로, 을향하여"
+        },
+        {
+          "id": 624,
+          "word": "three",
+          "pronunciation": "",
+          "meaning": "삼백명이상"
+        },
+        {
+          "id": 625,
+          "word": "hundred",
+          "pronunciation": "",
+          "meaning": "삼백명이상"
+        },
+        {
+          "id": 626,
+          "word": "after",
+          "pronunciation": "",
+          "meaning": "후에, 을본떠서"
+        },
+        {
+          "id": 627,
+          "word": "search",
+          "pronunciation": "",
+          "meaning": "찾다, 뒤지다"
+        },
+        {
+          "id": 628,
+          "word": "party",
+          "pronunciation": "",
+          "meaning": "수색대"
+        },
+        {
+          "id": 629,
+          "word": "chase",
+          "pronunciation": "",
+          "meaning": "쫓다"
+        },
+        {
+          "id": 630,
+          "word": "reach",
+          "pronunciation": "",
+          "meaning": "도달하다, 손을집다"
+        },
+        {
+          "id": 631,
+          "word": "accept",
+          "pronunciation": "",
+          "meaning": "받아들이다"
+        },
+        {
+          "id": 632,
+          "word": "hate",
+          "pronunciation": "",
+          "meaning": "미워하다, 싫어하다"
+        },
+        {
+          "id": 633,
+          "word": "earn",
+          "pronunciation": "",
+          "meaning": "일하여벌다"
+        },
+        {
+          "id": 634,
+          "word": "repeat",
+          "pronunciation": "",
+          "meaning": "되풀이하다, 반복하다"
+        },
+        {
+          "id": 635,
+          "word": "exist",
+          "pronunciation": "",
+          "meaning": "존재하다"
+        },
+        {
+          "id": 636,
+          "word": "grab",
+          "pronunciation": "",
+          "meaning": "움켜잡다"
+        },
+        {
+          "id": 637,
+          "word": "shrug",
+          "pronunciation": "",
+          "meaning": "어깨를"
+        },
+        {
+          "id": 638,
+          "word": "scream",
+          "pronunciation": "",
+          "meaning": "(날카롭게) 소리치다"
+        },
+        {
+          "id": 639,
+          "word": "surround",
+          "pronunciation": "",
+          "meaning": "둘러싸다"
+        },
+        {
+          "id": 640,
+          "word": "envy",
+          "pronunciation": "",
+          "meaning": "부 러워하다, 질투하다"
+        },
+        {
+          "id": 641,
+          "word": "advise",
+          "pronunciation": "",
+          "meaning": "충고하다, 권하다"
+        },
+        {
+          "id": 642,
+          "word": "bless",
+          "pronunciation": "",
+          "meaning": "축복하다"
+        },
+        {
+          "id": 643,
+          "word": "graduate",
+          "pronunciation": "",
+          "meaning": "졸업하다"
+        },
+        {
+          "id": 644,
+          "word": "graduating",
+          "pronunciation": "",
+          "meaning": "졸업반학생"
+        },
+        {
+          "id": 645,
+          "word": "arrest",
+          "pronunciation": "",
+          "meaning": "체포하다"
+        },
+        {
+          "id": 646,
+          "word": "prove",
+          "pronunciation": "",
+          "meaning": "증명하다, 로판명되다"
+        },
+        {
+          "id": 647,
+          "word": "yell",
+          "pronunciation": "",
+          "meaning": "소리치다, 고함치다"
+        },
+        {
+          "id": 648,
+          "word": "review",
+          "pronunciation": "",
+          "meaning": "복습하다, 재검토하다"
+        },
+        {
+          "id": 649,
+          "word": "bend",
+          "pronunciation": "",
+          "meaning": "구부리다"
+        },
+        {
+          "id": 650,
+          "word": "whisper",
+          "pronunciation": "",
+          "meaning": "동 속삭이다"
+        },
+        {
+          "id": 651,
+          "word": "float",
+          "pronunciation": "",
+          "meaning": "뜨다, 띄우다"
+        },
+        {
+          "id": 652,
+          "word": "drag",
+          "pronunciation": "",
+          "meaning": "(힘겹게) 끌다"
+        },
+        {
+          "id": 653,
+          "word": "destroy",
+          "pronunciation": "",
+          "meaning": "파괴하다"
+        },
+        {
+          "id": 654,
+          "word": "beat",
+          "pronunciation": "",
+          "meaning": "때리다, 이기다"
+        },
+        {
+          "id": 655,
+          "word": "ache",
+          "pronunciation": "",
+          "meaning": "아프다"
+        },
+        {
+          "id": 656,
+          "word": "clap",
+          "pronunciation": "",
+          "meaning": "치다, 치다"
+        },
+        {
+          "id": 657,
+          "word": "obtain",
+          "pronunciation": "",
+          "meaning": "획득하다, 얻다"
+        },
+        {
+          "id": 658,
+          "word": "drown",
+          "pronunciation": "",
+          "meaning": "몰에) 빠져죽다, 빠지다"
+        },
+        {
+          "id": 659,
+          "word": "boast",
+          "pronunciation": "",
+          "meaning": "자랑하다"
+        },
+        {
+          "id": 660,
+          "word": "bury",
+          "pronunciation": "",
+          "meaning": "묻다"
+        },
+        {
+          "id": 661,
+          "word": "deal",
+          "pronunciation": "",
+          "meaning": "다루다, 거래하다"
+        },
+        {
+          "id": 662,
+          "word": "bite",
+          "pronunciation": "",
+          "meaning": "물다,"
+        },
+        {
+          "id": 663,
+          "word": "vote",
+          "pronunciation": "",
+          "meaning": "투표하다"
+        },
+        {
+          "id": 664,
+          "word": "burn",
+          "pronunciation": "",
+          "meaning": "불에타다, 태우다"
+        },
+        {
+          "id": 665,
+          "word": "sink",
+          "pronunciation": "",
+          "meaning": "가라앉다"
+        },
+        {
+          "id": 666,
+          "word": "reply",
+          "pronunciation": "",
+          "meaning": "대답하다"
+        },
+        {
+          "id": 667,
+          "word": "flow",
+          "pronunciation": "",
+          "meaning": "흐르다"
+        },
+        {
+          "id": 668,
+          "word": "recommend",
+          "pronunciation": "",
+          "meaning": "동 추천하다"
+        },
+        {
+          "id": 669,
+          "word": "drop",
+          "pronunciation": "",
+          "meaning": "떨어지다, 떨어뜨리다"
+        },
+        {
+          "id": 670,
+          "word": "sail",
+          "pronunciation": "",
+          "meaning": "항해하다"
+        },
+        {
+          "id": 671,
+          "word": "record",
+          "pronunciation": "",
+          "meaning": "기록하다"
+        },
+        {
+          "id": 672,
+          "word": "breathe",
+          "pronunciation": "",
+          "meaning": "호흡하다"
+        },
+        {
+          "id": 673,
+          "word": "shine",
+          "pronunciation": "",
+          "meaning": "빛나다"
+        },
+        {
+          "id": 674,
+          "word": "hide",
+          "pronunciation": "",
+          "meaning": "숨기다, 숨다"
+        },
+        {
+          "id": 675,
+          "word": "fight",
+          "pronunciation": "",
+          "meaning": "싸우다"
+        },
+        {
+          "id": 676,
+          "word": "fear",
+          "pronunciation": "",
+          "meaning": "두려워하다"
+        },
+        {
+          "id": 677,
+          "word": "obey",
+          "pronunciation": "",
+          "meaning": "복종하다, 따르다"
+        },
+        {
+          "id": 678,
+          "word": "dive",
+          "pronunciation": "",
+          "meaning": "뛰어들다"
+        },
+        {
+          "id": 679,
+          "word": "surprise",
+          "pronunciation": "",
+          "meaning": "놀라게하다"
+        },
+        {
+          "id": 680,
+          "word": "gather",
+          "pronunciation": "",
+          "meaning": "모으다, 모이다"
+        },
+        {
+          "id": 681,
+          "word": "throw",
+          "pronunciation": "",
+          "meaning": "동 던지다"
+        },
+        {
+          "id": 682,
+          "word": "excuse",
+          "pronunciation": "",
+          "meaning": "용서하다, 변명하다"
+        },
+        {
+          "id": 683,
+          "word": "encourage",
+          "pronunciation": "",
+          "meaning": "격려하다, 권하다"
+        },
+        {
+          "id": 684,
+          "word": "marry",
+          "pronunciation": "",
+          "meaning": "결혼하다"
+        },
+        {
+          "id": 685,
+          "word": "occur",
+          "pronunciation": "",
+          "meaning": "일어나다, 생각이나다"
+        },
+        {
+          "id": 686,
+          "word": "ignore",
+          "pronunciation": "",
+          "meaning": "무시하다"
+        },
+        {
+          "id": 687,
+          "word": "shut",
+          "pronunciation": "",
+          "meaning": "닫다"
+        },
+        {
+          "id": 688,
+          "word": "walt",
+          "pronunciation": "",
+          "meaning": "알을) 낳다"
+        },
+        {
+          "id": 689,
+          "word": "spell",
+          "pronunciation": "",
+          "meaning": "철자를쓰다"
+        },
+        {
+          "id": 690,
+          "word": "seek",
+          "pronunciation": "",
+          "meaning": "찾다, 구하다"
+        },
+        {
+          "id": 691,
+          "word": "broadcast",
+          "pronunciation": "",
+          "meaning": "동 방송하다"
+        },
+        {
+          "id": 692,
+          "word": "cure",
+          "pronunciation": "",
+          "meaning": "치료하다, 고치다"
+        },
+        {
+          "id": 693,
+          "word": "treat",
+          "pronunciation": "",
+          "meaning": "다루다, 대우하다"
+        },
+        {
+          "id": 694,
+          "word": "mention",
+          "pronunciation": "",
+          "meaning": "동 언급하다"
+        },
+        {
+          "id": 695,
+          "word": "unite",
+          "pronunciation": "",
+          "meaning": "통합하다, 단결하다"
+        },
+        {
+          "id": 696,
+          "word": "divide",
+          "pronunciation": "",
+          "meaning": "나누다"
+        },
+        {
+          "id": 697,
+          "word": "cheer",
+          "pronunciation": "",
+          "meaning": "환호하다, 기운내다"
+        },
+        {
+          "id": 698,
+          "word": "admire",
+          "pronunciation": "",
+          "meaning": "감탄하다, 존경하다"
+        },
+        {
+          "id": 699,
+          "word": "memorize",
+          "pronunciation": "",
+          "meaning": "외우다"
+        },
+        {
+          "id": 700,
+          "word": "poem",
+          "pronunciation": "",
+          "meaning": "시를외우다"
+        },
+        {
+          "id": 701,
+          "word": "heal",
+          "pronunciation": "",
+          "meaning": "치유하다"
+        },
+        {
+          "id": 702,
+          "word": "educate",
+          "pronunciation": "",
+          "meaning": "교육하다, 가르치다"
+        },
+        {
+          "id": 703,
+          "word": "manage",
+          "pronunciation": "",
+          "meaning": "관리하다, 간신히하다"
+        },
+        {
+          "id": 704,
+          "word": "rush",
+          "pronunciation": "",
+          "meaning": "톨진하다, 급히하다"
+        },
+        {
+          "id": 705,
+          "word": "attract",
+          "pronunciation": "",
+          "meaning": "매혹하다, (주의등을) 끌다"
+        },
+        {
+          "id": 706,
+          "word": "wrap",
+          "pronunciation": "",
+          "meaning": "포장하다, 둘러싸다"
+        },
+        {
+          "id": 707,
+          "word": "starve",
+          "pronunciation": "",
+          "meaning": "동 굴이죽다"
+        },
+        {
+          "id": 708,
+          "word": "spread",
+          "pronunciation": "",
+          "meaning": "펼치다, 퍼뜨리다"
+        },
+        {
+          "id": 709,
+          "word": "melt",
+          "pronunciation": "",
+          "meaning": "녹다, 녹이다"
+        },
+        {
+          "id": 710,
+          "word": "complete",
+          "pronunciation": "",
+          "meaning": "완료하다"
+        },
+        {
+          "id": 711,
+          "word": "escape",
+          "pronunciation": "",
+          "meaning": "탈출하다, 벗어나다"
+        },
+        {
+          "id": 712,
+          "word": "blame",
+          "pronunciation": "",
+          "meaning": "비난하다, 탓하다"
+        },
+        {
+          "id": 713,
+          "word": "pray",
+          "pronunciation": "",
+          "meaning": "기도하다, 빌다"
+        },
+        {
+          "id": 714,
+          "word": "stretch",
+          "pronunciation": "",
+          "meaning": "늘이다, 번다"
+        },
+        {
+          "id": 715,
+          "word": "confuse",
+          "pronunciation": "",
+          "meaning": "혼동시키다, 혼동하다"
+        },
+        {
+          "id": 716,
+          "word": "kick",
+          "pronunciation": "",
+          "meaning": "(발로) 차다"
+        },
+        {
+          "id": 717,
+          "word": "chat",
+          "pronunciation": "",
+          "meaning": "수다떨다"
+        },
+        {
+          "id": 718,
+          "word": "approach",
+          "pronunciation": "",
+          "meaning": "접 근하다, 다가가다"
+        },
+        {
+          "id": 719,
+          "word": "contain",
+          "pronunciation": "",
+          "meaning": "함유하다, 이들어있다"
+        },
+        {
+          "id": 720,
+          "word": "display",
+          "pronunciation": "",
+          "meaning": "전 시하다"
+        },
+        {
+          "id": 721,
+          "word": "spill",
+          "pronunciation": "",
+          "meaning": "쏟다, 쏟아지다"
+        },
+        {
+          "id": 722,
+          "word": "represent",
+          "pronunciation": "",
+          "meaning": "대표하다, 대리하다"
+        },
+        {
+          "id": 723,
+          "word": "debate",
+          "pronunciation": "",
+          "meaning": "토론하다"
+        },
+        {
+          "id": 724,
+          "word": "chop",
+          "pronunciation": "",
+          "meaning": "잘게자르다"
+        },
+        {
+          "id": 725,
+          "word": "fold",
+          "pronunciation": "",
+          "meaning": "접 다"
+        },
+        {
+          "id": 726,
+          "word": "inform",
+          "pronunciation": "",
+          "meaning": "알리다"
+        },
+        {
+          "id": 727,
+          "word": "persuade",
+          "pronunciation": "",
+          "meaning": "설득하다"
+        },
+        {
+          "id": 728,
+          "word": "establish",
+          "pronunciation": "",
+          "meaning": "설립하다, 확립하다"
+        },
+        {
+          "id": 729,
+          "word": "misunderstand",
+          "pronunciation": "",
+          "meaning": "오해하다"
+        },
+        {
+          "id": 730,
+          "word": "perform",
+          "pronunciation": "",
+          "meaning": "수행하다, 공연하다"
+        },
+        {
+          "id": 731,
+          "word": "donate",
+          "pronunciation": "",
+          "meaning": "기부하다, 기증하다"
+        },
+        {
+          "id": 732,
+          "word": "burst",
+          "pronunciation": "",
+          "meaning": "터뜨리다, 터지다"
+        },
+        {
+          "id": 733,
+          "word": "blend",
+          "pronunciation": "",
+          "meaning": "섞다"
+        },
+        {
+          "id": 734,
+          "word": "approve",
+          "pronunciation": "",
+          "meaning": "승인하다, 찬성하다"
+        },
+        {
+          "id": 735,
+          "word": "differ",
+          "pronunciation": "",
+          "meaning": "다르다"
+        },
+        {
+          "id": 736,
+          "word": "argue",
+          "pronunciation": "",
+          "meaning": "언쟁하다, 주장하다"
+        },
+        {
+          "id": 737,
+          "word": "wrheska",
+          "pronunciation": "",
+          "meaning": "있었다."
+        },
+        {
+          "id": 738,
+          "word": "measure",
+          "pronunciation": "",
+          "meaning": "측정하다"
+        },
+        {
+          "id": 739,
+          "word": "decorate",
+          "pronunciation": "",
+          "meaning": "장식하다, 꾸미다"
+        },
+        {
+          "id": 740,
+          "word": "organize",
+          "pronunciation": "",
+          "meaning": "조직하다, 정리하다"
+        },
+        {
+          "id": 741,
+          "word": "spin",
+          "pronunciation": "",
+          "meaning": "(빙빙) 돌다, 차바퀴가)"
+        },
+        {
+          "id": 742,
+          "word": "overcome",
+          "pronunciation": "",
+          "meaning": "극복하다"
+        },
+        {
+          "id": 743,
+          "word": "scold",
+          "pronunciation": "",
+          "meaning": "혼내다,"
+        },
+        {
+          "id": 744,
+          "word": "pack",
+          "pronunciation": "",
+          "meaning": "(짐을) 싸다"
+        },
+        {
+          "id": 745,
+          "word": "distinguish",
+          "pronunciation": "",
+          "meaning": "구별하다, 분간하다"
+        },
+        {
+          "id": 746,
+          "word": "reflect",
+          "pronunciation": "",
+          "meaning": "반사하다"
+        },
+        {
+          "id": 747,
+          "word": "reuse",
+          "pronunciation": "",
+          "meaning": "재사용하다"
+        },
+        {
+          "id": 748,
+          "word": "yawn",
+          "pronunciation": "",
+          "meaning": "하품하다"
+        },
+        {
+          "id": 749,
+          "word": "compose",
+          "pronunciation": "",
+          "meaning": "구성하다, 작곡하다"
+        },
+        {
+          "id": 750,
+          "word": "unify",
+          "pronunciation": "",
+          "meaning": "통일하다, 통합하다"
+        },
+        {
+          "id": 751,
+          "word": "shoot",
+          "pronunciation": "",
+          "meaning": "쏘다, 사냥하다"
+        },
+        {
+          "id": 752,
+          "word": "invade",
+          "pronunciation": "",
+          "meaning": "침입하다"
+        },
+        {
+          "id": 753,
+          "word": "exclude",
+          "pronunciation": "",
+          "meaning": "동 제외하다"
+        },
+        {
+          "id": 754,
+          "word": "scratch",
+          "pronunciation": "",
+          "meaning": "할퀴다, 국다"
+        },
+        {
+          "id": 755,
+          "word": "stare",
+          "pronunciation": "",
+          "meaning": "응시하다"
+        },
+        {
+          "id": 756,
+          "word": "career",
+          "pronunciation": "",
+          "meaning": "직업, 경력"
+        },
+        {
+          "id": 757,
+          "word": "semester",
+          "pronunciation": "",
+          "meaning": "학기"
+        },
+        {
+          "id": 758,
+          "word": "advice",
+          "pronunciation": "",
+          "meaning": "조인"
+        },
+        {
+          "id": 759,
+          "word": "apiece",
+          "pronunciation": "",
+          "meaning": "충고한마디"
+        },
+        {
+          "id": 760,
+          "word": "slice",
+          "pronunciation": "",
+          "meaning": "조각"
+        },
+        {
+          "id": 761,
+          "word": "grocery",
+          "pronunciation": "",
+          "meaning": "영식료품"
+        },
+        {
+          "id": 762,
+          "word": "receipt",
+          "pronunciation": "",
+          "meaning": "영수증"
+        },
+        {
+          "id": 763,
+          "word": "consumer",
+          "pronunciation": "",
+          "meaning": "소비자"
+        },
+        {
+          "id": 764,
+          "word": "producer",
+          "pronunciation": "",
+          "meaning": "생산자"
+        },
+        {
+          "id": 765,
+          "word": "happiness",
+          "pronunciation": "",
+          "meaning": "행복"
+        },
+        {
+          "id": 766,
+          "word": "bride",
+          "pronunciation": "",
+          "meaning": "신부"
+        },
+        {
+          "id": 767,
+          "word": "groom",
+          "pronunciation": "",
+          "meaning": "신랑"
+        },
+        {
+          "id": 768,
+          "word": "wedding",
+          "pronunciation": "",
+          "meaning": "결혼식)"
+        },
+        {
+          "id": 769,
+          "word": "benefit",
+          "pronunciation": "",
+          "meaning": "이익, 혜택"
+        },
+        {
+          "id": 770,
+          "word": "contact",
+          "pronunciation": "",
+          "meaning": "접 촉, 연락"
+        },
+        {
+          "id": 771,
+          "word": "abedroom",
+          "pronunciation": "",
+          "meaning": "벽장"
+        },
+        {
+          "id": 772,
+          "word": "closet",
+          "pronunciation": "",
+          "meaning": "벽장"
+        },
+        {
+          "id": 773,
+          "word": "switch",
+          "pronunciation": "",
+          "meaning": "스위치, 전환"
+        },
+        {
+          "id": 774,
+          "word": "policy",
+          "pronunciation": "",
+          "meaning": "정책전환"
+        },
+        {
+          "id": 775,
+          "word": "highway",
+          "pronunciation": "",
+          "meaning": "고속도로"
+        },
+        {
+          "id": 776,
+          "word": "license",
+          "pronunciation": "",
+          "meaning": "면허증)"
+        },
+        {
+          "id": 777,
+          "word": "driving",
+          "pronunciation": "",
+          "meaning": "운전면허"
+        },
+        {
+          "id": 778,
+          "word": "wallet",
+          "pronunciation": "",
+          "meaning": "남성용지갑"
+        },
+        {
+          "id": 779,
+          "word": "kindness",
+          "pronunciation": "",
+          "meaning": "친절 (한행동)"
+        },
+        {
+          "id": 780,
+          "word": "imagination",
+          "pronunciation": "",
+          "meaning": "상상력, 창의력"
+        },
+        {
+          "id": 781,
+          "word": "advance",
+          "pronunciation": "",
+          "meaning": "진보, 발전"
+        },
+        {
+          "id": 782,
+          "word": "progress",
+          "pronunciation": "",
+          "meaning": "진보"
+        },
+        {
+          "id": 783,
+          "word": "advantage",
+          "pronunciation": "",
+          "meaning": "이점, 유리한점"
+        },
+        {
+          "id": 784,
+          "word": "amusement",
+          "pronunciation": "",
+          "meaning": "재미, 놀이"
+        },
+        {
+          "id": 785,
+          "word": "interest",
+          "pronunciation": "",
+          "meaning": "흥미, 관심"
+        },
+        {
+          "id": 786,
+          "word": "unit",
+          "pronunciation": "",
+          "meaning": "구성단위, 상품의) 한개"
+        },
+        {
+          "id": 787,
+          "word": "price",
+          "pronunciation": "",
+          "meaning": "개당가격"
+        },
+        {
+          "id": 788,
+          "word": "report",
+          "pronunciation": "",
+          "meaning": "보고서보도"
+        },
+        {
+          "id": 789,
+          "word": "protest",
+          "pronunciation": "",
+          "meaning": "항의, 시위"
+        },
+        {
+          "id": 790,
+          "word": "growth",
+          "pronunciation": "",
+          "meaning": "형 성장"
+        },
+        {
+          "id": 791,
+          "word": "comment",
+          "pronunciation": "",
+          "meaning": "논평,"
+        },
+        {
+          "id": 792,
+          "word": "summary",
+          "pronunciation": "",
+          "meaning": "요약, 개요"
+        },
+        {
+          "id": 793,
+          "word": "brief",
+          "pronunciation": "",
+          "meaning": "간단한개요"
+        },
+        {
+          "id": 794,
+          "word": "device",
+          "pronunciation": "",
+          "meaning": "(기계적) 장치, 기기"
+        },
+        {
+          "id": 795,
+          "word": "electronic",
+          "pronunciation": "",
+          "meaning": "전 자장치"
+        },
+        {
+          "id": 796,
+          "word": "condition",
+          "pronunciation": "",
+          "meaning": "상태, 조건"
+        },
+        {
+          "id": 797,
+          "word": "wave",
+          "pronunciation": "",
+          "meaning": "파도, 물결"
+        },
+        {
+          "id": 798,
+          "word": "flag",
+          "pronunciation": "",
+          "meaning": "영기, 깃발"
+        },
+        {
+          "id": 799,
+          "word": "exhibition",
+          "pronunciation": "",
+          "meaning": "전 시회)"
+        },
+        {
+          "id": 800,
+          "word": "journal",
+          "pronunciation": "",
+          "meaning": "잡지, 일기"
+        },
+        {
+          "id": 801,
+          "word": "author",
+          "pronunciation": "",
+          "meaning": "저자, 작가"
+        },
+        {
+          "id": 802,
+          "word": "comic",
+          "pronunciation": "",
+          "meaning": "만화, 만화책"
+        },
+        {
+          "id": 803,
+          "word": "lifetime",
+          "pronunciation": "",
+          "meaning": "일생"
+        },
+        {
+          "id": 804,
+          "word": "fable",
+          "pronunciation": "",
+          "meaning": "용우화"
+        },
+        {
+          "id": 805,
+          "word": "fables",
+          "pronunciation": "",
+          "meaning": "이습우화"
+        },
+        {
+          "id": 806,
+          "word": "writer",
+          "pronunciation": "",
+          "meaning": "우화작가"
+        },
+        {
+          "id": 807,
+          "word": "palace",
+          "pronunciation": "",
+          "meaning": "궁전"
+        },
+        {
+          "id": 808,
+          "word": "buckingham",
+          "pronunciation": "",
+          "meaning": "버킹엄궁전"
+        },
+        {
+          "id": 809,
+          "word": "agere",
+          "pronunciation": "",
+          "meaning": "있다."
+        },
+        {
+          "id": 810,
+          "word": "architect",
+          "pronunciation": "",
+          "meaning": "건축가, 설계자"
+        },
+        {
+          "id": 811,
+          "word": "option",
+          "pronunciation": "",
+          "meaning": "선택사항, 선택권"
+        },
+        {
+          "id": 812,
+          "word": "dust",
+          "pronunciation": "",
+          "meaning": "먼지"
+        },
+        {
+          "id": 813,
+          "word": "income",
+          "pronunciation": "",
+          "meaning": "소득, 수입"
+        },
+        {
+          "id": 814,
+          "word": "wage",
+          "pronunciation": "",
+          "meaning": "임금, 급여"
+        },
+        {
+          "id": 815,
+          "word": "garbage",
+          "pronunciation": "",
+          "meaning": "쓰레기"
+        },
+        {
+          "id": 816,
+          "word": "take",
+          "pronunciation": "",
+          "meaning": "내놓다"
+        },
+        {
+          "id": 817,
+          "word": "item",
+          "pronunciation": "",
+          "meaning": "항목"
+        },
+        {
+          "id": 818,
+          "word": "package",
+          "pronunciation": "",
+          "meaning": "일괄 (프로그램)"
+        },
+        {
+          "id": 819,
+          "word": "envelope",
+          "pronunciation": "",
+          "meaning": "봉투"
+        },
+        {
+          "id": 820,
+          "word": "envelop",
+          "pronunciation": "",
+          "meaning": "감싸다, 봉하다"
+        },
+        {
+          "id": 821,
+          "word": "authority",
+          "pronunciation": "",
+          "meaning": "권위, 권한, 당국"
+        },
+        {
+          "id": 822,
+          "word": "force",
+          "pronunciation": "",
+          "meaning": "힘군대"
+        },
+        {
+          "id": 823,
+          "word": "goal",
+          "pronunciation": "",
+          "meaning": "목표, 골"
+        },
+        {
+          "id": 824,
+          "word": "score",
+          "pronunciation": "",
+          "meaning": "점수, 득점"
+        },
+        {
+          "id": 825,
+          "word": "region",
+          "pronunciation": "",
+          "meaning": "영지역"
+        },
+        {
+          "id": 826,
+          "word": "navy",
+          "pronunciation": "",
+          "meaning": "해군"
+        },
+        {
+          "id": 827,
+          "word": "host",
+          "pronunciation": "",
+          "meaning": "초대한) 주인, 주최측"
+        },
+        {
+          "id": 828,
+          "word": "peer",
+          "pronunciation": "",
+          "meaning": "또래"
+        },
+        {
+          "id": 829,
+          "word": "nest",
+          "pronunciation": "",
+          "meaning": "둥지, (작은동물의) 집"
+        },
+        {
+          "id": 830,
+          "word": "quality",
+          "pronunciation": "",
+          "meaning": "높은 (낮은) 품질"
+        },
+        {
+          "id": 831,
+          "word": "quantity",
+          "pronunciation": "",
+          "meaning": "양다량"
+        },
+        {
+          "id": 832,
+          "word": "construction",
+          "pronunciation": "",
+          "meaning": "건설공사"
+        },
+        {
+          "id": 833,
+          "word": "under",
+          "pronunciation": "",
+          "meaning": "공사중"
+        },
+        {
+          "id": 834,
+          "word": "research",
+          "pronunciation": "",
+          "meaning": "연구 (조사)"
+        },
+        {
+          "id": 835,
+          "word": "path",
+          "pronunciation": "",
+          "meaning": "진로"
+        },
+        {
+          "id": 836,
+          "word": "laundry",
+          "pronunciation": "",
+          "meaning": "세탁물, 세탁소"
+        },
+        {
+          "id": 837,
+          "word": "bush",
+          "pronunciation": "",
+          "meaning": "수풀, 덤불"
+        },
+        {
+          "id": 838,
+          "word": "loaves",
+          "pronunciation": "",
+          "meaning": "덩어리의빵"
+        },
+        {
+          "id": 839,
+          "word": "bread",
+          "pronunciation": "",
+          "meaning": "덩어리의빵"
+        },
+        {
+          "id": 840,
+          "word": "target",
+          "pronunciation": "",
+          "meaning": "과녁, 목표물"
+        },
+        {
+          "id": 841,
+          "word": "wile",
+          "pronunciation": "",
+          "meaning": "자원하다"
+        },
+        {
+          "id": 842,
+          "word": "pace",
+          "pronunciation": "",
+          "meaning": "걸음일등의) 속도"
+        },
+        {
+          "id": 843,
+          "word": "revival",
+          "pronunciation": "",
+          "meaning": "부 흥"
+        },
+        {
+          "id": 844,
+          "word": "trade",
+          "pronunciation": "",
+          "meaning": "무역회복"
+        },
+        {
+          "id": 845,
+          "word": "flames",
+          "pronunciation": "",
+          "meaning": "불을끄다"
+        },
+        {
+          "id": 846,
+          "word": "thumb",
+          "pronunciation": "",
+          "meaning": "엄지손가락"
+        },
+        {
+          "id": 847,
+          "word": "fist",
+          "pronunciation": "",
+          "meaning": "주먹"
+        },
+        {
+          "id": 848,
+          "word": "alarm",
+          "pronunciation": "",
+          "meaning": "경보"
+        },
+        {
+          "id": 849,
+          "word": "afire",
+          "pronunciation": "",
+          "meaning": "화재경보"
+        },
+        {
+          "id": 850,
+          "word": "examination",
+          "pronunciation": "",
+          "meaning": "조사, 시험 (줄여서"
+        },
+        {
+          "id": 851,
+          "word": "swing",
+          "pronunciation": "",
+          "meaning": "그네, 흔들기, 휘두르기"
+        },
+        {
+          "id": 852,
+          "word": "wheat",
+          "pronunciation": "",
+          "meaning": "밀가루"
+        },
+        {
+          "id": 853,
+          "word": "flour",
+          "pronunciation": "",
+          "meaning": "밀가루"
+        },
+        {
+          "id": 854,
+          "word": "crop",
+          "pronunciation": "",
+          "meaning": "영농작물, 수확"
+        },
+        {
+          "id": 855,
+          "word": "cage",
+          "pronunciation": "",
+          "meaning": "새장, 우리"
+        },
+        {
+          "id": 856,
+          "word": "chain",
+          "pronunciation": "",
+          "meaning": "사슬, 체인"
+        },
+        {
+          "id": 857,
+          "word": "master",
+          "pronunciation": "",
+          "meaning": "주인, 대가"
+        },
+        {
+          "id": 858,
+          "word": "film",
+          "pronunciation": "",
+          "meaning": "영화의대가"
+        },
+        {
+          "id": 859,
+          "word": "servant",
+          "pronunciation": "",
+          "meaning": "하인"
+        },
+        {
+          "id": 860,
+          "word": "moment",
+          "pronunciation": "",
+          "meaning": "순간"
+        },
+        {
+          "id": 861,
+          "word": "moments",
+          "pronunciation": "",
+          "meaning": "소중한순간"
+        },
+        {
+          "id": 862,
+          "word": "sheet",
+          "pronunciation": "",
+          "meaning": "침대의) 시트, (종이) 한장"
+        },
+        {
+          "id": 863,
+          "word": "education",
+          "pronunciation": "",
+          "meaning": "교육부"
+        },
+        {
+          "id": 864,
+          "word": "clothing",
+          "pronunciation": "",
+          "meaning": "남성복매장"
+        },
+        {
+          "id": 865,
+          "word": "sample",
+          "pronunciation": "",
+          "meaning": "샘플, 견본"
+        },
+        {
+          "id": 866,
+          "word": "stream",
+          "pronunciation": "",
+          "meaning": "흐름, 시내"
+        },
+        {
+          "id": 867,
+          "word": "plenty",
+          "pronunciation": "",
+          "meaning": "많음"
+        },
+        {
+          "id": 868,
+          "word": "lack",
+          "pronunciation": "",
+          "meaning": "부 족,"
+        },
+        {
+          "id": 869,
+          "word": "fortune",
+          "pronunciation": "",
+          "meaning": "재산"
+        },
+        {
+          "id": 870,
+          "word": "temple",
+          "pronunciation": "",
+          "meaning": "절사원"
+        },
+        {
+          "id": 871,
+          "word": "counselor",
+          "pronunciation": "",
+          "meaning": "카운슬러"
+        },
+        {
+          "id": 872,
+          "word": "booth",
+          "pronunciation": "",
+          "meaning": "작은방부스"
+        },
+        {
+          "id": 873,
+          "word": "belg",
+          "pronunciation": "",
+          "meaning": "가라앉았다."
+        },
+        {
+          "id": 874,
+          "word": "bubble",
+          "pronunciation": "",
+          "meaning": "거품"
+        },
+        {
+          "id": 875,
+          "word": "bottom",
+          "pronunciation": "",
+          "meaning": "밑바닥, 밑"
+        },
+        {
+          "id": 876,
+          "word": "rate",
+          "pronunciation": "",
+          "meaning": "형 비율, 속도"
+        },
+        {
+          "id": 877,
+          "word": "horizon",
+          "pronunciation": "",
+          "meaning": "수평선, 지평선"
+        },
+        {
+          "id": 878,
+          "word": "shore",
+          "pronunciation": "",
+          "meaning": "해안"
+        },
+        {
+          "id": 879,
+          "word": "coast",
+          "pronunciation": "",
+          "meaning": "해안, 연안"
+        },
+        {
+          "id": 880,
+          "word": "hunter",
+          "pronunciation": "",
+          "meaning": "사냥꾼"
+        },
+        {
+          "id": 881,
+          "word": "captain",
+          "pronunciation": "",
+          "meaning": "선장, 주장"
+        },
+        {
+          "id": 882,
+          "word": "greek",
+          "pronunciation": "",
+          "meaning": "그리스신들"
+        },
+        {
+          "id": 883,
+          "word": "gods",
+          "pronunciation": "",
+          "meaning": "그리스신들"
+        },
+        {
+          "id": 884,
+          "word": "heaven",
+          "pronunciation": "",
+          "meaning": "하늘, 천국"
+        },
+        {
+          "id": 885,
+          "word": "ceiling",
+          "pronunciation": "",
+          "meaning": "천장"
+        },
+        {
+          "id": 886,
+          "word": "basement",
+          "pronunciation": "",
+          "meaning": "지하실, 지하층"
+        },
+        {
+          "id": 887,
+          "word": "board",
+          "pronunciation": "",
+          "meaning": "보드"
+        },
+        {
+          "id": 888,
+          "word": "pill",
+          "pronunciation": "",
+          "meaning": "알약"
+        },
+        {
+          "id": 889,
+          "word": "sleeping",
+          "pronunciation": "",
+          "meaning": "수면제"
+        },
+        {
+          "id": 890,
+          "word": "pills",
+          "pronunciation": "",
+          "meaning": "수면제"
+        },
+        {
+          "id": 891,
+          "word": "drugstore",
+          "pronunciation": "",
+          "meaning": "약국"
+        },
+        {
+          "id": 892,
+          "word": "port",
+          "pronunciation": "",
+          "meaning": "항구"
+        },
+        {
+          "id": 893,
+          "word": "coal",
+          "pronunciation": "",
+          "meaning": "석탄"
+        },
+        {
+          "id": 894,
+          "word": "flashlight",
+          "pronunciation": "",
+          "meaning": "플래시, 손전등"
+        },
+        {
+          "id": 895,
+          "word": "nail",
+          "pronunciation": "",
+          "meaning": "손톱, 발톱, 못"
+        },
+        {
+          "id": 896,
+          "word": "finger",
+          "pronunciation": "",
+          "meaning": "손톱을"
+        },
+        {
+          "id": 897,
+          "word": "nails",
+          "pronunciation": "",
+          "meaning": "손톱을"
+        },
+        {
+          "id": 898,
+          "word": "cloth",
+          "pronunciation": "",
+          "meaning": "영천, 직물"
+        },
+        {
+          "id": 899,
+          "word": "clothes",
+          "pronunciation": "",
+          "meaning": "옷의복"
+        },
+        {
+          "id": 900,
+          "word": "post",
+          "pronunciation": "",
+          "meaning": "우편물"
+        },
+        {
+          "id": 901,
+          "word": "tail",
+          "pronunciation": "",
+          "meaning": "꼬리"
+        },
+        {
+          "id": 902,
+          "word": "piece",
+          "pronunciation": "",
+          "meaning": "영조각"
+        },
+        {
+          "id": 903,
+          "word": "sale",
+          "pronunciation": "",
+          "meaning": "판매, 할인판매"
+        },
+        {
+          "id": 904,
+          "word": "liberty",
+          "pronunciation": "",
+          "meaning": "자유"
+        },
+        {
+          "id": 905,
+          "word": "religious",
+          "pronunciation": "",
+          "meaning": "종교의자유"
+        },
+        {
+          "id": 906,
+          "word": "nickname",
+          "pronunciation": "",
+          "meaning": "별명,"
+        },
+        {
+          "id": 907,
+          "word": "pair",
+          "pronunciation": "",
+          "meaning": "댄서한쌍"
+        },
+        {
+          "id": 908,
+          "word": "dancers",
+          "pronunciation": "",
+          "meaning": "댄서한쌍"
+        },
+        {
+          "id": 909,
+          "word": "fantasy",
+          "pronunciation": "",
+          "meaning": "공상소설"
+        },
+        {
+          "id": 910,
+          "word": "novels",
+          "pronunciation": "",
+          "meaning": "공상소설"
+        },
+        {
+          "id": 911,
+          "word": "harmony",
+          "pronunciation": "",
+          "meaning": "조화, 화합"
+        },
+        {
+          "id": 912,
+          "word": "soul",
+          "pronunciation": "",
+          "meaning": "영혼, 사람"
+        },
+        {
+          "id": 913,
+          "word": "kite",
+          "pronunciation": "",
+          "meaning": "연을날리다"
+        },
+        {
+          "id": 914,
+          "word": "exit",
+          "pronunciation": "",
+          "meaning": "영출구"
+        },
+        {
+          "id": 915,
+          "word": "metal",
+          "pronunciation": "",
+          "meaning": "금속"
+        },
+        {
+          "id": 916,
+          "word": "cave",
+          "pronunciation": "",
+          "meaning": "영동굴"
+        },
+        {
+          "id": 917,
+          "word": "amount",
+          "pronunciation": "",
+          "meaning": "총액"
+        },
+        {
+          "id": 918,
+          "word": "beginning",
+          "pronunciation": "",
+          "meaning": "처음, 시작"
+        },
+        {
+          "id": 919,
+          "word": "value",
+          "pronunciation": "",
+          "meaning": "가치"
+        },
+        {
+          "id": 920,
+          "word": "stranger",
+          "pronunciation": "",
+          "meaning": "낮선사람, 처음온사람"
+        },
+        {
+          "id": 921,
+          "word": "harm",
+          "pronunciation": "",
+          "meaning": "손해"
+        },
+        {
+          "id": 922,
+          "word": "fare",
+          "pronunciation": "",
+          "meaning": "(교통) 요금"
+        },
+        {
+          "id": 923,
+          "word": "fault",
+          "pronunciation": "",
+          "meaning": "결점, 잘못"
+        },
+        {
+          "id": 924,
+          "word": "garage",
+          "pronunciation": "",
+          "meaning": "차고, 주차장"
+        },
+        {
+          "id": 925,
+          "word": "indoor",
+          "pronunciation": "",
+          "meaning": "실내주차장"
+        },
+        {
+          "id": 926,
+          "word": "parking",
+          "pronunciation": "",
+          "meaning": "실내주차장"
+        },
+        {
+          "id": 927,
+          "word": "doubt",
+          "pronunciation": "",
+          "meaning": "의심"
+        },
+        {
+          "id": 928,
+          "word": "truth",
+          "pronunciation": "",
+          "meaning": "진실, 사실"
+        },
+        {
+          "id": 929,
+          "word": "crash",
+          "pronunciation": "",
+          "meaning": "영충돌, 요란한소리"
+        },
+        {
+          "id": 930,
+          "word": "acar",
+          "pronunciation": "",
+          "meaning": "자동차충돌"
+        },
+        {
+          "id": 931,
+          "word": "suitcase",
+          "pronunciation": "",
+          "meaning": "여행가방"
+        },
+        {
+          "id": 932,
+          "word": "democracy",
+          "pronunciation": "",
+          "meaning": "민주주의, 민주정치"
+        },
+        {
+          "id": 933,
+          "word": "sorrow",
+          "pronunciation": "",
+          "meaning": "영슬픔"
+        },
+        {
+          "id": 934,
+          "word": "excitement",
+          "pronunciation": "",
+          "meaning": "흥분"
+        },
+        {
+          "id": 935,
+          "word": "youth",
+          "pronunciation": "",
+          "meaning": "젊음, 청춘 (기)"
+        },
+        {
+          "id": 936,
+          "word": "folk",
+          "pronunciation": "",
+          "meaning": "사람들, 가족"
+        },
+        {
+          "id": 937,
+          "word": "wisdom",
+          "pronunciation": "",
+          "meaning": "지혜"
+        },
+        {
+          "id": 938,
+          "word": "treasure",
+          "pronunciation": "",
+          "meaning": "보물, 보배"
+        },
+        {
+          "id": 939,
+          "word": "anational",
+          "pronunciation": "",
+          "meaning": "국보"
+        },
+        {
+          "id": 940,
+          "word": "harvest",
+          "pronunciation": "",
+          "meaning": "추수"
+        },
+        {
+          "id": 941,
+          "word": "century",
+          "pronunciation": "",
+          "meaning": "세기,"
+        },
+        {
+          "id": 942,
+          "word": "pole",
+          "pronunciation": "",
+          "meaning": "기둥,"
+        },
+        {
+          "id": 943,
+          "word": "atent",
+          "pronunciation": "",
+          "meaning": "텐트버팀목"
+        },
+        {
+          "id": 944,
+          "word": "justice",
+          "pronunciation": "",
+          "meaning": "정의"
+        },
+        {
+          "id": 945,
+          "word": "limit",
+          "pronunciation": "",
+          "meaning": "제한, 한계"
+        },
+        {
+          "id": 946,
+          "word": "limits",
+          "pronunciation": "",
+          "meaning": "능력의한계"
+        },
+        {
+          "id": 947,
+          "word": "abilities",
+          "pronunciation": "",
+          "meaning": "능력의한계"
+        },
+        {
+          "id": 948,
+          "word": "universe",
+          "pronunciation": "",
+          "meaning": "우주, 전세계"
+        },
+        {
+          "id": 949,
+          "word": "custom",
+          "pronunciation": "",
+          "meaning": "관습, 습관"
+        },
+        {
+          "id": 950,
+          "word": "valley",
+          "pronunciation": "",
+          "meaning": "골짜기, 계곡"
+        },
+        {
+          "id": 951,
+          "word": "source",
+          "pronunciation": "",
+          "meaning": "출처, 근원"
+        },
+        {
+          "id": 952,
+          "word": "anews",
+          "pronunciation": "",
+          "meaning": "뉴스의출처"
+        },
+        {
+          "id": 953,
+          "word": "athletes",
+          "pronunciation": "",
+          "meaning": "올림픽 (아마추어) 선수들"
+        },
+        {
+          "id": 954,
+          "word": "choir",
+          "pronunciation": "",
+          "meaning": "합창단, 성가대"
+        },
+        {
+          "id": 955,
+          "word": "dozen",
+          "pronunciation": "",
+          "meaning": "개묶음"
+        },
+        {
+          "id": 956,
+          "word": "eggs",
+          "pronunciation": "",
+          "meaning": "달갈다스"
+        },
+        {
+          "id": 957,
+          "word": "community",
+          "pronunciation": "",
+          "meaning": "공동체, 지역사회"
+        },
+        {
+          "id": 958,
+          "word": "local",
+          "pronunciation": "",
+          "meaning": "지역공동체"
+        },
+        {
+          "id": 959,
+          "word": "track",
+          "pronunciation": "",
+          "meaning": "지나간자국, 선로"
+        },
+        {
+          "id": 960,
+          "word": "jewel",
+          "pronunciation": "",
+          "meaning": "보석, 보석장신구"
+        },
+        {
+          "id": 961,
+          "word": "aring",
+          "pronunciation": "",
+          "meaning": "보석반지"
+        },
+        {
+          "id": 962,
+          "word": "jewelry",
+          "pronunciation": "",
+          "meaning": "보석류"
+        },
+        {
+          "id": 963,
+          "word": "signal",
+          "pronunciation": "",
+          "meaning": "교통신호"
+        },
+        {
+          "id": 964,
+          "word": "equipment",
+          "pronunciation": "",
+          "meaning": "장비, 설비"
+        },
+        {
+          "id": 965,
+          "word": "beggar",
+          "pronunciation": "",
+          "meaning": "거지"
+        },
+        {
+          "id": 966,
+          "word": "quarter",
+          "pronunciation": "",
+          "meaning": "분의동전"
+        },
+        {
+          "id": 967,
+          "word": "quarters",
+          "pronunciation": "",
+          "meaning": "분의"
+        },
+        {
+          "id": 968,
+          "word": "five",
+          "pronunciation": "",
+          "meaning": "시분전"
+        },
+        {
+          "id": 969,
+          "word": "pity",
+          "pronunciation": "",
+          "meaning": "불쌍히여김, 연민"
+        },
+        {
+          "id": 970,
+          "word": "temperature",
+          "pronunciation": "",
+          "meaning": "온도, 기온, 체온"
+        },
+        {
+          "id": 971,
+          "word": "thermometer",
+          "pronunciation": "",
+          "meaning": "온도계"
+        },
+        {
+          "id": 972,
+          "word": "continent",
+          "pronunciation": "",
+          "meaning": "대륙"
+        },
+        {
+          "id": 973,
+          "word": "direction",
+          "pronunciation": "",
+          "meaning": "지시"
+        },
+        {
+          "id": 974,
+          "word": "letters",
+          "pronunciation": "",
+          "meaning": "축하편지"
+        },
+        {
+          "id": 975,
+          "word": "congratulation",
+          "pronunciation": "",
+          "meaning": "축하편지"
+        },
+        {
+          "id": 976,
+          "word": "invasion",
+          "pronunciation": "",
+          "meaning": "사생활침해"
+        },
+        {
+          "id": 977,
+          "word": "privacy",
+          "pronunciation": "",
+          "meaning": "사생활침해"
+        },
+        {
+          "id": 978,
+          "word": "spirit",
+          "pronunciation": "",
+          "meaning": "정신, 마음"
+        },
+        {
+          "id": 979,
+          "word": "museum",
+          "pronunciation": "",
+          "meaning": "박물관입구"
+        },
+        {
+          "id": 980,
+          "word": "opening",
+          "pronunciation": "",
+          "meaning": "개회식"
+        },
+        {
+          "id": 981,
+          "word": "ceremony",
+          "pronunciation": "",
+          "meaning": "개회식"
+        },
+        {
+          "id": 982,
+          "word": "raindrop",
+          "pronunciation": "",
+          "meaning": "빗방울"
+        },
+        {
+          "id": 983,
+          "word": "documentary",
+          "pronunciation": "",
+          "meaning": "다큐멘터리, 기록물"
+        },
+        {
+          "id": 984,
+          "word": "function",
+          "pronunciation": "",
+          "meaning": "기능"
+        },
+        {
+          "id": 985,
+          "word": "tomb",
+          "pronunciation": "",
+          "meaning": "월무덤, 묘"
+        },
+        {
+          "id": 986,
+          "word": "cartoon",
+          "pronunciation": "",
+          "meaning": "만화, 만화영화"
+        },
+        {
+          "id": 987,
+          "word": "cartoons",
+          "pronunciation": "",
+          "meaning": "만화를읽다"
+        },
+        {
+          "id": 988,
+          "word": "screen",
+          "pronunciation": "",
+          "meaning": "화면, 스크린, 영화"
+        },
+        {
+          "id": 989,
+          "word": "mission",
+          "pronunciation": "",
+          "meaning": "임무, 사절단"
+        },
+        {
+          "id": 990,
+          "word": "landmark",
+          "pronunciation": "",
+          "meaning": "랜드마크, 획기적"
+        },
+        {
+          "id": 991,
+          "word": "setting",
+          "pronunciation": "",
+          "meaning": "앵배경, 장소"
+        },
+        {
+          "id": 992,
+          "word": "scene",
+          "pronunciation": "",
+          "meaning": "영장면, 현장"
+        },
+        {
+          "id": 993,
+          "word": "scenery",
+          "pronunciation": "",
+          "meaning": "경치"
+        },
+        {
+          "id": 994,
+          "word": "background",
+          "pronunciation": "",
+          "meaning": "배경"
+        },
+        {
+          "id": 995,
+          "word": "link",
+          "pronunciation": "",
+          "meaning": "연결, 관련, 링크"
+        },
+        {
+          "id": 996,
+          "word": "chip",
+          "pronunciation": "",
+          "meaning": "흠집, 조각, 감자튀김"
+        },
+        {
+          "id": 997,
+          "word": "potato",
+          "pronunciation": "",
+          "meaning": "감자튀김"
+        },
+        {
+          "id": 998,
+          "word": "chips",
+          "pronunciation": "",
+          "meaning": "감자튀김"
+        },
+        {
+          "id": 999,
+          "word": "shuttle",
+          "pronunciation": "",
+          "meaning": "우주왕복선"
+        },
+        {
+          "id": 1000,
+          "word": "satellite",
+          "pronunciation": "",
+          "meaning": "위성방송"
+        },
+        {
+          "id": 1001,
+          "word": "astronaut",
+          "pronunciation": "",
+          "meaning": "비행사"
+        },
+        {
+          "id": 1002,
+          "word": "proof",
+          "pronunciation": "",
+          "meaning": "증거,"
+        },
+        {
+          "id": 1003,
+          "word": "site",
+          "pronunciation": "",
+          "meaning": "위치, 장소인터넷"
+        },
+        {
+          "id": 1004,
+          "word": "riddle",
+          "pronunciation": "",
+          "meaning": "수수께끼, 불가사의"
+        },
+        {
+          "id": 1005,
+          "word": "active",
+          "pronunciation": "",
+          "meaning": "활화산"
+        },
+        {
+          "id": 1006,
+          "word": "volcano",
+          "pronunciation": "",
+          "meaning": "활화산"
+        },
+        {
+          "id": 1007,
+          "word": "bomb",
+          "pronunciation": "",
+          "meaning": "폭탄, 폭발물"
+        },
+        {
+          "id": 1008,
+          "word": "bullet",
+          "pronunciation": "",
+          "meaning": "총알"
+        },
+        {
+          "id": 1009,
+          "word": "zone",
+          "pronunciation": "",
+          "meaning": "구역, 지대"
+        },
+        {
+          "id": 1010,
+          "word": "yard",
+          "pronunciation": "",
+          "meaning": "마당, 학교의) 운동장"
+        },
+        {
+          "id": 1011,
+          "word": "shepherd",
+          "pronunciation": "",
+          "meaning": "목자"
+        },
+        {
+          "id": 1012,
+          "word": "stuff",
+          "pronunciation": "",
+          "meaning": "형 것, 물건"
+        },
+        {
+          "id": 1013,
+          "word": "goods",
+          "pronunciation": "",
+          "meaning": "상품"
+        },
+        {
+          "id": 1014,
+          "word": "microwave",
+          "pronunciation": "",
+          "meaning": "전 자레인지"
+        },
+        {
+          "id": 1015,
+          "word": "chimney",
+          "pronunciation": "",
+          "meaning": "굴뚝"
+        },
+        {
+          "id": 1016,
+          "word": "pimple",
+          "pronunciation": "",
+          "meaning": "여드름, 뽀루지"
+        },
+        {
+          "id": 1017,
+          "word": "bowl",
+          "pronunciation": "",
+          "meaning": "그릇"
+        },
+        {
+          "id": 1018,
+          "word": "salad",
+          "pronunciation": "",
+          "meaning": "샐러드그릇"
+        },
+        {
+          "id": 1019,
+          "word": "bowls",
+          "pronunciation": "",
+          "meaning": "밥두그릇"
+        },
+        {
+          "id": 1020,
+          "word": "rice",
+          "pronunciation": "",
+          "meaning": "밥두그릇"
+        },
+        {
+          "id": 1021,
+          "word": "crack",
+          "pronunciation": "",
+          "meaning": "롱갈라진금"
+        },
+        {
+          "id": 1022,
+          "word": "leftover",
+          "pronunciation": "",
+          "meaning": "남은음식, 잔재"
+        },
+        {
+          "id": 1023,
+          "word": "fitness",
+          "pronunciation": "",
+          "meaning": "헬스, 건강"
+        },
+        {
+          "id": 1024,
+          "word": "shelter",
+          "pronunciation": "",
+          "meaning": "피신처쉼터"
+        },
+        {
+          "id": 1025,
+          "word": "apple",
+          "pronunciation": "",
+          "meaning": "사과꽃"
+        },
+        {
+          "id": 1026,
+          "word": "blossoms",
+          "pronunciation": "",
+          "meaning": "사과꽃"
+        },
+        {
+          "id": 1027,
+          "word": "submarine",
+          "pronunciation": "",
+          "meaning": "잠수함"
+        },
+        {
+          "id": 1028,
+          "word": "context",
+          "pronunciation": "",
+          "meaning": "문맥, 맥락"
+        },
+        {
+          "id": 1029,
+          "word": "communication",
+          "pronunciation": "",
+          "meaning": "의사소통, 통신"
+        },
+        {
+          "id": 1030,
+          "word": "wireless",
+          "pronunciation": "",
+          "meaning": "무선통신망"
+        },
+        {
+          "id": 1031,
+          "word": "communications",
+          "pronunciation": "",
+          "meaning": "무선통신망"
+        },
+        {
+          "id": 1032,
+          "word": "routine",
+          "pronunciation": "",
+          "meaning": "판에박힌) 일상"
+        },
+        {
+          "id": 1033,
+          "word": "chore",
+          "pronunciation": "",
+          "meaning": "일상의) 잡일, 하기싫은일"
+        },
+        {
+          "id": 1034,
+          "word": "burden",
+          "pronunciation": "",
+          "meaning": "짐무거운짐"
+        },
+        {
+          "id": 1035,
+          "word": "pattern",
+          "pronunciation": "",
+          "meaning": "패턴, 무늬"
+        },
+        {
+          "id": 1036,
+          "word": "evolution",
+          "pronunciation": "",
+          "meaning": "진화, 발달"
+        },
+        {
+          "id": 1037,
+          "word": "civilizations",
+          "pronunciation": "",
+          "meaning": "문명의발달"
+        },
+        {
+          "id": 1038,
+          "word": "side",
+          "pronunciation": "",
+          "meaning": "영쪽옆구리, 편"
+        },
+        {
+          "id": 1039,
+          "word": "empire",
+          "pronunciation": "",
+          "meaning": "미디어 [출판] 제국"
+        },
+        {
+          "id": 1040,
+          "word": "pipe",
+          "pronunciation": "",
+          "meaning": "관파이프"
+        },
+        {
+          "id": 1041,
+          "word": "industry",
+          "pronunciation": "",
+          "meaning": "산업, 공업"
+        },
+        {
+          "id": 1042,
+          "word": "idiot",
+          "pronunciation": "",
+          "meaning": "멍청이"
+        },
+        {
+          "id": 1043,
+          "word": "sleeve",
+          "pronunciation": "",
+          "meaning": "소매"
+        },
+        {
+          "id": 1044,
+          "word": "surf",
+          "pronunciation": "",
+          "meaning": "영파도"
+        },
+        {
+          "id": 1045,
+          "word": "telescope",
+          "pronunciation": "",
+          "meaning": "망원경"
+        },
+        {
+          "id": 1046,
+          "word": "oxygen",
+          "pronunciation": "",
+          "meaning": "산소"
+        },
+        {
+          "id": 1047,
+          "word": "pronunciation",
+          "pronunciation": "",
+          "meaning": "발음법"
+        },
+        {
+          "id": 1048,
+          "word": "merchant",
+          "pronunciation": "",
+          "meaning": "상인"
+        },
+        {
+          "id": 1049,
+          "word": "kindergarten",
+          "pronunciation": "",
+          "meaning": "유치원"
+        },
+        {
+          "id": 1050,
+          "word": "ancient",
+          "pronunciation": "",
+          "meaning": "고대의, 매우오래된"
+        },
+        {
+          "id": 1051,
+          "word": "elementary",
+          "pronunciation": "",
+          "meaning": "초등의,"
+        },
+        {
+          "id": 1052,
+          "word": "problems",
+          "pronunciation": "",
+          "meaning": "사회적문제"
+        },
+        {
+          "id": 1053,
+          "word": "nervous",
+          "pronunciation": "",
+          "meaning": "불안한, 긴장되는"
+        },
+        {
+          "id": 1054,
+          "word": "certain",
+          "pronunciation": "",
+          "meaning": "확실한, 어떤"
+        },
+        {
+          "id": 1055,
+          "word": "afraid",
+          "pronunciation": "",
+          "meaning": "무서워하는, 걱정하는"
+        },
+        {
+          "id": 1056,
+          "word": "asleep",
+          "pronunciation": "",
+          "meaning": "잠들어있는"
+        },
+        {
+          "id": 1057,
+          "word": "international",
+          "pronunciation": "",
+          "meaning": "국제적인"
+        },
+        {
+          "id": 1058,
+          "word": "contrary",
+          "pronunciation": "",
+          "meaning": "반대의"
+        },
+        {
+          "id": 1059,
+          "word": "straight",
+          "pronunciation": "",
+          "meaning": "형 똑바른"
+        },
+        {
+          "id": 1060,
+          "word": "line",
+          "pronunciation": "",
+          "meaning": "직선"
+        },
+        {
+          "id": 1061,
+          "word": "sore",
+          "pronunciation": "",
+          "meaning": "아픈"
+        },
+        {
+          "id": 1062,
+          "word": "safathea",
+          "pronunciation": "",
+          "meaning": "바란다)."
+        },
+        {
+          "id": 1063,
+          "word": "tough",
+          "pronunciation": "",
+          "meaning": "질긴"
+        },
+        {
+          "id": 1064,
+          "word": "familiar",
+          "pronunciation": "",
+          "meaning": "친숙한, 익숙한"
+        },
+        {
+          "id": 1065,
+          "word": "nuclear",
+          "pronunciation": "",
+          "meaning": "원자력의, 핵의"
+        },
+        {
+          "id": 1066,
+          "word": "silent",
+          "pronunciation": "",
+          "meaning": "침묵의, 조용한"
+        },
+        {
+          "id": 1067,
+          "word": "cruel",
+          "pronunciation": "",
+          "meaning": "잔인한"
+        },
+        {
+          "id": 1068,
+          "word": "global",
+          "pronunciation": "",
+          "meaning": "지구의, 세계적인"
+        },
+        {
+          "id": 1069,
+          "word": "bold",
+          "pronunciation": "",
+          "meaning": "형 대담한, 볼드체의"
+        },
+        {
+          "id": 1070,
+          "word": "curly",
+          "pronunciation": "",
+          "meaning": "형 곱슬곱슬한"
+        },
+        {
+          "id": 1071,
+          "word": "overweight",
+          "pronunciation": "",
+          "meaning": "과체중인, 비만인"
+        },
+        {
+          "id": 1072,
+          "word": "underweight",
+          "pronunciation": "",
+          "meaning": "저체중인, 중량부족인"
+        },
+        {
+          "id": 1073,
+          "word": "handmade",
+          "pronunciation": "",
+          "meaning": "손으로만든, 수제의"
+        },
+        {
+          "id": 1074,
+          "word": "shoes",
+          "pronunciation": "",
+          "meaning": "수제화"
+        },
+        {
+          "id": 1075,
+          "word": "depressed",
+          "pronunciation": "",
+          "meaning": "침체된"
+        },
+        {
+          "id": 1076,
+          "word": "frustrated",
+          "pronunciation": "",
+          "meaning": "좌절한, 짜증난"
+        },
+        {
+          "id": 1077,
+          "word": "lost",
+          "pronunciation": "",
+          "meaning": "길을잃은, 분실한"
+        },
+        {
+          "id": 1078,
+          "word": "former",
+          "pronunciation": "",
+          "meaning": "이전의, 전자의"
+        },
+        {
+          "id": 1079,
+          "word": "latter",
+          "pronunciation": "",
+          "meaning": "후자의"
+        },
+        {
+          "id": 1080,
+          "word": "well-known",
+          "pronunciation": "",
+          "meaning": "잘알려진"
+        },
+        {
+          "id": 1081,
+          "word": "ashamed",
+          "pronunciation": "",
+          "meaning": "부 끄러운"
+        },
+        {
+          "id": 1082,
+          "word": "broken",
+          "pronunciation": "",
+          "meaning": "개진, 고장난"
+        },
+        {
+          "id": 1083,
+          "word": "classical",
+          "pronunciation": "",
+          "meaning": "클래식의, 고전의"
+        },
+        {
+          "id": 1084,
+          "word": "classic",
+          "pronunciation": "",
+          "meaning": "일류의, 고전의"
+        },
+        {
+          "id": 1085,
+          "word": "endless",
+          "pronunciation": "",
+          "meaning": "형 끝없는"
+        },
+        {
+          "id": 1086,
+          "word": "fashionable",
+          "pronunciation": "",
+          "meaning": "유행하는"
+        },
+        {
+          "id": 1087,
+          "word": "helpful",
+          "pronunciation": "",
+          "meaning": "유용한, 도움이되는"
+        },
+        {
+          "id": 1088,
+          "word": "logical",
+          "pronunciation": "",
+          "meaning": "형 논리적인, 타당한"
+        },
+        {
+          "id": 1089,
+          "word": "creative",
+          "pronunciation": "",
+          "meaning": "창의적인"
+        },
+        {
+          "id": 1090,
+          "word": "extreme",
+          "pronunciation": "",
+          "meaning": "극도의, 극한의"
+        },
+        {
+          "id": 1091,
+          "word": "neat",
+          "pronunciation": "",
+          "meaning": "깔끔한, 잘정돈된"
+        },
+        {
+          "id": 1092,
+          "word": "sticky",
+          "pronunciation": "",
+          "meaning": "끈적끈적한"
+        },
+        {
+          "id": 1093,
+          "word": "part-time",
+          "pronunciation": "",
+          "meaning": "근무가) 파트타임인, 시간제인"
+        },
+        {
+          "id": 1094,
+          "word": "full-time",
+          "pronunciation": "",
+          "meaning": "전 시간근무인"
+        },
+        {
+          "id": 1095,
+          "word": "whole",
+          "pronunciation": "",
+          "meaning": "전 체의, 모든"
+        },
+        {
+          "id": 1096,
+          "word": "next",
+          "pronunciation": "",
+          "meaning": "다음주내내"
+        },
+        {
+          "id": 1097,
+          "word": "week",
+          "pronunciation": "",
+          "meaning": "다음주내내"
+        },
+        {
+          "id": 1098,
+          "word": "military",
+          "pronunciation": "",
+          "meaning": "군의유군의"
+        },
+        {
+          "id": 1099,
+          "word": "civil",
+          "pronunciation": "",
+          "meaning": "민간의"
+        },
+        {
+          "id": 1100,
+          "word": "gentle",
+          "pronunciation": "",
+          "meaning": "헝부드러운, 다정한"
+        },
+        {
+          "id": 1101,
+          "word": "gentleman",
+          "pronunciation": "",
+          "meaning": "신사"
+        },
+        {
+          "id": 1102,
+          "word": "materials",
+          "pronunciation": "",
+          "meaning": "원자재"
+        },
+        {
+          "id": 1103,
+          "word": "disabled",
+          "pronunciation": "",
+          "meaning": "장애가있는"
+        },
+        {
+          "id": 1104,
+          "word": "lazy",
+          "pronunciation": "",
+          "meaning": "게으른, 느긋한"
+        },
+        {
+          "id": 1105,
+          "word": "opposite",
+          "pronunciation": "",
+          "meaning": "반대편의, 정반대의"
+        },
+        {
+          "id": 1106,
+          "word": "medium",
+          "pronunciation": "",
+          "meaning": "중간의"
+        },
+        {
+          "id": 1107,
+          "word": "terrific",
+          "pronunciation": "",
+          "meaning": "멋진, 굉장한"
+        },
+        {
+          "id": 1108,
+          "word": "speed",
+          "pronunciation": "",
+          "meaning": "굉장한속도"
+        },
+        {
+          "id": 1109,
+          "word": "weekly",
+          "pronunciation": "",
+          "meaning": "매주의, 주단위의"
+        },
+        {
+          "id": 1110,
+          "word": "yearly",
+          "pronunciation": "",
+          "meaning": "매년의, 연간의"
+        },
+        {
+          "id": 1111,
+          "word": "strict",
+          "pronunciation": "",
+          "meaning": "엄격한"
+        },
+        {
+          "id": 1112,
+          "word": "paper",
+          "pronunciation": "",
+          "meaning": "지방신문"
+        },
+        {
+          "id": 1113,
+          "word": "dear",
+          "pronunciation": "",
+          "meaning": "친애하는"
+        },
+        {
+          "id": 1114,
+          "word": "stormy",
+          "pronunciation": "",
+          "meaning": "형 독풍우치는"
+        },
+        {
+          "id": 1115,
+          "word": "fancy",
+          "pronunciation": "",
+          "meaning": "고급의"
+        },
+        {
+          "id": 1116,
+          "word": "restaurant",
+          "pronunciation": "",
+          "meaning": "고급음식점"
+        },
+        {
+          "id": 1117,
+          "word": "essential",
+          "pronunciation": "",
+          "meaning": "필수적인, 본질적인"
+        },
+        {
+          "id": 1118,
+          "word": "native",
+          "pronunciation": "",
+          "meaning": "곳의, 모국어의"
+        },
+        {
+          "id": 1119,
+          "word": "efofct",
+          "pronunciation": "",
+          "meaning": "곳의, 모국어의"
+        },
+        {
+          "id": 1120,
+          "word": "tight",
+          "pronunciation": "",
+          "meaning": "단단한, 곽끼는"
+        },
+        {
+          "id": 1121,
+          "word": "knot",
+          "pronunciation": "",
+          "meaning": "단단한매듭"
+        },
+        {
+          "id": 1122,
+          "word": "rough",
+          "pronunciation": "",
+          "meaning": "거친, 힘든"
+        },
+        {
+          "id": 1123,
+          "word": "smooth",
+          "pronunciation": "",
+          "meaning": "매끄러운"
+        },
+        {
+          "id": 1124,
+          "word": "particular",
+          "pronunciation": "",
+          "meaning": "특정한, 특별한"
+        },
+        {
+          "id": 1125,
+          "word": "eastern",
+          "pronunciation": "",
+          "meaning": "동 쪽의, 남쪽의, 남의"
+        },
+        {
+          "id": 1126,
+          "word": "southern",
+          "pronunciation": "",
+          "meaning": "남쪽의, 남의"
+        },
+        {
+          "id": 1127,
+          "word": "northern",
+          "pronunciation": "",
+          "meaning": "북쪽의, 북의"
+        },
+        {
+          "id": 1128,
+          "word": "impressive",
+          "pronunciation": "",
+          "meaning": "인상적인, 인상 [감명] 깊은"
+        },
+        {
+          "id": 1129,
+          "word": "ambitious",
+          "pronunciation": "",
+          "meaning": "야망을품은"
+        },
+        {
+          "id": 1130,
+          "word": "charming",
+          "pronunciation": "",
+          "meaning": "매력적인"
+        },
+        {
+          "id": 1131,
+          "word": "independent",
+          "pronunciation": "",
+          "meaning": "독립한, 자주적인"
+        },
+        {
+          "id": 1132,
+          "word": "extra",
+          "pronunciation": "",
+          "meaning": "형 추가의"
+        },
+        {
+          "id": 1133,
+          "word": "challenging",
+          "pronunciation": "",
+          "meaning": "도전적인, 힘든"
+        },
+        {
+          "id": 1134,
+          "word": "maximum",
+          "pronunciation": "",
+          "meaning": "최대의, 최고의"
+        },
+        {
+          "id": 1135,
+          "word": "minimum",
+          "pronunciation": "",
+          "meaning": "최소의"
+        },
+        {
+          "id": 1136,
+          "word": "cheerful",
+          "pronunciation": "",
+          "meaning": "쾌활한, 명랑한"
+        },
+        {
+          "id": 1137,
+          "word": "awkward",
+          "pronunciation": "",
+          "meaning": "어색한, 불편한"
+        },
+        {
+          "id": 1138,
+          "word": "messy",
+          "pronunciation": "",
+          "meaning": "어질러진, 지저분한"
+        },
+        {
+          "id": 1139,
+          "word": "instant",
+          "pronunciation": "",
+          "meaning": "즉시의, 인스턴트의"
+        },
+        {
+          "id": 1140,
+          "word": "selfish",
+          "pronunciation": "",
+          "meaning": "이기적인"
+        },
+        {
+          "id": 1141,
+          "word": "valuable",
+          "pronunciation": "",
+          "meaning": "귀중한, 가치있는"
+        },
+        {
+          "id": 1142,
+          "word": "lesson",
+          "pronunciation": "",
+          "meaning": "귀중한교훈"
+        },
+        {
+          "id": 1143,
+          "word": "typical",
+          "pronunciation": "",
+          "meaning": "전 형적인, 보통의"
+        },
+        {
+          "id": 1144,
+          "word": "electric",
+          "pronunciation": "",
+          "meaning": "전 기의"
+        },
+        {
+          "id": 1145,
+          "word": "tropical",
+          "pronunciation": "",
+          "meaning": "열대의"
+        },
+        {
+          "id": 1146,
+          "word": "exotic",
+          "pronunciation": "",
+          "meaning": "이국적인, 외국의"
+        },
+        {
+          "id": 1147,
+          "word": "worldwide",
+          "pronunciation": "",
+          "meaning": "전 세계적인"
+        },
+        {
+          "id": 1148,
+          "word": "amobile",
+          "pronunciation": "",
+          "meaning": "이동도서관"
+        },
+        {
+          "id": 1149,
+          "word": "severe",
+          "pronunciation": "",
+          "meaning": "엄한, 극심한"
+        },
+        {
+          "id": 1150,
+          "word": "standard",
+          "pronunciation": "",
+          "meaning": "표준의, 일반적인"
+        },
+        {
+          "id": 1151,
+          "word": "cable",
+          "pronunciation": "",
+          "meaning": "일반케이블"
+        },
+        {
+          "id": 1152,
+          "word": "safety",
+          "pronunciation": "",
+          "meaning": "안전기준"
+        },
+        {
+          "id": 1153,
+          "word": "love",
+          "pronunciation": "",
+          "meaning": "순수한사랑"
+        },
+        {
+          "id": 1154,
+          "word": "royal",
+          "pronunciation": "",
+          "meaning": "왕의, 왕림의"
+        },
+        {
+          "id": 1155,
+          "word": "beliefs",
+          "pronunciation": "",
+          "meaning": "신앙"
+        },
+        {
+          "id": 1156,
+          "word": "miserable",
+          "pronunciation": "",
+          "meaning": "비참한"
+        },
+        {
+          "id": 1157,
+          "word": "uneasy",
+          "pronunciation": "",
+          "meaning": "불안한, 불편한"
+        },
+        {
+          "id": 1158,
+          "word": "fake",
+          "pronunciation": "",
+          "meaning": "가짜의, 모조의"
+        },
+        {
+          "id": 1159,
+          "word": "unique",
+          "pronunciation": "",
+          "meaning": "고유의"
+        },
+        {
+          "id": 1160,
+          "word": "newborn",
+          "pronunciation": "",
+          "meaning": "신생의, 갓태어난"
+        },
+        {
+          "id": 1161,
+          "word": "blond",
+          "pronunciation": "",
+          "meaning": "금발인"
+        },
+        {
+          "id": 1162,
+          "word": "artificial",
+          "pronunciation": "",
+          "meaning": "인공의, 인조의"
+        },
+        {
+          "id": 1163,
+          "word": "flat",
+          "pronunciation": "",
+          "meaning": "평평한, 납작한"
+        },
+        {
+          "id": 1164,
+          "word": "humble",
+          "pronunciation": "",
+          "meaning": "겸손한"
+        },
+        {
+          "id": 1165,
+          "word": "dizzy",
+          "pronunciation": "",
+          "meaning": "어지러운, 아찔한"
+        },
+        {
+          "id": 1166,
+          "word": "such",
+          "pronunciation": "",
+          "meaning": "그러한, 이러한"
+        },
+        {
+          "id": 1167,
+          "word": "frightened",
+          "pronunciation": "",
+          "meaning": "겁먹은, 무서워하는"
+        },
+        {
+          "id": 1168,
+          "word": "frightening",
+          "pronunciation": "",
+          "meaning": "무서운"
+        },
+        {
+          "id": 1169,
+          "word": "indeed",
+          "pronunciation": "",
+          "meaning": "부 정말로, 참으로"
+        },
+        {
+          "id": 1170,
+          "word": "rapidly",
+          "pronunciation": "",
+          "meaning": "급격히, 빨리"
+        },
+        {
+          "id": 1171,
+          "word": "properly",
+          "pronunciation": "",
+          "meaning": "적절히, 제대로"
+        },
+        {
+          "id": 1172,
+          "word": "correctly",
+          "pronunciation": "",
+          "meaning": "정확히"
+        },
+        {
+          "id": 1173,
+          "word": "sincerely",
+          "pronunciation": "",
+          "meaning": "진심으로"
+        },
+        {
+          "id": 1174,
+          "word": "badly",
+          "pronunciation": "",
+          "meaning": "나쁘게,"
+        },
+        {
+          "id": 1175,
+          "word": "exactly",
+          "pronunciation": "",
+          "meaning": "정확히바로"
+        },
+        {
+          "id": 1176,
+          "word": "unfortunately",
+          "pronunciation": "",
+          "meaning": "불행히도, 안타감게도"
+        },
+        {
+          "id": 1177,
+          "word": "simply",
+          "pronunciation": "",
+          "meaning": "간단히, 그냥"
+        },
+        {
+          "id": 1178,
+          "word": "gradually",
+          "pronunciation": "",
+          "meaning": "점차, 서서히"
+        },
+        {
+          "id": 1179,
+          "word": "perhaps",
+          "pronunciation": "",
+          "meaning": "아마"
+        },
+        {
+          "id": 1180,
+          "word": "forever",
+          "pronunciation": "",
+          "meaning": "영원히"
+        },
+        {
+          "id": 1181,
+          "word": "ahead",
+          "pronunciation": "",
+          "meaning": "앞에, 앞으로"
+        },
+        {
+          "id": 1182,
+          "word": "mile",
+          "pronunciation": "",
+          "meaning": "마일앞에"
+        },
+        {
+          "id": 1183,
+          "word": "upstairs",
+          "pronunciation": "",
+          "meaning": "위층으로"
+        },
+        {
+          "id": 1184,
+          "word": "downstairs",
+          "pronunciation": "",
+          "meaning": "아래층으로, 아래층의"
+        },
+        {
+          "id": 1185,
+          "word": "apartment",
+          "pronunciation": "",
+          "meaning": "위층아파트"
+        },
+        {
+          "id": 1186,
+          "word": "twice",
+          "pronunciation": "",
+          "meaning": "일주일 [한일"
+        },
+        {
+          "id": 1187,
+          "word": "anymore",
+          "pronunciation": "",
+          "meaning": "부 정문더이상"
+        },
+        {
+          "id": 1188,
+          "word": "somewhere",
+          "pronunciation": "",
+          "meaning": "어딘가에"
+        },
+        {
+          "id": 1189,
+          "word": "anywhere",
+          "pronunciation": "",
+          "meaning": "(의문문) 어디엔가, 부정문어"
+        },
+        {
+          "id": 1190,
+          "word": "besides",
+          "pronunciation": "",
+          "meaning": "게다가"
+        },
+        {
+          "id": 1191,
+          "word": "therefore",
+          "pronunciation": "",
+          "meaning": "그러므로"
+        },
+        {
+          "id": 1192,
+          "word": "beside",
+          "pronunciation": "",
+          "meaning": "옆에, 을벗어나"
+        },
+        {
+          "id": 1193,
+          "word": "behind",
+          "pronunciation": "",
+          "meaning": "뒤에"
+        },
+        {
+          "id": 1194,
+          "word": "before",
+          "pronunciation": "",
+          "meaning": "앞에"
+        },
+        {
+          "id": 1195,
+          "word": "above",
+          "pronunciation": "",
+          "meaning": "의위에"
+        },
+        {
+          "id": 1196,
+          "word": "beyond",
+          "pronunciation": "",
+          "meaning": "넘어서"
+        },
+        {
+          "id": 1197,
+          "word": "unless",
+          "pronunciation": "",
+          "meaning": "하지"
+        },
+        {
+          "id": 1198,
+          "word": "whether",
+          "pronunciation": "",
+          "meaning": "인지어떤지"
+        },
+        {
+          "id": 1199,
+          "word": "pretty",
+          "pronunciation": "",
+          "meaning": "부 패, 상당히"
+        },
+        {
+          "id": 1200,
+          "word": "woman",
+          "pronunciation": "",
+          "meaning": "예쁜여자"
+        },
+        {
+          "id": 1201,
+          "word": "kind",
+          "pronunciation": "",
+          "meaning": "다정한말"
+        },
+        {
+          "id": 1202,
+          "word": "words",
+          "pronunciation": "",
+          "meaning": "다정한말"
+        },
+        {
+          "id": 1203,
+          "word": "watch",
+          "pronunciation": "",
+          "meaning": "손목시계"
+        },
+        {
+          "id": 1204,
+          "word": "fair",
+          "pronunciation": "",
+          "meaning": "전 시회"
+        },
+        {
+          "id": 1205,
+          "word": "fine",
+          "pronunciation": "",
+          "meaning": "형 벌금"
+        },
+        {
+          "id": 1206,
+          "word": "move",
+          "pronunciation": "",
+          "meaning": "감동시키다, 움직이다"
+        },
+        {
+          "id": 1207,
+          "word": "gift",
+          "pronunciation": "",
+          "meaning": "재능, 선물"
+        },
+        {
+          "id": 1208,
+          "word": "company",
+          "pronunciation": "",
+          "meaning": "일행, 단체, 회사"
+        },
+        {
+          "id": 1209,
+          "word": "miss",
+          "pronunciation": "",
+          "meaning": "그리워하다, 놓치다, 을하지"
+        },
+        {
+          "id": 1210,
+          "word": "grade",
+          "pronunciation": "",
+          "meaning": "등급, 학년, 성적"
+        },
+        {
+          "id": 1211,
+          "word": "akey",
+          "pronunciation": "",
+          "meaning": "성공의비결"
+        },
+        {
+          "id": 1212,
+          "word": "hold",
+          "pronunciation": "",
+          "meaning": "개최하다, 손에) 잡다"
+        },
+        {
+          "id": 1213,
+          "word": "rule",
+          "pronunciation": "",
+          "meaning": "지배하다, 규정하다"
+        },
+        {
+          "id": 1214,
+          "word": "order",
+          "pronunciation": "",
+          "meaning": "주문, 순서, 명령"
+        },
+        {
+          "id": 1215,
+          "word": "match",
+          "pronunciation": "",
+          "meaning": "동 이울리다"
+        },
+        {
+          "id": 1216,
+          "word": "abox",
+          "pronunciation": "",
+          "meaning": "성냥한통"
+        },
+        {
+          "id": 1217,
+          "word": "matches",
+          "pronunciation": "",
+          "meaning": "성냥한통"
+        },
+        {
+          "id": 1218,
+          "word": "tell",
+          "pronunciation": "",
+          "meaning": "거짓말하다"
+        },
+        {
+          "id": 1219,
+          "word": "meet",
+          "pronunciation": "",
+          "meaning": "충족시키다, 만나다"
+        },
+        {
+          "id": 1220,
+          "word": "hang",
+          "pronunciation": "",
+          "meaning": "매달다, 걸다"
+        },
+        {
+          "id": 1221,
+          "word": "bill",
+          "pronunciation": "",
+          "meaning": "요금청구서, 계산서, 지폐"
+        },
+        {
+          "id": 1222,
+          "word": "operation",
+          "pronunciation": "",
+          "meaning": "수술, 운영, 작동"
+        },
+        {
+          "id": 1223,
+          "word": "railroad",
+          "pronunciation": "",
+          "meaning": "철도의운영"
+        },
+        {
+          "id": 1224,
+          "word": "stand",
+          "pronunciation": "",
+          "meaning": "참다, 서다"
+        },
+        {
+          "id": 1225,
+          "word": "face",
+          "pronunciation": "",
+          "meaning": "에직면하다, 을향하다"
+        },
+        {
+          "id": 1226,
+          "word": "turn",
+          "pronunciation": "",
+          "meaning": "차례, 회전"
+        },
+        {
+          "id": 1227,
+          "word": "appreciate",
+          "pronunciation": "",
+          "meaning": "인정하다, 고마워하다"
+        },
+        {
+          "id": 1228,
+          "word": "pass",
+          "pronunciation": "",
+          "meaning": "합격하다, 지나가다, 건네"
+        },
+        {
+          "id": 1229,
+          "word": "scale",
+          "pronunciation": "",
+          "meaning": "저울, 규모"
+        },
+        {
+          "id": 1230,
+          "word": "capital",
+          "pronunciation": "",
+          "meaning": "대문자, 수도"
+        },
+        {
+          "id": 1231,
+          "word": "figure",
+          "pronunciation": "",
+          "meaning": "숫자"
+        },
+        {
+          "id": 1232,
+          "word": "trees",
+          "pronunciation": "",
+          "meaning": "나무를심다"
+        },
+        {
+          "id": 1233,
+          "word": "anxious",
+          "pronunciation": "",
+          "meaning": "열망하는, 걱정되는"
+        },
+        {
+          "id": 1234,
+          "word": "press",
+          "pronunciation": "",
+          "meaning": "언론, 인쇄"
+        },
+        {
+          "id": 1235,
+          "word": "degree",
+          "pronunciation": "",
+          "meaning": "정도, 도 (온도, 각도)"
+        },
+        {
+          "id": 1236,
+          "word": "angle",
+          "pronunciation": "",
+          "meaning": "도각도"
+        },
+        {
+          "id": 1237,
+          "word": "degrees",
+          "pronunciation": "",
+          "meaning": "도각도"
+        },
+        {
+          "id": 1238,
+          "word": "baseball",
+          "pronunciation": "",
+          "meaning": "야구장"
+        },
+        {
+          "id": 1239,
+          "word": "grounds",
+          "pronunciation": "",
+          "meaning": "야구장"
+        },
+        {
+          "id": 1240,
+          "word": "will",
+          "pronunciation": "",
+          "meaning": "의지"
+        },
+        {
+          "id": 1241,
+          "word": "direct",
+          "pronunciation": "",
+          "meaning": "감독하다, 지시하다"
+        },
+        {
+          "id": 1242,
+          "word": "indirect",
+          "pronunciation": "",
+          "meaning": "간접적인"
+        },
+        {
+          "id": 1243,
+          "word": "character",
+          "pronunciation": "",
+          "meaning": "등장인물, 성격, 문자"
+        },
+        {
+          "id": 1244,
+          "word": "chinese",
+          "pronunciation": "",
+          "meaning": "한자"
+        },
+        {
+          "id": 1245,
+          "word": "characters",
+          "pronunciation": "",
+          "meaning": "한자"
+        },
+        {
+          "id": 1246,
+          "word": "term",
+          "pronunciation": "",
+          "meaning": "학기, 용어, 기간"
+        },
+        {
+          "id": 1247,
+          "word": "first",
+          "pronunciation": "",
+          "meaning": "학기"
+        },
+        {
+          "id": 1248,
+          "word": "terms",
+          "pronunciation": "",
+          "meaning": "과학용어"
+        },
+        {
+          "id": 1249,
+          "word": "draw",
+          "pronunciation": "",
+          "meaning": "끌다, 그리다"
+        },
+        {
+          "id": 1250,
+          "word": "drive",
+          "pronunciation": "",
+          "meaning": "(조직적) 운동"
+        },
+        {
+          "id": 1251,
+          "word": "race",
+          "pronunciation": "",
+          "meaning": "인종, 민족, 경주"
+        },
+        {
+          "id": 1252,
+          "word": "korean",
+          "pronunciation": "",
+          "meaning": "한민족"
+        },
+        {
+          "id": 1253,
+          "word": "field",
+          "pronunciation": "",
+          "meaning": "분야, 들판, 경기장"
+        },
+        {
+          "id": 1254,
+          "word": "notice",
+          "pronunciation": "",
+          "meaning": "공고문"
+        },
+        {
+          "id": 1255,
+          "word": "note",
+          "pronunciation": "",
+          "meaning": "주목하다"
+        },
+        {
+          "id": 1256,
+          "word": "thank-you",
+          "pronunciation": "",
+          "meaning": "감사편지"
+        },
+        {
+          "id": 1257,
+          "word": "still",
+          "pronunciation": "",
+          "meaning": "가만히있는"
+        },
+        {
+          "id": 1258,
+          "word": "store",
+          "pronunciation": "",
+          "meaning": "저장하다"
+        },
+        {
+          "id": 1259,
+          "word": "observe",
+          "pronunciation": "",
+          "meaning": "(법률등을) 지키다, 관찰하다"
+        },
+        {
+          "id": 1260,
+          "word": "regard",
+          "pronunciation": "",
+          "meaning": "인부"
+        },
+        {
+          "id": 1261,
+          "word": "raise",
+          "pronunciation": "",
+          "meaning": "기르다, 올리다, 모금하다"
+        },
+        {
+          "id": 1262,
+          "word": "rise",
+          "pronunciation": "",
+          "meaning": "오르다, 일어나다"
+        },
+        {
+          "id": 1263,
+          "word": "object",
+          "pronunciation": "",
+          "meaning": "물체"
+        },
+        {
+          "id": 1264,
+          "word": "count",
+          "pronunciation": "",
+          "meaning": "중요하다, 세다"
+        },
+        {
+          "id": 1265,
+          "word": "sign",
+          "pronunciation": "",
+          "meaning": "서명하다"
+        },
+        {
+          "id": 1266,
+          "word": "state",
+          "pronunciation": "",
+          "meaning": "상태, 국가"
+        },
+        {
+          "id": 1267,
+          "word": "spring",
+          "pronunciation": "",
+          "meaning": "튀어오르다"
+        },
+        {
+          "id": 1268,
+          "word": "mean",
+          "pronunciation": "",
+          "meaning": "형 못된"
+        },
+        {
+          "id": 1269,
+          "word": "strike",
+          "pronunciation": "",
+          "meaning": "생각나다, 치다"
+        },
+        {
+          "id": 1270,
+          "word": "falls",
+          "pronunciation": "",
+          "meaning": "인공폭포"
+        },
+        {
+          "id": 1271,
+          "word": "stick",
+          "pronunciation": "",
+          "meaning": "찌르다, 달라붙다"
+        },
+        {
+          "id": 1272,
+          "word": "straw",
+          "pronunciation": "",
+          "meaning": "빨대"
+        },
+        {
+          "id": 1273,
+          "word": "relative",
+          "pronunciation": "",
+          "meaning": "관계가있는"
+        },
+        {
+          "id": 1274,
+          "word": "absolute",
+          "pronunciation": "",
+          "meaning": "절대적인"
+        },
+        {
+          "id": 1275,
+          "word": "treatment",
+          "pronunciation": "",
+          "meaning": "치료, 대우, 처리"
+        },
+        {
+          "id": 1276,
+          "word": "date",
+          "pronunciation": "",
+          "meaning": "데이트, 날짜"
+        },
+        {
+          "id": 1277,
+          "word": "touch",
+          "pronunciation": "",
+          "meaning": "감동시키다, 당다"
+        },
+        {
+          "id": 1278,
+          "word": "rest",
+          "pronunciation": "",
+          "meaning": "나머지, 휴식"
+        },
+        {
+          "id": 1279,
+          "word": "volume",
+          "pronunciation": "",
+          "meaning": "음량 (볼륨), 책의) 권"
+        },
+        {
+          "id": 1280,
+          "word": "issue",
+          "pronunciation": "",
+          "meaning": "(잡지등의) 호논쟁 (점)"
+        },
+        {
+          "id": 1281,
+          "word": "january",
+          "pronunciation": "",
+          "meaning": "잡지월호"
+        },
+        {
+          "id": 1282,
+          "word": "latest",
+          "pronunciation": "",
+          "meaning": "최신호"
+        },
+        {
+          "id": 1283,
+          "word": "free",
+          "pronunciation": "",
+          "meaning": "무료의, 자유로운, 한가한"
+        },
+        {
+          "id": 1284,
+          "word": "block",
+          "pronunciation": "",
+          "meaning": "방해하다"
+        },
+        {
+          "id": 1285,
+          "word": "well",
+          "pronunciation": "",
+          "meaning": "건강한"
+        },
+        {
+          "id": 1286,
+          "word": "subject",
+          "pronunciation": "",
+          "meaning": "주제, 과목, 주어"
+        },
+        {
+          "id": 1287,
+          "word": "sentence",
+          "pronunciation": "",
+          "meaning": "문장의주어"
+        },
+        {
+          "id": 1288,
+          "word": "settle",
+          "pronunciation": "",
+          "meaning": "해결하다, 정착하다"
+        },
+        {
+          "id": 1289,
+          "word": "content",
+          "pronunciation": "",
+          "meaning": "만족하는"
+        },
+        {
+          "id": 1290,
+          "word": "contents",
+          "pronunciation": "",
+          "meaning": "목차페이지"
+        },
+        {
+          "id": 1291,
+          "word": "page",
+          "pronunciation": "",
+          "meaning": "목차페이지"
+        },
+        {
+          "id": 1292,
+          "word": "conduct",
+          "pronunciation": "",
+          "meaning": "지휘하다,"
+        },
+        {
+          "id": 1293,
+          "word": "complex",
+          "pronunciation": "",
+          "meaning": "콤플렉스, (건물) 단지"
+        },
+        {
+          "id": 1294,
+          "word": "firm",
+          "pronunciation": "",
+          "meaning": "회사"
+        },
+        {
+          "id": 1295,
+          "word": "soft",
+          "pronunciation": "",
+          "meaning": "부 드러운"
+        },
+        {
+          "id": 1296,
+          "word": "afirm",
+          "pronunciation": "",
+          "meaning": "확고한믿음"
+        },
+        {
+          "id": 1297,
+          "word": "bound",
+          "pronunciation": "",
+          "meaning": "같은, 행의"
+        },
+        {
+          "id": 1298,
+          "word": "website",
+          "pronunciation": "",
+          "meaning": "타월"
+        },
+        {
+          "id": 1299,
+          "word": "stadium",
+          "pronunciation": "",
+          "meaning": "퍼레이드"
+        },
+        {
+          "id": 1300,
+          "word": "postcard",
+          "pronunciation": "",
+          "meaning": "엔지니어 (기술자)"
+        },
+        {
+          "id": 1301,
+          "word": "dollar",
+          "pronunciation": "",
+          "meaning": "셰프 (요리사)"
+        },
+        {
+          "id": 1302,
+          "word": "vitamin",
+          "pronunciation": "",
+          "meaning": "허리케인"
+        },
+        {
+          "id": 1303,
+          "word": "wine",
+          "pronunciation": "",
+          "meaning": "차트도표"
+        },
+        {
+          "id": 1304,
+          "word": "able",
+          "pronunciation": "",
+          "meaning": "수있다"
+        },
+        {
+          "id": 1305,
+          "word": "find",
+          "pronunciation": "",
+          "meaning": "발견하다, 알아내다"
+        },
+        {
+          "id": 1306,
+          "word": "give",
+          "pronunciation": "",
+          "meaning": "그만두다, 단념하다"
+        },
+        {
+          "id": 1307,
+          "word": "through",
+          "pronunciation": "",
+          "meaning": "(고통따위를) 겪다, 을경험하다"
+        },
+        {
+          "id": 1308,
+          "word": "soon",
+          "pronunciation": "",
+          "meaning": "하자마자, 하자"
+        },
+        {
+          "id": 1309,
+          "word": "reservation",
+          "pronunciation": "",
+          "meaning": "예약하다"
+        },
+        {
+          "id": 1310,
+          "word": "time",
+          "pronunciation": "",
+          "meaning": "동 시에"
+        },
+        {
+          "id": 1311,
+          "word": "both",
+          "pronunciation": "",
+          "meaning": "양쪽다"
+        },
+        {
+          "id": 1312,
+          "word": "belong",
+          "pronunciation": "",
+          "meaning": "에속하다, 의것이다"
+        },
+        {
+          "id": 1313,
+          "word": "because",
+          "pronunciation": "",
+          "meaning": "때문에"
+        },
+        {
+          "id": 1314,
+          "word": "today",
+          "pronunciation": "",
+          "meaning": "오늘부터"
+        },
+        {
+          "id": 1315,
+          "word": "that",
+          "pronunciation": "",
+          "meaning": "그날부터"
+        },
+        {
+          "id": 1316,
+          "word": "likely",
+          "pronunciation": "",
+          "meaning": "같다"
+        },
+        {
+          "id": 1317,
+          "word": "result",
+          "pronunciation": "",
+          "meaning": "그결과"
+        },
+        {
+          "id": 1318,
+          "word": "oneself",
+          "pronunciation": "",
+          "meaning": "혼자, 혼자서"
+        },
+        {
+          "id": 1319,
+          "word": "part",
+          "pronunciation": "",
+          "meaning": "참가하다"
+        },
+        {
+          "id": 1320,
+          "word": "married",
+          "pronunciation": "",
+          "meaning": "결혼하다"
+        },
+        {
+          "id": 1321,
+          "word": "satisfied",
+          "pronunciation": "",
+          "meaning": "만족하다"
+        },
+        {
+          "id": 1322,
+          "word": "place",
+          "pronunciation": "",
+          "meaning": "일어나다, 개최되다"
+        },
+        {
+          "id": 1323,
+          "word": "last",
+          "pronunciation": "",
+          "meaning": "마침내, 드디어"
+        },
+        {
+          "id": 1324,
+          "word": "addition",
+          "pronunciation": "",
+          "meaning": "게다가, 에덧붙여"
+        },
+        {
+          "id": 1325,
+          "word": "other",
+          "pronunciation": "",
+          "meaning": "다시말해서"
+        },
+        {
+          "id": 1326,
+          "word": "known",
+          "pronunciation": "",
+          "meaning": "알려져있다"
+        },
+        {
+          "id": 1327,
+          "word": "instead",
+          "pronunciation": "",
+          "meaning": "대신에, 하지않고"
+        },
+        {
+          "id": 1328,
+          "word": "enjoy",
+          "pronunciation": "",
+          "meaning": "을즐기다, 즐검게하다"
+        },
+        {
+          "id": 1329,
+          "word": "most",
+          "pronunciation": "",
+          "meaning": "그중에서도, 특히"
+        },
+        {
+          "id": 1330,
+          "word": "short",
+          "pronunciation": "",
+          "meaning": "요컨대, 요약하면"
+        },
+        {
+          "id": 1331,
+          "word": "focus",
+          "pronunciation": "",
+          "meaning": "집중하다"
+        },
+        {
+          "id": 1332,
+          "word": "long",
+          "pronunciation": "",
+          "meaning": "머지않아,"
+        },
+        {
+          "id": 1333,
+          "word": "eager",
+          "pronunciation": "",
+          "meaning": "을열"
+        },
+        {
+          "id": 1334,
+          "word": "between",
+          "pronunciation": "",
+          "meaning": "사이에"
+        },
+        {
+          "id": 1335,
+          "word": "instance",
+          "pronunciation": "",
+          "meaning": "예를들어"
+        },
+        {
+          "id": 1336,
+          "word": "usual",
+          "pronunciation": "",
+          "meaning": "여느때처럼, 여전히"
+        },
+        {
+          "id": 1337,
+          "word": "sooner",
+          "pronunciation": "",
+          "meaning": "조만간, 언젠가는"
+        },
+        {
+          "id": 1338,
+          "word": "according",
+          "pronunciation": "",
+          "meaning": "에따르면"
+        },
+        {
+          "id": 1339,
+          "word": "turns",
+          "pronunciation": "",
+          "meaning": "교대로하다"
+        },
+        {
+          "id": 1340,
+          "word": "contrast",
+          "pronunciation": "",
+          "meaning": "와는) 대조적으로,"
+        },
+        {
+          "id": 1341,
+          "word": "while",
+          "pronunciation": "",
+          "meaning": "잠시"
+        },
+        {
+          "id": 1342,
+          "word": "found",
+          "pronunciation": "",
+          "meaning": "설립하다"
+        },
+        {
+          "id": 1343,
+          "word": "export",
+          "pronunciation": "",
+          "meaning": "수출하다"
+        },
+        {
+          "id": 1344,
+          "word": "play",
+          "pronunciation": "",
+          "meaning": "놀다"
+        },
+        {
+          "id": 1345,
+          "word": "elect",
+          "pronunciation": "",
+          "meaning": "선출하다"
+        },
+        {
+          "id": 1346,
+          "word": "impress",
+          "pronunciation": "",
+          "meaning": "감명을주다"
+        },
+        {
+          "id": 1347,
+          "word": "illogical",
+          "pronunciation": "",
+          "meaning": "비논리적인"
+        },
+        {
+          "id": 1348,
+          "word": "refill",
+          "pronunciation": "",
+          "meaning": "다시채우다"
+        },
+        {
+          "id": 1349,
+          "word": "input",
+          "pronunciation": "",
+          "meaning": "입력하다"
+        },
+        {
+          "id": 1350,
+          "word": "connection",
+          "pronunciation": "",
+          "meaning": "연결"
+        },
+        {
+          "id": 1351,
+          "word": "selection",
+          "pronunciation": "",
+          "meaning": "선택"
+        },
+        {
+          "id": 1352,
+          "word": "development",
+          "pronunciation": "",
+          "meaning": "발달"
+        },
+        {
+          "id": 1353,
+          "word": "requirement",
+          "pronunciation": "",
+          "meaning": "요구"
+        },
+        {
+          "id": 1354,
+          "word": "anor",
+          "pronunciation": "",
+          "meaning": "시다"
+        },
+        {
+          "id": 1355,
+          "word": "designer",
+          "pronunciation": "",
+          "meaning": "설계자"
+        },
+        {
+          "id": 1356,
+          "word": "comfortable",
+          "pronunciation": "",
+          "meaning": "안락한"
+        },
+        {
+          "id": 1357,
+          "word": "carefully",
+          "pronunciation": "",
+          "meaning": "조심스럽게"
+        }
+      ]
+    }
+  ]
 }
