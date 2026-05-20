@@ -1507,34 +1507,46 @@ function speakWord(word, wordId, btnEl) {
     document.querySelectorAll('.speak-btn.speaking').forEach(b => b.classList.remove('speaking'));
   };
 
-  // iOS Safari는 Web Speech API 사용 (Apple TTS = 최고 품질)
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-  if (isIOS) {
-    speakWithWebSpeech(word, onDone);
-    return;
-  }
-
-  // 그 외: Google TTS 시도 → 실패 시 Web Speech API
-  let fallbackUsed = false;
-  const googleUrl = `https://translate.googleapis.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(word)}&tl=en-US&client=gtx&speed=0.8`;
-  const audio = new Audio(googleUrl);
-  // crossOrigin 없이 로드 (CORS 오류 방지)
-  currentAudio = audio;
-
-  audio.onended = onDone;
-  audio.onerror = () => {
-    if (fallbackUsed) return;
-    fallbackUsed = true;
-    currentAudio = null;
-    speakWithWebSpeech(word, onDone);
+  const useGoogleTTS = () => {
+    const url = `https://translate.googleapis.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(word)}&tl=en-US&client=gtx&speed=0.8`;
+    const audio = new Audio(url);
+    currentAudio = audio;
+    audio.onended = onDone;
+    audio.onerror = onDone;
+    audio.play().catch(onDone);
   };
 
-  audio.play().catch(() => {
-    if (fallbackUsed) return;
-    fallbackUsed = true;
-    currentAudio = null;
-    speakWithWebSpeech(word, onDone);
-  });
+  // Web Speech 우선 시도 → 음성 없거나 실패 시 Google TTS fallback
+  const synth = window.speechSynthesis;
+  if (!synth) { useGoogleTTS(); return; }
+
+  const doSpeak = () => {
+    const voices = synth.getVoices();
+    if (voices.length === 0) {
+      // 스크린타임 등으로 Siri 차단 → Google TTS
+      useGoogleTTS();
+      return;
+    }
+    const utter = new SpeechSynthesisUtterance(word);
+    utter.lang = 'en-US';
+    utter.rate = 0.78;
+    utter.pitch = 1.0;
+    const best = voices.find(v => /en.US/i.test(v.lang) && /(samantha|ava|allison|enhanced|premium)/i.test(v.name))
+              || voices.find(v => /en.US/i.test(v.lang))
+              || voices.find(v => /^en/i.test(v.lang));
+    if (best) utter.voice = best;
+    utter.onend = onDone;
+    utter.onerror = () => useGoogleTTS(); // Web Speech 실패 → Google TTS
+    synth.speak(utter);
+  };
+
+  if (synth.getVoices().length === 0) {
+    // 음성 목록 로딩 대기 (최대 1초)
+    const t = setTimeout(() => { synth.onvoiceschanged = null; useGoogleTTS(); }, 1000);
+    synth.onvoiceschanged = () => { clearTimeout(t); synth.onvoiceschanged = null; doSpeak(); };
+  } else {
+    doSpeak();
+  }
 }
 
 function stopSpeaking() {
